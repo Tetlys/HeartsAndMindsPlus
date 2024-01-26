@@ -68,11 +68,12 @@ if (
 };
 
 //MAP MARKERS
+
 { 
 if (_y getVariable ["type", ""] != "NameMarine") then { 
     if (_y getVariable ["marker", ""] != "") then { 
         deleteMarker (_y getVariable ["marker", ""]); 
-    }; 
+    };
     private _cachingRadius = _y getVariable ["cachingRadius", 500]; 
     private _marker = createMarker [format ["city_%1", position _y], position _y]; 
     _marker setMarkerType "mil_box_noShadow";
@@ -92,6 +93,7 @@ if (_y getVariable ["type", ""] != "NameMarine") then {
     _y setVariable ["marker", _marker]; 
 };
 } forEach btc_city_all;
+
 
 if isServer then
 {

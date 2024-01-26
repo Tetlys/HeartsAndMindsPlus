@@ -9,9 +9,10 @@
 } forEach ARSENAL_CRATES;
 
 //SUPPORT CODE
-
+/*
 Private _UnitRole = roleDescription player;
 
 if (_UnitRole == "Commander") then {
 [player, BIS_requesterMod, BIS_providerMod] call BIS_fnc_addSupportLink;
 };
+*/

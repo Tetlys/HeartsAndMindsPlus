@@ -46,8 +46,8 @@ _city setVariable ["active", true];
 
 
 // Added Player Scaling Variable
-private _CurrentPlayers = count allPlayers;
-private _PlayerScale = ((_CurrentPlayers * 0.03) max 0.5) min 1;
+//private _CurrentPlayers = count allPlayers;
+//private _PlayerScale = ((_CurrentPlayers * 0.03) max 0.5) min 1;
 
 private _data_units = _city getVariable ["data_units", []];
 private _data_animals = _city getVariable ["data_animals", []];
@@ -103,21 +103,21 @@ if (_data_units isNotEqualTo []) then {
 } else {
     // Maximum number of enemy group
     private _numberOfGroup = (switch _type do {
-        case "Hill" : {10};
-        case "VegetationFir" : {10};
-        case "BorderCrossing" : {15};
-        case "NameLocal" : {20};
-        case "StrongpointArea" : {20};
-        case "NameVillage" : {20};
-        case "NameCity" : {25};
-        case "NameCityCapital" : {40};
-        case "Airport" : {30};
-        case "NameMarine" : {10};
+        case "Hill" : {8};
+        case "VegetationFir" : {8};
+        case "BorderCrossing" : {12};
+        case "NameLocal" : {15};
+        case "StrongpointArea" : {15};
+        case "NameVillage" : {15};
+        case "NameCity" : {20};
+        case "NameCityCapital" : {25};
+        case "Airport" : {20};
+        case "NameMarine" : {0};
         default {0};
     });
 
     if (_has_en) then {
-        private _finalNumberOfGroup = floor (_p_mil_group_ratio * _numberOfGroup * _PlayerScale); // Player Scaling Adjusted
+        private _finalNumberOfGroup = floor (_p_mil_group_ratio * _numberOfGroup); //   * _PlayerScale      Player Scaling Adjusted
         private _numberOfHouseGroup = _finalNumberOfGroup * btc_p_mil_wp_houseDensity;
         for "_i" from 1 to round _finalNumberOfGroup do {
             [
@@ -270,14 +270,14 @@ if !(_city getVariable ["has_suicider", false]) then {
 
 if (_city getVariable ["data_tags", []] isEqualTo []) then {
     private _tag_number = (switch _type do {
-        case "Hill" : {1};
-        case "BorderCrossing" : {1};
-        case "NameLocal" : {2.5};
-        case "StrongpointArea" : {3};
-        case "NameVillage" : {3.5};
-        case "NameCity" : {5};
-        case "NameCityCapital" : {6};
-        case "Airport" : {6};
+        case "Hill" : {0};
+        case "BorderCrossing" : {0};
+        case "NameLocal" : {0};
+        case "StrongpointArea" : {0};
+        case "NameVillage" : {0};
+        case "NameCity" : {0};
+        case "NameCityCapital" : {0};
+        case "Airport" : {0};
         case "NameMarine" : {0};
         default {0};
     });

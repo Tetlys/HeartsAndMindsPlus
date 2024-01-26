@@ -8,7 +8,7 @@ player createDiaryRecord [_mainCategory, [localize "STR_BTC_HAM_DOC_HEADLESS_TIT
 player createDiaryRecord [_mainCategory, [localize "STR_BTC_HAM_DOC_DOOR_TITLE", localize "STR_BTC_HAM_DOC_DOOR_TEXT"]];
 
 //Chemical warfare
-player createDiaryRecord [_mainCategory, [localize "STR_BTC_HAM_DOC_CHEMICALWARFARE_TITLE", localize "STR_BTC_HAM_DOC_CHEMICALWARFARE_TEXT"]];
+//player createDiaryRecord [_mainCategory, [localize "STR_BTC_HAM_DOC_CHEMICALWARFARE_TITLE", localize "STR_BTC_HAM_DOC_CHEMICALWARFARE_TEXT"]];
 
 //Spectrum devices
 player createDiaryRecord [_mainCategory, [localize "STR_BTC_HAM_DOC_SPECTRUMDEVICES_TITLE", localize "STR_BTC_HAM_DOC_SPECTRUMDEVICES_TEXT"]];
@@ -55,11 +55,5 @@ player createDiaryRecord [_mainCategory, [localize "STR_BTC_HAM_DOC_TRAFFIC_TITL
 //Version
 player createDiaryRecord [_mainCategory, [localize "STR_A3_FM_Welcome4",
         format (["<img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa' width='20' height='20'/> Version %1.%2.%3 <img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa' width='20' height='20'/> <br/><br/> <img image='\a3\missions_f_orange\Data\Img\orange_overview_ca.paa' width='355' height='200'/>"] + btc_version)
-    ]
-];
-
-//Rules
-player createDiaryRecord [_mainCategory, ["Rules",
-        format (["<img image='res\1.paa' width='355' height='200'/> <br/><br/> <img image='res\3.paa' width='355' height='200'/> <br/><br/> <img image='res\6.paa' width='355' height='200'/>"] + btc_version)
     ]
 ];

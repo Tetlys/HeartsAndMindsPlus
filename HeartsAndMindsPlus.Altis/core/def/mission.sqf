@@ -15,7 +15,8 @@ btc_p_auto_db = "btc_p_auto_db" call BIS_fnc_getParamValue isEqualTo 1;
 btc_p_db_autoRestartTime = "btc_p_db_autoRestartTime" call BIS_fnc_getParamValue;
 btc_p_db_autoRestartHour = [
     "btc_p_db_autoRestartHour1" call BIS_fnc_getParamValue,
-    "btc_p_db_autoRestartHour2" call BIS_fnc_getParamValue
+    "btc_p_db_autoRestartHour2" call BIS_fnc_getParamValue,
+    "btc_p_db_autoRestartHour3" call BIS_fnc_getParamValue
 ];
 btc_p_db_autoRestartType = "btc_p_db_autoRestartType" call BIS_fnc_getParamValue;
 btc_p_slot_isShare = "btc_p_slot_isShare" call BIS_fnc_getParamValue isEqualTo 1;
@@ -387,7 +388,7 @@ if (isServer) then {
 //Civ
 // Get all faction from mod there are currently running
 //copyToClipboard str (["CIV"] call btc_fnc_get_class);
-private _allfaction = ["CIV_F","DEFAULT"]; //All factions
+private _allfaction = ["UK3CB_CHC_C"]; //All factions
 _p_civ = _allfaction select _p_civ; //Select faction selected from mission parameter
 _p_civ_veh = _allfaction select _p_civ_veh; //Select faction selected from mission parameter
 private _allclasse = [[_p_civ]] call btc_civ_fnc_class; //Create classes from factions, you can combine factions from the SAME side : [[_p_civ, "btc_ac","LOP_TAK_CIV"]] call btc_civ_fnc_class.
@@ -458,67 +459,46 @@ btc_type_hazmat = ["HazmatBag_01_F", "Land_MetalBarrel_F"] + (_allClassSorted se
     {_x isKindOf "CBRNContainer_01_base_F"} ||
     {_x isKindOf "PlasticCase_01_base_F"}
 });
- 
+
 //Player
 btc_player_side = west;
 btc_respawn_marker = "respawn_west";
 btc_player_type = ["SoldierWB", "SoldierEB", "SoldierGB"] select ([west, east, independent] find btc_player_side);
 
-
 fortify_enemy_vehicles = [
-"UK3CB_ARD_O_Hilux_GMG",
-"UK3CB_ARD_O_Hilux_Rocket_Arty",
-"UK3CB_ARD_O_Hilux_Dshkm",
-"UK3CB_ARD_O_Hilux_M2",
-"UK3CB_ARD_O_Hilux_Metis",
-"UK3CB_ARD_O_Hilux_Mortar",
-"UK3CB_ARD_O_Hilux_Pkm",
-"UK3CB_ARD_O_Hilux_Spg9",
-"UK3CB_ARD_O_Hilux_Zu23_Front",
-"UK3CB_ARD_O_Hilux_Zu23",
-"UK3CB_ARD_O_UAZ_AGS30",
-"UK3CB_ARD_O_UAZ_MG",
-"UK3CB_ARD_O_UAZ_SPG9",
-"UK3CB_ARD_O_2S6M_Tunguska",
-"UK3CB_ARD_O_MTLB_ZU23",
-"UK3CB_ARD_O_Ural_Zu23",
-"UK3CB_ARD_O_ZsuTank",
-"UK3CB_ARD_O_BMP1",
-"UK3CB_ARD_O_BMP2",
-"UK3CB_ARD_O_BMP2K",
-"UK3CB_ARD_O_BRM1K",
-"UK3CB_ARD_O_BTR40",
-"UK3CB_ARD_O_BTR40_MG",
-"UK3CB_ARD_O_BTR60",
-"UK3CB_ARD_O_BTR70",
-"UK3CB_ARD_O_BTR80",
-"UK3CB_ARD_O_BTR80a",
-"UK3CB_ARD_O_MTLB_Cannon",
-"UK3CB_ARD_O_MTLB_BMP",
-"UK3CB_ARD_O_MTLB_KPVT",
-"UK3CB_ARD_O_MAZ_543_SCUD",
-"UK3CB_ARD_O_BM21",
-"UK3CB_ARD_O_BRDM2",
-"UK3CB_ARD_O_BRDM2_ATGM",
-"UK3CB_ARD_O_BRDM2_HQ",
-"UK3CB_ARD_O_GAZ_Vodnik_Cannon",
-"UK3CB_ARD_O_GAZ_Vodnik_KVPT",
-"UK3CB_ARD_O_GAZ_Vodnik_PKT",
-"UK3CB_ARD_O_T34",
-"UK3CB_ARD_O_T55",
-"UK3CB_ARD_O_T72A",
-"UK3CB_ARD_O_T72B",
-"UK3CB_ARD_O_T72BM",
-"UK3CB_ARD_O_T72BA",
-"UK3CB_ARD_O_T72BB",
-"UK3CB_ARD_O_T72BC"
+"rhs_btr60_vmf",
+"rhs_btr70_vmf",
+"rhs_btr80_vmf",
+"rhs_btr80a_vmf",
+"rhs_2s1_vmf",
+"rhs_2s1_at_vmf",
+"RHS_BM21_VMF_01",
+"rhs_tigr_sts_vmf",
+"rhs_tigr_sts_3camo_vmf",
+"rhs_bmp1_vmf",
+"rhs_bmp1d_vmf",
+"rhs_bmp1k_vmf",
+"rhs_bmp1p_vmf",
+"rhs_bmp2e_vmf",
+"rhs_bmp2_vmf",
+"rhs_bmp2d_vmf",
+"rhs_bmp2k_vmf",
+"rhs_brm1k_vmf",
+"rhs_prp3_vmf",
+"rhsgref_BRDM2_vmf",
+"rhsgref_BRDM2_ATGM_vmf",
+"rhsgref_BRDM2_HQ_vmf",
+"rhs_mig29s_vmf",
+"rhs_mig29sm_vmf",
+"rhs_gaz66_zu23_vmf",
+"RHS_Ural_Zu23_VMF_01"
 ];
 
 //Log  
 btc_construction_array =
 [
     [
-        "Ground Vehicles",
+        "Ground Vehicles & Boats",
         "Air Vehicles",
         "Fortifications",
         "Static",
@@ -531,88 +511,74 @@ btc_construction_array =
     [
         [
             //"Ground Vehicles"
-            "rhsusf_mrzr4_d",
-            "rhsusf_m1045_d",
-            "rhsusf_m998_d_2dr_fulltop",
-            "rhsusf_m998_d_2dr_halftop",
-            "rhsusf_m998_d_2dr",
-            "rhsusf_m998_d_4dr_fulltop",
-            "rhsusf_m998_d_4dr_halftop",
-            "rhsusf_m1152_usarmy_d",
-            "rhsusf_m1043_d_m2",
-            "rhsusf_m1151_m2_v1_usarmy_d",
-            "rhsusf_m1151_m2_v2_usarmy_d",
-            "rhsusf_m1165a1_gmv_m2_m240_socom_d",
-            "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
-            "UK3CB_B_M939_Closed_DES",
-            "UK3CB_B_M939_Guntruck_DES",
-            "UK3CB_B_M939_Open_DES",
-            "UK3CB_B_M939_Reammo_DES",
-            "UK3CB_B_M939_Recovery_DES",
-            "UK3CB_B_M939_Refuel_DES",
-            "UK3CB_B_M939_Repair_DES",
-            "rhsusf_stryker_m1127_m2_d",
-            "rhsusf_M1220_usarmy_d",
-            "rhsusf_m1240a1_m2_uik_usarmy_d",
-            "UK3CB_B_MaxxPro_M2_US",
-            "B_APC_Tracked_01_CRV_F",
-            "rhsusf_M1220_M2_usarmy_d",
-            "rhsusf_M1230_M2_usarmy_d",
-            "rhsusf_M1232_M2_usarmy_d",
-            "RHS_M2A2",
-            "RHS_M2A2_BUSKI",
-            "RHS_M2A3_BUSKIII",
-            "rhsusf_m1a2sep2d_usarmy"
+			"CFP_B_USSEALS_HMMWV_SOV_M2_WDL_01", 
+			"CFP_B_USSEALS_HMMWV_SOV_Mk19_WDL_01", 
+			"rhsusf_m113_usarmy", 
+			"rhsusf_m113_usarmy_MK19", 
+			"rhsusf_m966_w", 
+			"rhsusf_m1151_mk19_v2_usarmy_wd", 
+			"rhsusf_m1151_m240_v2_usarmy_wd", 
+			"rhsusf_m1151_m2_v2_usarmy_wd", 
+			"RHS_M2A3_BUSKIII_wd", 
+			"RHS_M6_wd", 
+			"rhsusf_M1117_W", 
+			"rhsusf_M1220_M2_usarmy_wd", 
+			"rhsusf_M1220_MK19_usarmy_wd", 
+			"rhsusf_M1237_M2_usarmy_wd", 
+			"rhsusf_M1237_MK19_usarmy_wd", 
+			"UK3CB_B_MaxxPro_M2_US_W", 
+			"UK3CB_B_MaxxPro_MK19_US_W", 
+			"rhsusf_m1a1aim_tuski_wd", 
+			"rhsusf_m1a2sep1tuskiiwd_usarmy", 
+			"rhsusf_m1a2sep2wd_usarmy", 
+			"rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd", 
+			"rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd",
+			"rhsusf_mrzr4_d",
+            //Boats
+            "B_Boat_Transport_01_F", 
+            "rhsusf_mkvsoc"
         ],
         [
             //"Air Vehicles"
-            "RHS_MELB_MH6M",
-            "RHS_MELB_AH6M",
-            "RHS_CH_47F_10",
-            "RHS_UH60M_d",
-            "RHS_C130J",
-            "B_Plane_Fighter_01_F",
-            "RHS_AH64D"
+			"RHS_UH60M", 
+			"RHS_AH64D_wd", 
+			"CFP_B_USSEALS_MH_6J_Little_Bird_WDL_01"
         ],
         [
             //"Fortifications"
-            "Land_BagFence_End_F",
-            "Land_BagFence_Long_F",
-            "Land_BagFence_Round_F",
-            "Land_BagFence_Short_F",
-            "Land_Razorwire_F",
-            "Land_Net_Fence_Gate_F",
-            "Land_HBarrier_3_F",
-            "Land_HBarrier_5_F",
-            "Land_HBarrier_Big_F",
-            "Land_HBarrier_1_F",
-            "Land_Concrete_SmallWall_8m_F",
-            "Land_Concrete_SmallWall_4m_F",
-            "Land_ConcreteHedgehog_01_F",
-            "Land_DragonsTeeth_01_4x2_new_F",
-            "BlockConcrete_F",
-            "Land_RampConcrete_F",
-            "Land_CncShelter_F",
-            "Land_HBarrierWall_corridor_F",
-            "Land_HBarrierWall_corner_F",
-            "Land_HBarrierWall6_F",
-            "Land_HBarrierWall4_F",
-            "Land_CncWall4_F",
-            "Land_CncWall1_F",
-            "Land_BagBunker_Small_F",
-            "Land_Plank_01_4m_F",
-            "Land_Plank_01_8m_F"
+            "Land_HBarrier_01_big_tower_green_F", 
+			"Land_HBarrier_01_wall_4_green_F", 
+			"Land_HBarrier_01_wall_6_green_F", 
+			"Land_HBarrier_01_wall_corner_green_F", 
+			"Land_HBarrier_01_wall_corridor_green_F", 
+			"Land_HBarrier_01_line_1_green_F", 
+			"Land_HBarrier_01_big_4_green_F", 
+			"Land_HBarrier_01_line_5_green_F", 
+			"Land_HBarrier_01_line_3_green_F",
+			"zed", 
+			"Land_BarbGate", 
+			"Land_New_WiredFence_10m_F", 
+			"Land_New_WiredFence_5m_F", 
+			"Wire", 
+			"Land_New_WiredFence_pole_F", 
+			"Land_Razorwire_F", 
+			"Land_BagFence_01_corner_green_F", 
+			"Land_BagFence_01_end_green_F", 
+			"Land_BagFence_01_long_green_F", 
+			"Land_BagFence_01_round_green_F", 
+			"Land_BagFence_01_short_green_F"
         ],
         [
             //"Static"
-            "UK3CB_B_Searchlight_NATO",
-            "B_Static_Designator_01_F",
-            "RHS_M2StaticMG_D",
-            "RHS_M2StaticMG_MiniTripod_D",
-            "RHS_Stinger_AA_pod_D",
-            "RHS_TOW_TriPod_D",
-            "RHS_M252_D",
-            "RHS_M119_D"
+            "RHS_Stinger_AA_pod_WD", 
+			"UK3CB_B_Static_M240_Elcan_High_US_W", 
+			"UK3CB_B_Static_M240_Elcan_Low_US_W", 
+			"RHS_M2StaticMG_WD", 
+			"RHS_M2StaticMG_MiniTripod_WD", 
+			"RHS_TOW_TriPod_WD", 
+			"RHS_MK19_TriPod_WD", 
+			"CUP_B_M252_USMC", 
+			"CUP_B_SearchLight_static_USMC"
         ],
         [
             //"Ammobox"

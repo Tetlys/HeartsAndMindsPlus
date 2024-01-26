@@ -5,6 +5,9 @@ btc_custom_loc = [
     EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,true]
 */
 
+[[10877.2,13013.4,0.0],"StrongpointArea","Factory",600,true],
+[[15677,16433.7,0.0],"Airport","North Airport",800,true]
+
 ];
 
 /*

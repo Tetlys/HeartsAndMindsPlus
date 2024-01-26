@@ -9,9 +9,9 @@ Author: Incontinentia
 private ["_trackingType","_necItem","_fullVP","_preStrikeCDE","_playTimeVar","_playTime","_percentage","_hqCallsign","_airCallsign","_nightTimeOnly","_aircraftType","_minTimeOnTgt","_randomDelay","_altitudeMin","_altitudeRandom","_radius","_speed","_ammoArray","_allowSensitive","_maxCollateral","_sideFriendly","_trackingEnabled","_percentageReliability","_isAffectedByOvercast","_objectOcclusion","_maxOvercastDegradation","_trackingRange","_terminalNecessary","_requestInterval","_repeatedStrikes","_timeout"];
 
 //General Options
-_percentage = 95;                      //Percentage chance that the aircraft will be available for sorties
+_percentage = 80;                      //Percentage chance that the aircraft will be available for sorties
 _hqCallsign = "CROSSROADS";             //Callsign for HQ element
-_airCallsign = "STRIKE PACKAGE";           //Aircraft callsign
+_airCallsign = "REAPER";           //Aircraft callsign
 _nightTimeOnly = false;                 //Is activity limited to night-time only sorties?
 _useRadioTriggers = false;               //Interact with CAS using Radio Charlie
 

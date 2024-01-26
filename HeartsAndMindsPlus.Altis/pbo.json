@@ -1,0 +1,11 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+            "\\.xml$"
+        ]
+    },
+    "headers": [
+    ]
+}
