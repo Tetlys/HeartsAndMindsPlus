@@ -1,10 +1,10 @@
-private _locations = configfile >> "cfgWorlds" >> worldName >> "names";
+private _locations = configfile >> "cfgworlds" >> worldname >> "names";
 
 btc_custom_loc = [
 /*
-    DESCRIPTION: [POS(Array),TYPE(String),NAME(String),RADIUS (Number),IS OCCUPIED(Bool)]
+    DESCRIPTION: [POS(Array),TYPE(String),NAME(String),RADIUS (Number),IS OCCUPIED(Bool), (count _locations + #)]
     Possible types: "NameVillage","NameCity","NameCityCapital","NameLocal","Hill","Airport","NameMarine", "StrongpointArea", "BorderCrossing", "VegetationFir"
-    EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,true]
+    EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,true,(count _locations + 1)]
 */
 
 [[1038.99,2900.04,0],"Airport","airport2",700,true,(count _locations + 1)],
