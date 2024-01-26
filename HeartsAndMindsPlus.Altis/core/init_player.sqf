@@ -3,7 +3,7 @@ if !(isNil "btc_custom_loc") then {
     {
         _x params ["_pos", "_cityType", "_cityName", "_radius"];
         private _location = createLocation [_cityType, _pos, _radius, _radius];
-        _location setText _cityName;
+        //_location setText _cityName;
     } forEach btc_custom_loc;
 };
 btc_intro_done = [] spawn btc_respawn_fnc_intro;
