@@ -32,7 +32,7 @@ params [
     ["_name", "", [""]],
     ["_cachingRadius", 0, [0]],
     ["_has_en", false, [false]],
-    ["_id", count btc_city_all, [0]]
+    ["_id", (0 min (selectMin keys btc_city_all)) - 1, [0]]
 ];
 
 private _city = createTrigger ["EmptyDetector", [_position select 0, _position select 1, getTerrainHeightASL _position], false];
