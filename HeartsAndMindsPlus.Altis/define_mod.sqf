@@ -7,13 +7,13 @@ btc_custom_loc = [
     EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,true,(count _locations + 1)]
 */
 
-[[1038.99,2900.04,0],"Airport","airport2",700,true,],
-[[15645.5,16497.9,0],"Airport","airport1",700,true,],
-[[10922.3,12988.4,0],"StrongpointArea","strongpoint1",600,true,],
-[[11544.2,10213.6,0],"StrongpointArea","strongpoint2",600,true],
-[[12130.2,16385.1,0],"StrongpointArea","strongpoint3",600,true],
-[[5170.18,17485.2,0],"StrongpointArea","strongpoint4",600,true],
-[[9138.97,16373.6,0],"StrongpointArea","strongpoint5",600,true]
+[[1038.99,2900.04,0],"Airport","airport2",700,true,(count _locations + 1)],
+[[15645.5,16497.9,0],"Airport","airport1",700,true,(count _locations + 2)],
+[[10922.3,12988.4,0],"StrongpointArea","strongpoint1",600,true,(count _locations + 3)],
+[[11544.2,10213.6,0],"StrongpointArea","strongpoint2",600,true,(count _locations + 4)],
+[[12130.2,16385.1,0],"StrongpointArea","strongpoint3",600,true,(count _locations + 5)],
+[[5170.18,17485.2,0],"StrongpointArea","strongpoint4",600,true,(count _locations + 6)],
+[[9138.97,16373.6,0],"StrongpointArea","strongpoint5",600,true,(count _locations + 7)]
 
 
 ];
