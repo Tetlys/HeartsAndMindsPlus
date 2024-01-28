@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=3045;
+		nextID=3050;
 	};
 	class MarkerIDProvider
 	{
@@ -20,21 +20,20 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=838;
+		nextID=883;
 	};
 	class Camera
 	{
-		pos[]={10728.241,114.32909,12993.224};
-		dir[]={0.72517133,-0.45998326,0.51238859};
-		up[]={0.37566873,0.88792753,0.26543847};
-		aside[]={0.57706118,0,-0.81670088};
+		pos[]={16085.76,10.820534,6922.6108};
+		dir[]={0.064931639,-0.53654653,0.84140497};
+		up[]={0.041284718,0.84385616,0.53496808};
+		aside[]={0.99706042,4.1165913e-007,-0.07694447};
 	};
 };
 binarizationWanted=0;
 sourceName="HeartsAndMindsPlus";
 addons[]=
 {
-	"A3_Structures_F_Mil_Flags",
 	"A3_Structures_F_Mil_Helipads",
 	"A3_Characters_F",
 	"cfp_uniforms",
@@ -51,6 +50,7 @@ addons[]=
 	"CUP_CAMisc",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_cargo",
+	"A3_Structures_F_Mil_Flags",
 	"cupUaceext",
 	"rhsusf_c_m113",
 	"RHS_US_A2_AirImport",
@@ -23322,23 +23322,6 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={16086.793,6.3268046,6932.0166};
-								angles[]={6.2802954,1.1488873,6.2468419};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								name="hq_flag";
-							};
-							id=301;
-							type="Flag_NATO_F";
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
 								position[]={16116.854,2.3035448,6888.2144};
 								angles[]={0,4.1392221,0.0090957033};
 							};
@@ -23423,7 +23406,7 @@ class Mission
 								nAttributes=5;
 							};
 						};
-						class Item2
+						class Item1
 						{
 							dataType="Group";
 							side="West";
@@ -23559,7 +23542,7 @@ class Mission
 							};
 							id=1248;
 						};
-						class Item3
+						class Item2
 						{
 							dataType="Group";
 							side="West";
@@ -23685,7 +23668,7 @@ class Mission
 							};
 							id=1019;
 						};
-						class Item4
+						class Item3
 						{
 							dataType="Object";
 							class PositionInfo
@@ -23701,7 +23684,7 @@ class Mission
 							id=2190;
 							type="HeliH";
 						};
-						class Item5
+						class Item4
 						{
 							dataType="Object";
 							class PositionInfo
@@ -23749,7 +23732,7 @@ class Mission
 								nAttributes=2;
 							};
 						};
-						class Item6
+						class Item5
 						{
 							dataType="Object";
 							class PositionInfo
@@ -23796,9 +23779,26 @@ class Mission
 								nAttributes=2;
 							};
 						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={16086.793,6.3268046,6932.0171};
+								angles[]={6.2802882,1.1488804,6.2468476};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								name="hq_flag";
+							};
+							id=3047;
+							type="Flag_US_F";
+						};
 					};
 					id=1335;
-					atlOffset=0.61602831;
+					atlOffset=0.077003479;
 				};
 				class Item1
 				{
@@ -26659,7 +26659,7 @@ class Mission
 				};
 			};
 			id=1334;
-			atlOffset=0.62718248;
+			atlOffset=0.60992289;
 		};
 		class Item1
 		{

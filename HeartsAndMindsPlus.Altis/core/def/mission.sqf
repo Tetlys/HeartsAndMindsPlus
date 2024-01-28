@@ -411,7 +411,7 @@ btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_R
 //FOB
 btc_fob_mat = "Land_Cargo20_blue_F";
 btc_fob_structure = "Land_Cargo_HQ_V1_F";
-btc_fob_flag = "Flag_NATO_F";
+btc_fob_flag = "Flag_US_F";
 btc_fob_id = 0;
 btc_fob_minDistance = 1500;
 
@@ -792,7 +792,8 @@ btc_flag_textures = [
     "\A3\Data_F\Flags\flag_blue_CO.paa",
     '#(argb,8,8,3)color(0.9,0.9,0,1)',
     "\A3\Data_F\Flags\flag_uk_CO.paa",
-    "\A3\Data_F\Flags\flag_NATO_CO.paa"
+    "\A3\Data_F\Flags\flag_NATO_CO.paa",
+    "\A3\Ui_f\data\Map\Markers\Flags\usa_ca.paa"
 ];
 
 //Respawn
