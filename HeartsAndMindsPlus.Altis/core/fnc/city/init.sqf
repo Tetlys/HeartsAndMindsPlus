@@ -59,7 +59,7 @@ for "_id" from 0 to (count _locations - 1) do {
         };
         private _name = getText(_current >> "name");
         private _cachingRadius = getNumber(_current >> "RadiusA") + getNumber(_current >> "RadiusB");
-        _cachingRadius = (_cachingRadius max 160) min 800;
+        _cachingRadius = (_cachingRadius max 160) min 675;
 
         if (btc_city_blacklist find _name >= 0) exitWith {};
 

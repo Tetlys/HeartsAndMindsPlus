@@ -103,7 +103,7 @@ btc_global_reputation = "btc_p_rep" call BIS_fnc_getParamValue;
 btc_p_rep_notify = "btc_p_rep_notify" call BIS_fnc_getParamValue;
 btc_city_radiusOffset = ("btc_p_city_radiusOffset" call BIS_fnc_getParamValue) * 100;
 btc_p_trigger = if (("btc_p_trigger" call BIS_fnc_getParamValue) isEqualTo 1) then {
-    "this && (false in (thisList apply {_x isKindOf 'Plane'})) && (false in (thisList apply {(_x isKindOf 'Helicopter') && (speed _x > 190)}))"
+    "this && (false in (thisList apply {_x isKindOf 'Plane'})) && (false in (thisList apply {(_x isKindOf 'Helicopter') && (speed _x > 250)}))"
 } else {
     "this"
 };
@@ -185,7 +185,7 @@ if (isServer) then {
 
     //Patrol
     btc_patrol_active = [];
-    btc_patrol_area = 2000;
+    btc_patrol_area = 1000;
 
     //Rep
     btc_rep_militia_call_time = 600;
@@ -755,23 +755,23 @@ btc_rep_bonus_cache = 200;
 btc_rep_bonus_civ_hh = 3;
 btc_rep_bonus_disarm = 15;
 btc_rep_bonus_hideout = 200;
-btc_rep_bonus_mil_killed = 0.25;
+btc_rep_bonus_mil_killed = 0.75;
 btc_rep_bonus_IEDCleanUp = 10;
 btc_rep_bonus_removeTag = 3;
 btc_rep_bonus_removeTagLetter = 0.5;
-btc_rep_bonus_foodGive = 0.5;
+btc_rep_bonus_foodGive = 5;
 btc_rep_malus_veh_killed = 10;
 
 btc_rep_malus_civ_hd = - 2;
 btc_rep_malus_animal_hd = - 1;
-btc_rep_malus_civ_killed = - 10;
-btc_rep_malus_animal_killed = - 5;
+btc_rep_malus_civ_killed = - 5;
+btc_rep_malus_animal_killed = - 1;
 btc_rep_malus_civ_suppressed = - 0;
-btc_rep_malus_player_respawn = - 5;
+btc_rep_malus_player_respawn = - 2;
 btc_rep_malus_building_damaged = - 0;
-btc_rep_malus_building_destroyed = - 20;
+btc_rep_malus_building_destroyed = - 10;
 btc_rep_malus_foodRemove = - btc_rep_bonus_foodGive;
-btc_rep_malus_breakDoor = - 1;
+btc_rep_malus_breakDoor = - 0.25;
 btc_rep_malus_wheelChange = - 0;
 
 btc_rep_level_veryLow = 0;
@@ -793,7 +793,7 @@ btc_flag_textures = [
     '#(argb,8,8,3)color(0.9,0.9,0,1)',
     "\A3\Data_F\Flags\flag_uk_CO.paa",
     "\A3\Data_F\Flags\flag_NATO_CO.paa",
-    "\A3\Ui_f\data\Map\Markers\Flags\usa_ca.paa"
+    "\A3\Data_F\Flags\flag_us_CO.paa"
 ];
 
 //Respawn

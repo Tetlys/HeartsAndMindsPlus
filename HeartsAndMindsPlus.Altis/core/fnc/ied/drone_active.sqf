@@ -28,7 +28,7 @@ params [
 [group _driver_drone] call CBA_fnc_clearWaypoints;
 
 private _trigger = createTrigger ["EmptyDetector", getPos _driver_drone, false];
-_trigger setTriggerArea [10, 10, 0, false, -60];
+_trigger setTriggerArea [15, 15, 0, false, -60];
 _trigger setTriggerActivation [str btc_player_side, "PRESENT", true];
 _trigger setTriggerStatements ["this", "[thisTrigger] call btc_ied_fnc_drone_fire;", ""];
 _trigger setVariable ["btc_ied_drone", _driver_drone];

@@ -30,6 +30,7 @@ roleArsenal = {
 	//Define the gear for each Role
     Private _DefaultGear = [
         //PRIMARY
+			"rhs_weap_M320",
        	 	"Louetta_416_10_3",
 			"Louetta_416_10_6",
 			"Louetta_416_14_3",
