@@ -29,24 +29,30 @@ _cats = [];
 _cats = _cats + _main_class;
 _level = 0;
 
+// note - TO ADJUST UNLOCK LEVELS
 //UNLOCK SYSTEM
 [] remoteExecCall ["tet_fortify_progress", [2]];
 for "_i" from (count _main_class) to 0 step -1 do {
     switch (_i) do {
         case 1: {
-            _level = 10;
+            //_level = 10;
+            _level = 0;
         };
         case 2: {
-            _level = 25;
+            //_level = 25;
+            _level = 0;
         };
         case 3: {
-            _level = 40;
+            //_level = 40;
+            _level = 0;
         };
         case 4: {
-            _level = 55;
+            //_level = 55;
+            _level = 0;
         };
         case 5: {
-            _level = 70;
+            //_level = 70;
+            _level = 0;
         };
         default {
             _level = 0;

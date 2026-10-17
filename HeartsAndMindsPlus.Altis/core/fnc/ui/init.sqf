@@ -28,7 +28,7 @@ params ["_player"];
 _UID = getplayeruid _player; 
 _NAME = name _player;
 _UIDARRAY = keys BTC_UID_array;
-_OUTPUT = [_name,"0:1:0:0:0:0:0:0:0:0:0:0"] joinstring ":";
+_OUTPUT = [_name,"1:1:0:0:0:0:0:0:0:0:1:1"] joinstring ":";
 _ALLKEYS = keys BTC_UID_array;   
 _KEYCOUNT = count _ALLKEYS;
 

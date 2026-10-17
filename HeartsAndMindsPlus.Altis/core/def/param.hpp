@@ -147,7 +147,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_FAC_ETYPE"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66};
         texts[]={"0 - Bohemia Interactive: CSAT (Side: EAST)","1 - Bohemia Interactive: FIA (Side: EAST)","2 - Enoch Bohemia Interactive: Spetsnaz (Side: EAST)","3 - Expansion Bohemia Interactive: CSAT (Pacific) (Side: EAST)","4 - Expansion Bohemia Interactive: Gendarmerie (Side: EAST)","5 - RHS Red Hammer Studios: Russia (VMF) (Side: EAST)","6 - RHS_AFRF Red Hammer Studios: Russia (MSV) (Side: EAST)","7 - RHS_AFRF Red Hammer Studios: Russia (RVA) (Side: EAST)","8 - RHS_AFRF Red Hammer Studios: Russia (TV) (Side: EAST)","9 - RHS_AFRF Red Hammer Studios: Russia (VDV) (Side: EAST)","10 - RHS_AFRF Red Hammer Studios: Russia (VPVO) (Side: EAST)","11 - RHS_AFRF Red Hammer Studios: Russia (VV) (Side: EAST)","12 - RHS_AFRF Red Hammer Studios: Russia (VVS - Camo) (Side: EAST)","13 - RHS_AFRF Red Hammer Studios: Russia (VVS - Grey) (Side: EAST)","14 - RHS_SAF RHS (A2 port): SAF (KOV) (Side: EAST)","15 - RHS_SAF RHS (A2 port): SAF (RVIPVO) (Side: EAST)","16 - RHSGREF Red Hammer Studios: Tanoan Liberation Army (Side: EAST)","17 - UK3CB_Factions www.3commandobrigade.com: 3CB AAF (Side: EAST)","18 - UK3CB_Factions www.3commandobrigade.com: 3CB African Desert Army (Side: EAST)","19 - UK3CB_Factions www.3commandobrigade.com: 3CB African Desert Army Paramilitary (Side: EAST)","20 - UK3CB_Factions www.3commandobrigade.com: 3CB African Desert Civilian Militia (Side: EAST)","21 - UK3CB_Factions www.3commandobrigade.com: 3CB African Desert Civilians (Side: EAST)","22 - UK3CB_Factions www.3commandobrigade.com: 3CB African Desert Extremists (Side: EAST)","23 - UK3CB_Factions www.3commandobrigade.com: 3CB African Desert Militia (Side: EAST)","24 - UK3CB_Factions www.3commandobrigade.com: 3CB African Desert National Police (Side: EAST)","25 - UK3CB_Factions www.3commandobrigade.com: 3CB Altis Police Department (Side: EAST)","26 - UK3CB_Factions www.3commandobrigade.com: 3CB Ardistan Army (Side: EAST)","27 - UK3CB_Factions www.3commandobrigade.com: 3CB ChDKZ (Chernarussian Movement of the Red Star) (Side: EAST)","28 - UK3CB_Factions www.3commandobrigade.com: 3CB ChDKZ Winter (Chernarussian Movement of the Red Star) (Side: EAST)","29 - UK3CB_Factions www.3commandobrigade.com: 3CB Chernarus Civilians (Side: EAST)","30 - UK3CB_Factions www.3commandobrigade.com: 3CB Chernarus Communist Militia (Side: EAST)","31 - UK3CB_Factions www.3commandobrigade.com: 3CB Chernarus Police Department (Side: EAST)","32 - UK3CB_Factions www.3commandobrigade.com: 3CB Cold War USSR - Early (Side: EAST)","33 - UK3CB_Factions www.3commandobrigade.com: 3CB Cold War USSR - Late (Side: EAST)","34 - UK3CB_Factions www.3commandobrigade.com: 3CB CSAT Africa (Side: EAST)","35 - UK3CB_Factions www.3commandobrigade.com: 3CB CSAT Europe (Side: EAST)","36 - UK3CB_Factions www.3commandobrigade.com: 3CB CSAT Mediterranean (Side: EAST)","37 - UK3CB_Factions www.3commandobrigade.com: 3CB CSAT Middle East (Side: EAST)","38 - UK3CB_Factions www.3commandobrigade.com: 3CB CSAT Navy (Pacific) (Side: EAST)","39 - UK3CB_Factions www.3commandobrigade.com: 3CB CSAT Navy (Side: EAST)","40 - UK3CB_Factions www.3commandobrigade.com: 3CB CSAT Pacific (Side: EAST)","41 - UK3CB_Factions www.3commandobrigade.com: 3CB CSAT Urban (Side: EAST)","42 - UK3CB_Factions www.3commandobrigade.com: 3CB CSAT Winter (Side: EAST)","43 - UK3CB_Factions www.3commandobrigade.com: 3CB FIA (Side: EAST)","44 - UK3CB_Factions www.3commandobrigade.com: 3CB Grozovia Armed Forces (Side: EAST)","45 - UK3CB_Factions www.3commandobrigade.com: 3CB ION Services - Desert (Side: EAST)","46 - UK3CB_Factions www.3commandobrigade.com: 3CB ION Services - Urban (Side: EAST)","47 - UK3CB_Factions www.3commandobrigade.com: 3CB ION Services - Winter (Side: EAST)","48 - UK3CB_Factions www.3commandobrigade.com: 3CB ION Services - Woodland (Side: EAST)","49 - UK3CB_Factions www.3commandobrigade.com: 3CB Karzeghistan Royal Guard (Side: EAST)","50 - UK3CB_Factions www.3commandobrigade.com: 3CB Kolgujev Defence Force (Side: EAST)","51 - UK3CB_Factions www.3commandobrigade.com: 3CB Livonia Defence Force (Side: EAST)","52 - UK3CB_Factions www.3commandobrigade.com: 3CB Livonia Forest Rangers (Side: EAST)","53 - UK3CB_Factions www.3commandobrigade.com: 3CB Livonia Separatist Militia (Side: EAST)","54 - UK3CB_Factions www.3commandobrigade.com: 3CB Livonian Nationalist Militia (Side: EAST)","55 - UK3CB_Factions www.3commandobrigade.com: 3CB Malden Defence Force (Side: EAST)","56 - UK3CB_Factions www.3commandobrigade.com: 3CB Middle East Civilians (Side: EAST)","57 - UK3CB_Factions www.3commandobrigade.com: 3CB Middle East Extremists (Side: EAST)","58 - UK3CB_Factions www.3commandobrigade.com: 3CB Middle East Insurgents (Side: EAST)","59 - UK3CB_Factions www.3commandobrigade.com: 3CB NAPA (The National Party) (Side: EAST)","60 - UK3CB_Factions www.3commandobrigade.com: 3CB NFA (Nogovan Freedom Alliance) (Side: EAST)","61 - UK3CB_Factions www.3commandobrigade.com: 3CB Nogova Police Department (Side: EAST)","62 - UK3CB_Factions www.3commandobrigade.com: 3CB Takistan Civilians (Side: EAST)","63 - UK3CB_Factions www.3commandobrigade.com: 3CB Takistan Insurgents (Side: EAST)","64 - UK3CB_Factions www.3commandobrigade.com: 3CB Takistan National Army (Side: EAST)","65 - UK3CB_Factions www.3commandobrigade.com: 3CB Takistan National Police (Side: EAST)","66 - UK3CB_Factions www.3commandobrigade.com: ChDKZ (Side: EAST)"};
-        default = 35;
+        default = 63;
     };
     class btc_p_AA { // Anti-Air infantry:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_FAC_EAA"]);
@@ -333,19 +333,19 @@ class Params {
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_BTC_HAM_PARAM_SKILL_AIMACC"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
-        default = 5;
+        default = 4;
     };
     class btc_p_set_skill_aimingShake { // Set skill, aimingShake
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_BTC_HAM_PARAM_SKILL_AIMSKILL"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
-        default = 6;
+        default = 5;
     };
     class btc_p_set_skill_aimingSpeed { // Set skill, aimingSpeed
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_BTC_HAM_PARAM_SKILL_AIMSPEED"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
-        default = 6;
+        default = 5;
     };
     class btc_p_set_skill_endurance { // Set skill, endurance
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_A3_VR_STAMINA"]);
@@ -369,7 +369,7 @@ class Params {
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_BTC_HAM_PARAM_SKILL_COURAGE"]);
         values[]={0,1,2,3,4,5,6,7,8,9,10};
         texts[]={"0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"};
-        default = 8;
+        default = 6;
     };
     class btc_p_set_skill_reloadSpeed { // Set skill, reloadSpeed
         title = __EVAL(format ["      %1, %2", localize "STR_A3_CFGVEHICLES_MODULESKILL_F_0", localize "STR_BTC_HAM_PARAM_SKILL_RELOAD"]);

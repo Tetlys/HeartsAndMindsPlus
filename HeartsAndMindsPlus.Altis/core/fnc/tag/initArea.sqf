@@ -79,7 +79,7 @@ for "_i" from 1 to _n do {
                     };
 
                     _letterPos set [2, 0];
-                    _array pushBack [_letterPos, [_v1, _v2], format ["\a3\ui_f\data\igui\cfg\simpletasks\letters\%1_ca.paa", _x], "UserTexture1m_F"];
+                    _array pushBack [_letterPos, [_v1, _v2], format ["\a3\ui_f\data\igui\cfg\simpletasks\letters\%1_ca.paa", _x], "ace_tagging_texture1m"];
                 } forEach (_word splitString "");
                 _sel_pos = _sel_pos getPos [1.4, _sel_dir + 90];
             } forEach _sentences;
