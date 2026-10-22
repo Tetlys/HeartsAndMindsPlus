@@ -45,4 +45,6 @@ if (_type in btc_log_def_can_load) then {
     [_obj, round ((sizeOf _type)*1.5)] call ace_cargo_fnc_setSpace;
 };
 
- 
+if (_type in btc_supplies_cargo) then {
+    [_obj] call tet_fortify_fill;
+};

@@ -55,7 +55,7 @@ _city setVariable ["active", true];
 
 // Added Player Scaling Variable
 private _CurrentPlayers = count allPlayers;
-private _PlayerScale = ((_CurrentPlayers * 0.06) max 1) min 4;
+private _PlayerScale = ((_CurrentPlayers * 0.1) max 1) min 2;
 
 private _data_units = _city getVariable ["data_units", []];
 private _data_animals = _city getVariable ["data_animals", []];

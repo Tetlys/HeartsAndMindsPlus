@@ -531,6 +531,7 @@ roleArsenal = {
       Private _RIFLEMAN = [
         //PRIMARY
 		"rhs_weap_hk416d10",
+		"rhs_weap_m4a1_carryhandle",
 		"rhs_weap_hk416d10_m320",
 		"rhs_weap_m16a4_imod",
 		"rhs_weap_m16a4_imod_M203",

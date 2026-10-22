@@ -217,6 +217,8 @@ if (isServer) then {
     };
     btc_cache_weapons_type = _weapons_usefull apply {(toLower getText (_x >> "model")) select [1]};
 
+    btc_type_sleepingbag_folded = _allClassSorted select {_x isKindOf "Land_Sleeping_bag_folded_F"};
+
     //Hideout classname
     btc_type_campfire = ["MetalBarrel_burning_F"] + (_allClassSorted select {_x isKindOf "Land_Campfire_F"});
     btc_type_Scrapyard = _allClassSorted select {
@@ -235,7 +237,7 @@ if (isServer) then {
 
     //Side
     btc_side_ID = 0;
-    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower",  "checkpoint", "hostage", "kill", "civtreatment", "EMP", "rescue", "hack", "removeRubbish"]; // REMOVED: , "convoy", "capture_officer"
+    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower",  "checkpoint", "hostage", "kill", "civtreatment", "EMP", "rescue", "hack", "removeRubbish","convoy", "capture_officer", "massacre"];
     if (btc_p_sea) then {btc_side_list append ["civtreatment_boat", "underwater_generator"]}; // On sea
     if (btc_p_chem) then {btc_side_list append ["chemicalLeak", "pandemic"]};
     btc_side_list_use = [];
@@ -304,7 +306,8 @@ if (isServer) then {
     btc_type_cargoEMP = _allClassSorted select {_x isKindOf "Cargo_EMP_base_F"};
     btc_type_antenna = _allClassSorted select {_x isKindOf "OmniDirectionalAntenna_01_base_F"};
     btc_type_solarPanel = _allClassSorted select {_x isKindOf "Land_SolarPanel_04_base_F"};
-
+    btc_type_sports = (_allClassSorted select {_x isKindOf "SportItems_base_F"}) select {"ball" in _x}; 
+    btc_type_bottles = (_allClassSorted select {_x isKindOf "Items_base_F"}) select {"Bottle" in _x and (not ("stack" in _x))};
     // The two arrays below are prefixes of buildings and their multiplier.
     // They will multiply the values of btc_rep_malus_building_destroyed and btc_rep_malus_building_damaged,
     // if a building is not present here it will be multiplied by 1.0.
@@ -371,7 +374,7 @@ if (isServer) then {
     });
     btc_type_ieds = _ieds - ["Land_Garbage_line_F","Land_Garbage_square3_F","Land_Garbage_square5_F", "Land_MarketShelter_F", "Land_ClothShelter_01_F", "Land_ClothShelter_02_F"];
     btc_model_ieds = btc_type_ieds apply {(toLower getText(_cfgVehicles >> _x >> "model")) select [1]};
-    btc_type_blacklist = btc_type_tags + btc_type_flowers + ["UserTexture1m_F"]; publicVariable "btc_type_blacklist";
+    btc_type_blacklist = btc_type_tags + btc_type_flowers + ["ace_tagging_texture1m"]; publicVariable "btc_type_blacklist";
 
     btc_groundWeaponHolder = [];
 

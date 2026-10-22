@@ -94,7 +94,16 @@ if (
         default {_marker setMarkerType "o_unknown";};
     });
 
+// OPTION A: Markers have to be investigated
     _marker setMarkerColor "ColorCIV";
+
+// OPTION B: Markers stay correct color
+    //if (_y getVariable ["occupied", false]) then { 
+    //    _marker setMarkerColor "colorOPFOR";  // CONFIG OBJ Colors - MAIN MARKERS
+    //} else {
+    //    _marker setMarkerColor "colorBLUFOR";  // CONFIG OBJ Colors - MAIN MARKERS
+    //};
+
     _marker setMarkerAlpha 0.5;
     _marker setMarkerSize [0.8,0.8];
     _y setVariable ["marker", _marker]; 

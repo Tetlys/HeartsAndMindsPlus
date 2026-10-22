@@ -3879,6 +3879,18 @@
                 <French>Recherchez et décontaminez ce civil. Suivez les gouttes de sang rouge et
                     utilisez votre détecteur chimique.</French>
             </Key>
+            <Key ID="STR_BTC_HAM_SIDE_MASSACRE_TITLE">
+                <Original>%1 massacre</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_MASSACRE_DESC">
+                <Original>Civilians were brutally killed in %1. They are requesting your help to move dead bodies in a grave next to a religious building. To locate killed civilians go to the subtask.</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_MASSACRE_C_TITLE">
+                <Original>%1</Original>
+            </Key>
+            <Key ID="STR_BTC_HAM_SIDE_MASSACRE_C_DESC">
+                <Original>Move this killed civilian next to a church and dig a grave.</Original>
+            </Key>
         </Container>
     </Package>
     <Package name="Actions">
