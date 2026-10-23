@@ -31,7 +31,8 @@ if (btc_debug || btc_debug_log) then {
 };
 
 _UID = getplayerUID _player;
-if !(isNil "_UID") then {["REP",_UID,nil,_reputation] call tet_ui_setdatascore;};
+if (_reputation == btc_rep_bonus_hideout ||_reputation == btc_rep_bonus_cache ) then {{_UID = getplayerUID _x; ["REP",_UID,nil,_reputation] call tet_ui_setdatascore;}foreach allplayers;} else {if !(isNil "_UID") then {["REP",_UID,nil,_reputation] call tet_ui_setdatascore;}};
+
 
 btc_global_reputation = btc_global_reputation + _reputation;
 

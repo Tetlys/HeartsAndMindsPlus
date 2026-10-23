@@ -237,7 +237,7 @@ if (isServer) then {
 
     //Side
     btc_side_ID = 0;
-    btc_side_list = ["supply", "mines", "vehicle", "get_city", "tower",  "checkpoint", "hostage", "kill", "civtreatment", "EMP", "rescue", "hack", "removeRubbish","convoy", "capture_officer", "massacre"];
+    btc_side_list = ["supply", "mines", "get_city", "tower",  "checkpoint", "hostage", "kill", "civtreatment", "EMP", "rescue", "hack", "removeRubbish","convoy", "capture_officer", "massacre"]; //, "vehicle"
     if (btc_p_sea) then {btc_side_list append ["civtreatment_boat", "underwater_generator"]}; // On sea
     if (btc_p_chem) then {btc_side_list append ["chemicalLeak", "pandemic"]};
     btc_side_list_use = [];
@@ -399,7 +399,7 @@ if (isServer) then {
 //Civ
 // Get all faction from mod there are currently running
 // copyToClipboard str (["CIV"] call btc_fnc_get_class);
-private _allfaction = ["CIV_F","DEFAULT","CIV_IDAP_F","CUP_C_CHERNARUS","CUP_C_SAHRANI","CUP_C_TK","CUP_C_RU"]; //All factions
+private _allfaction = ["CIV_F","DEFAULT","CIV_IDAP_F","UK3CB_ADC_C","UK3CB_CHC_C","UK3CB_MEC_C","UK3CB_TKC_C"]; //All factions
 _p_civ = _allfaction select _p_civ; //Select faction selected from mission parameter
 _p_civ_veh = _allfaction select _p_civ_veh; //Select faction selected from mission parameter
 private _allclasse = [[_p_civ]] call btc_civ_fnc_class; //Create classes from factions, you can combine factions from the SAME side : [[_p_civ, "btc_ac","LOP_TAK_CIV"]] call btc_civ_fnc_class.

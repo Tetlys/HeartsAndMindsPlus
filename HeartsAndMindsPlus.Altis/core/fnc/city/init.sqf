@@ -56,7 +56,7 @@ for "_id" from 0 to (count _locations - 1) do {
             } else {
                 _position = getPos (_church select 0);
             };
-        };
+        }; 
         private _name = getText(_current >> "name");
         private _cachingRadius = getNumber(_current >> "RadiusA") + getNumber(_current >> "RadiusB");
         _cachingRadius = (_cachingRadius max 160) min 800;
@@ -65,12 +65,14 @@ for "_id" from 0 to (count _locations - 1) do {
 
         
         //if you want a safe area
-        if ((getMarkerPos "btc_base") inArea [_position, 500, 500, 0, false]) exitWith {};
+        if ((getMarkerPos "btc_base") inArea [_position, 19500, 19500, 0, false]) exitWith {};
         
 
         [_position, _type, _name, _cachingRadius, false, _id] call btc_city_fnc_create;
     };
 };
+
+
 
 private _cities = values btc_city_all;
 [_cities, true] call CBA_fnc_shuffle;
@@ -82,7 +84,7 @@ private _numberOfCity = round ((count _cities) * _density_of_occupiedCity);
     };
 } forEach (_cities select [0, _numberOfCity]);
 
+
 if !(isNil "btc_custom_loc") then {
     {_x call btc_city_fnc_create;} forEach btc_custom_loc;
 };
-

@@ -50,6 +50,7 @@ if (
     publicVariable "btc_hideouts";
 
     [btc_rep_bonus_hideout, _instigator] call btc_rep_fnc_change;
+    //{[btc_rep_bonus_hideout, _x] call btc_rep_fnc_change;} foreach allplayers;
 
     private _id = _hideout getVariable "id";
     private _marker = createMarker [format ["btc_hideout_%1_destroyed", _id], getPos _hideout];

@@ -3620,7 +3620,7 @@
                 <Czech>Eliminovat %1</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_KILL_DESC">
-                <Original>Assassinate %1 in %2, then bring his dog tag to the base for
+                <Original>Assassinate %1, then bring his dog tag to the base for
                     identification. He is responsible for terrorizing the local population!</Original>
                 <German>Eliminieren Sie %1 in %2 und sichern Sie seine Hundemarke zur
                     Identifizierung. Er ist der Hauptverantwortliche für den Terror in der Region!</German>
@@ -3880,10 +3880,10 @@
                     utilisez votre détecteur chimique.</French>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_MASSACRE_TITLE">
-                <Original>%1 massacre</Original>
+                <Original>massacre</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_MASSACRE_DESC">
-                <Original>Civilians were brutally killed in %1. They are requesting your help to move dead bodies in a grave next to a religious building. To locate killed civilians go to the subtask.</Original>
+                <Original>Civilians were brutally killed in a neaby town. They are requesting your help to move dead bodies in a grave next to a religious building. To locate killed civilians go to the subtask.</Original>
             </Key>
             <Key ID="STR_BTC_HAM_SIDE_MASSACRE_C_TITLE">
                 <Original>%1</Original>
