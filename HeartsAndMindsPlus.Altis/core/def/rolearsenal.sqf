@@ -42,6 +42,8 @@ roleArsenal = {
 		"UK3CB_BHP",
 		"hgun_esd_01_F", 
 		"ACE_VMH3",
+		"UK3CB_P320_DES", 
+		"UK3CB_P320_BLK", 
         //HELM
 		"75th_opscore_b12",
 		"75th_opscore4_1",
@@ -232,6 +234,7 @@ roleArsenal = {
 		"rhsusf_acc_anpeq15side_bk",
 		"rhsusf_acc_anpeq15",
 		"rhsusf_acc_anpeq15_bk",
+		"ACE_SPIR",
 		//MUZZLE
 		"rhsusf_acc_omega9k",
 		"rhs_acc_dtk3",
@@ -313,6 +316,7 @@ roleArsenal = {
 		"rhs_mag_m576",
 		"rhsusf_8Rnd_Slug",
 		"rhsusf_8Rnd_00Buck",
+		"UK3CB_P320_9x19_17Rnd",
 		//GRENADES
 		"rhs_mag_an_m14_th3",
 		"SmokeShell",
@@ -509,6 +513,15 @@ roleArsenal = {
 		"rhsusf_20Rnd_762x51_SR25_m62_Mag",
 		"rhsusf_20Rnd_762x51_SR25_m993_Mag",
 		"rhsusf_20Rnd_762x51_SR25_mk316_special_Mag",
+		"rhs_weap_m4a1_carryhandle_m203S", 
+		"rhs_weap_m4a1_m203s_d", 
+		"rhs_weap_m4a1_m203s", 
+		"rhs_weap_m4a1_m320", 
+		"rhs_weap_m4a1_m203s_wd", 
+		"rhs_weap_m4a1_carryhandle_mstock",
+		"rhs_weap_m4a1", 
+		"rhs_weap_m4a1_d", 
+		"rhs_weap_m4a1_wd", 
 		//SECONDARY
 		"rhs_weap_M320",
 		 //LAUNCHER
@@ -555,6 +568,15 @@ roleArsenal = {
 		"rhsusf_20Rnd_762x51_SR25_m62_Mag",
 		"rhsusf_20Rnd_762x51_SR25_m993_Mag",
 		"rhsusf_20Rnd_762x51_SR25_mk316_special_Mag",
+		"rhs_weap_m4a1_carryhandle_m203S", 
+		"rhs_weap_m4a1_m203s_d", 
+		"rhs_weap_m4a1_m203s", 
+		"rhs_weap_m4a1_m320", 
+		"rhs_weap_m4a1_m203s_wd", 
+		"rhs_weap_m4a1_carryhandle_mstock",
+		"rhs_weap_m4a1", 
+		"rhs_weap_m4a1_d", 
+		"rhs_weap_m4a1_wd", 
 		//SECONDARY
 		"rhs_weap_M320",
 		//LAUNCHER
@@ -617,6 +639,10 @@ roleArsenal = {
 		"75th_Ranger_URGI_5",
 		"75th_Ranger_URGI_3",
 		"75th_Ranger_FSP_2",
+		"rhs_weap_m4a1_carryhandle_mstock", 
+		"rhs_weap_m4a1", 
+		"rhs_weap_m4a1_d", 
+		"rhs_weap_m4a1_wd", 
 		//VEST
 		"rhsusf_weap_MP7A2",
 		"rhsusf_weap_MP7A2_desert",
@@ -681,6 +707,15 @@ roleArsenal = {
 		"75th_Ranger_URGI_3",
 		"75th_Ranger_FSP_2",
 		"avm224_W_M224_mortar_carry",
+		"rhs_weap_m4a1_carryhandle_m203S", 
+		"rhs_weap_m4a1_m203s_d", 
+		"rhs_weap_m4a1_m203s", 
+		"rhs_weap_m4a1_m320", 
+		"rhs_weap_m4a1_m203s_wd", 
+		"rhs_weap_m4a1_carryhandle_mstock",
+		"rhs_weap_m4a1", 
+		"rhs_weap_m4a1_d", 
+		"rhs_weap_m4a1_wd", 
 		//SECONDARY
 		"rhs_weap_M320",
 		 //LAUNCHER
@@ -714,6 +749,7 @@ roleArsenal = {
 		"75th_Ranger_URGI_5",
 		"75th_Ranger_URGI_3",
 		"75th_Ranger_FSP_2",
+		"rhs_weap_m4a1",
         //HELM
 		"H_CrewHelmetHeli_B",
 		"H_PilotHelmetHeli_B",
