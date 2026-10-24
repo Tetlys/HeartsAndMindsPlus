@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={761.1535,199.49638,12863.602};
-		dir[]={-0.87295574,-0.35717085,0.33256924};
-		up[]={-0.3338891,0.9339813,0.12720098};
-		aside[]={0.35604438,1.5093246e-07,0.93458867};
+		pos[]={790.59741,285.08331,13047.365};
+		dir[]={-0.63202018,-0.58413774,-0.50925213};
+		up[]={-0.45485649,0.81165379,-0.36650231};
+		aside[]={-0.62742358,-6.359187e-08,0.77868032};
 	};
 };
 binarizationWanted=0;
@@ -437,10 +437,15 @@ dlcs[]=
 randomSeed=59864;
 class ScenarioData
 {
-	author="Kuze";
+	author="Tetlys";
+	overViewPicture="1.paa";
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
+	class Header
+	{
+		gameType="Coop";
+	};
 	wreckRemovalMaxTime=3600;
 };
 class CustomAttributes
@@ -8871,6 +8876,7 @@ class Mission
 {
 	class Intel
 	{
+		briefingName="Hearts & Minds Plus";
 		timeOfChanges=1800.0002;
 		startWeather=0.25;
 		startWind=0.1;
@@ -10782,7 +10788,7 @@ class Mission
 				};
 			};
 			id=0;
-			atlOffset=-77.796249;
+			atlOffset=0.33628845;
 		};
 		class Item1
 		{
@@ -22784,7 +22790,7 @@ class Mission
 				};
 			};
 			id=1793;
-			atlOffset=-77.912582;
+			atlOffset=-9.1552734e-05;
 		};
 	};
 };
