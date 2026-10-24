@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=593;
+		nextID=641;
 	};
 	class Camera
 	{
-		pos[]={686.10638,155.83925,12893.063};
-		dir[]={-0.84005058,-0.24990803,0.48165783};
-		up[]={-0.21687524,0.96824473,0.1243494};
-		aside[]={0.49743932,6.211194e-07,0.86758214};
+		pos[]={761.1535,199.49638,12863.602};
+		dir[]={-0.87295574,-0.35717085,0.33256924};
+		up[]={-0.3338891,0.9339813,0.12720098};
+		aside[]={0.35604438,1.5093246e-07,0.93458867};
 	};
 };
 binarizationWanted=0;
@@ -8890,14 +8890,14 @@ class Mission
 	};
 	class Entities
 	{
-		items=22;
+		items=12;
 		class Item0
 		{
 			dataType="Layer";
 			name="BASE ASSETS";
 			class Entities
 			{
-				items=6;
+				items=5;
 				class Item0
 				{
 					dataType="Layer";
@@ -10780,67 +10780,11 @@ class Mission
 					id=38;
 					atlOffset=0.0026092529;
 				};
-				class Item5
-				{
-					dataType="Layer";
-					name="Players";
-					id=43;
-					atlOffset=-142.75999;
-				};
 			};
 			id=0;
 			atlOffset=-77.796249;
 		};
 		class Item1
-		{
-			dataType="Layer";
-			name="TANOA HNM PRESET VIRGIN";
-			id=180;
-			atlOffset=-142.75999;
-		};
-		class Item2
-		{
-			dataType="Layer";
-			name="FOB EDEN";
-			id=329;
-			atlOffset=-142.75999;
-		};
-		class Item3
-		{
-			dataType="Layer";
-			name="AdditionalStuff";
-			id=388;
-			atlOffset=-142.75999;
-		};
-		class Item4
-		{
-			dataType="Layer";
-			name="Hearts Core";
-			id=479;
-			atlOffset=-142.75999;
-		};
-		class Item5
-		{
-			dataType="Layer";
-			name="MainCompFEB2022";
-			id=622;
-			atlOffset=-142.75999;
-		};
-		class Item6
-		{
-			dataType="Layer";
-			name="NEWMAPMAKERSHIT";
-			id=633;
-			atlOffset=-142.75999;
-		};
-		class Item7
-		{
-			dataType="Layer";
-			name="JAN22MapCompHnM";
-			id=1002;
-			atlOffset=-142.75999;
-		};
-		class Item8
 		{
 			dataType="Group";
 			side="West";
@@ -19511,7 +19455,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item9
+		class Item2
 		{
 			dataType="Group";
 			side="West";
@@ -20083,7 +20027,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item10
+		class Item3
 		{
 			dataType="Layer";
 			name="FOB START";
@@ -20145,14 +20089,7 @@ class Mission
 			id=1290;
 			atlOffset=0.0078887939;
 		};
-		class Item11
-		{
-			dataType="Layer";
-			name="VEHICLES";
-			id=1343;
-			atlOffset=-142.75999;
-		};
-		class Item12
+		class Item4
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20188,7 +20125,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item13
+		class Item5
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20223,7 +20160,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item14
+		class Item6
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20258,7 +20195,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item15
+		class Item7
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20293,14 +20230,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item16
-		{
-			dataType="Layer";
-			name="Team Map Intel";
-			id=1591;
-			atlOffset=-142.75999;
-		};
-		class Item17
+		class Item8
 		{
 			dataType="Object";
 			class PositionInfo
@@ -20335,7 +20265,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item18
+		class Item9
 		{
 			dataType="Layer";
 			name="FOB EDEN";
@@ -22591,12 +22521,12 @@ class Mission
 			id=1767;
 			atlOffset=0.0082397461;
 		};
-		class Item19
+		class Item10
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={675.46466,135.78409,12915.433};
+				position[]={675.46503,135.78409,12915.433};
 				angles[]={0,1.3459979,0};
 			};
 			areaSize[]={90,0,90};
@@ -22635,13 +22565,13 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item20
+		class Item11
 		{
 			dataType="Layer";
 			name="SIGNS";
 			class Entities
 			{
-				items=2;
+				items=1;
 				class Item0
 				{
 					dataType="Layer";
@@ -22655,7 +22585,7 @@ class Mission
 							name="HQ Assets_1";
 							class Entities
 							{
-								items=3;
+								items=4;
 								class Item0
 								{
 									dataType="Object";
@@ -22797,29 +22727,7 @@ class Mission
 										nAttributes=2;
 									};
 								};
-							};
-							id=1786;
-							atlOffset=0.0038146973;
-						};
-					};
-					id=1785;
-					atlOffset=0.0038146973;
-				};
-				class Item1
-				{
-					dataType="Layer";
-					name="JAN22MapCompHnM_4";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Layer";
-							name="HQ Assets_3";
-							class Entities
-							{
-								items=1;
-								class Item0
+								class Item3
 								{
 									dataType="Object";
 									class PositionInfo
@@ -22867,21 +22775,16 @@ class Mission
 									};
 								};
 							};
-							id=1791;
+							id=1786;
+							atlOffset=-9.1552734e-05;
 						};
 					};
-					id=1790;
+					id=1785;
+					atlOffset=-9.1552734e-05;
 				};
 			};
 			id=1793;
-			atlOffset=-9.1552734e-05;
-		};
-		class Item21
-		{
-			dataType="Layer";
-			name="FOB START";
-			id=2074;
-			atlOffset=-142.75999;
+			atlOffset=-77.912582;
 		};
 	};
 };
