@@ -70,12 +70,6 @@ private _delay = [_group, _veh_type, [selectRandom btc_civ_type_units], _safe_po
 [{
     _this call btc_patrol_fnc_init;
     (_this select 0) setVariable ["acex_headless_blacklist", false];
-    // VBIED Chance
-    private _r = random 5;
-    if (_r <1) then {
-    _currentDriver = driver _this;
-    [_currentDriver] call btc_ied_fnc_suiciderLoop;
-    };
 }, [_group, [_start_city, _active_city], _area, _pos_isWater], _delay] call btc_delay_fnc_waitAndExecute;
 
 true
