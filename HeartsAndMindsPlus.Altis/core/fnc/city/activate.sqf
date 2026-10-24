@@ -90,7 +90,7 @@ if (!(_city getVariable ["initialized", false])) then {
         case "NameMarine" : {0};
         case "VegetationVineyard" : {2};
         case "Strategic" : {3};
-        default {0};
+        default {1};
     });
 
     if (_has_en) then {
@@ -135,7 +135,7 @@ if (_data_units isNotEqualTo []) then {
         case "NameMarine" : {5}; 
         case "VegetationVineyard" : {10};
         case "Strategic" : {16};
-        default {0};
+        default {10};
     });
 
     if (_has_en) then {
@@ -166,7 +166,7 @@ if (_data_units isNotEqualTo []) then {
                 case "Airport" : {6};
                 case "VegetationVineyard" : {3};
                 case "Strategic" : {6};
-                default {0};
+                default {3};
             });
             [_housesEntrerable+_housesNotEntrerable, round (_p_mil_static_group_ratio * _numberOfStatic * _PlayerScale), _city] call btc_mil_fnc_create_staticOnRoof;
         };
