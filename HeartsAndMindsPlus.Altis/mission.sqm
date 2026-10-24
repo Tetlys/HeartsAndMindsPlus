@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={706.60291,180.53088,12937.278};
-		dir[]={-0.63486487,-0.59207225,-0.49642241};
-		up[]={-0.4664278,0.80587339,-0.36471453};
-		aside[]={-0.61599141,1.8626451e-07,0.78777856};
+		pos[]={632.29602,172.28926,12888.288};
+		dir[]={0.82297665,-0.56484872,-0.060691118};
+		up[]={0.56332248,0.82519484,-0.041542728};
+		aside[]={-0.073547073,-9.3874405e-08,-0.99730873};
 	};
 };
 binarizationWanted=0;
@@ -437,7 +437,7 @@ dlcs[]=
 randomSeed=59864;
 class ScenarioData
 {
-	author="Kuze";
+	author="Tetlys";
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
@@ -8871,6 +8871,7 @@ class Mission
 {
 	class Intel
 	{
+		briefingName="Hearts & Minds Plus";
 		timeOfChanges=1800.0002;
 		startWeather=0.25;
 		startWind=0.1;
