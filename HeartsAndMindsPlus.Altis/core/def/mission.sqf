@@ -480,23 +480,21 @@ btc_player_type = ["SoldierWB", "SoldierEB", "SoldierGB"] select ([west, east, i
 
 _Tier0Array = [
     ["UK3CB_B_M1030_NATO", 80],
-    ["B_Quadbike_01_F", 100],
     ["rhsusf_mrzr4_d", 200],
     ["UK3CB_C_V3S_Recovery", 250],
     ["C_Offroad_01_F", 500],
     ["UK3CB_C_LandRover_Open", 500],
     ["UK3CB_C_LandRover_Closed", 500],
-    ["UK3CB_TKA_B_Hilux_Ambulance", 800],
-    ["UK3CB_ION_B_Woodland_Transit_Medevac", 1000]
-    
+    ["UK3CB_CW_US_B_EARLY_M151_JEEP_HMG", 600],
+    ["rhsusf_m1151_m240_v2_usarmy_wd", 750],
+    ["UK3CB_TKA_B_Hilux_Ambulance", 800]
 ];
 
 _Tier1Array = [
-    ["rhsusf_m1151_m240_v2_usarmy_wd", 800],
     ["UK3CB_B_M939_Recovery_WDL", 800],
     ["rhsusf_m1151_m2_v2_usarmy_wd", 1000],
     ["rhsusf_M1078A1R_SOV_M2_D_fmtv_socom", 1000],
-    ["rhsusf_m966_w", 1200],
+    ["rhsusf_m1151_mk19_v3_usmc_wd", 1000],
     ["rhsusf_M1084A1P2_B_WD_fmtv_usarmy", 1200],
     ["rhsusf_m1165a1_gmv_m2_m240_socom_d", 1500],
     ["rhsusf_m113_usarmy_medical", 1500],
@@ -506,40 +504,40 @@ _Tier1Array = [
 ];
 
 _Tier2Array = [
-    ["rhsusf_M1117_W", 2000],
     ["rhsusf_M1238A1_socom_d", 2500],
     ["rhsusf_M1220_usarmy_wd", 2800],
     ["RHS_M119_WD", 3000],
     ["rhsusf_stryker_m1126_m2_wd", 3000],
     ["rhsusf_m1240a1_usarmy_wd", 3000],
+    ["UK3CB_B_MaxxPro_M2_US_W", 3000],
+    ["rhsusf_m1240a1_m240_usarmy_wd", 3800],
     ["RHS_MELB_MH6M", 5000],
-    ["UK3CB_B_T28Trojan_HIDF_CAS", 6000],
-    ["RHSGREF_A29B_HIDF", 6000]
+    ["UK3CB_B_T28Trojan_HIDF_CAS", 6000]
 ];
 
 _Tier3Array = [
-    ["rhsusf_m1240a1_m240_usarmy_wd", 3800],
     ["rhsusf_M1220_M2_usarmy_wd", 4000],
     ["rhsusf_m1240a1_m2_uik_usarmy_wd", 4500],
-    ["UK3CB_B_AAV_US_WDL", 5000],
+    ["rhsusf_m1240a1_mk19_uik_usarmy_wd", 5000],
     ["UK3CB_B_LAV25_US_WDL", 6000],
+    ["RHS_CH_47F", 8000],
     ["RHS_UH60M", 7000],
     ["RHS_UH60M_MEV2", 8000],
     ["RHS_C130J", 8000],
     ["UK3CB_B_AC47_HIDF", 8500],
-    ["UK3CB_LDF_B_L39_PYLON", 10000]
+    ["UK3CB_LDF_B_L39_PYLON", 12000]
 ];
 
 _Tier4Array = [
     ["rhsusf_m1245_m2crows_socom_d", 6000],
     ["rhsusf_M1238A1_M2_socom_d", 6000],
-    ["RHS_CH_47F", 8000],
     ["rhsusf_CH53E_USMC_GAU21", 9000],
     ["RHS_MELB_AH6M", 10000],
     ["B_UGV_01_rcws_F", 12000],
     ["RHS_M2A3_wd", 13000],
     ["rhsusf_m109_usarmy", 15000],
-    ["B_UAV_05_F", 15000]
+    ["B_UAV_05_F", 15000],
+    ["UK3CB_CW_US_B_LATE_AH1Z", 18000]
 ];
 
 _Tier5Array = [

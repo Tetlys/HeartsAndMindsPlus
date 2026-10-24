@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=545;
+		nextID=593;
 	};
 	class Camera
 	{
-		pos[]={654.90332,173.81392,12821.511};
-		dir[]={0.15267642,-0.71193177,0.68559259};
-		up[]={0.15475984,0.70217472,0.69495624};
-		aside[]={0.97619152,8.5955253e-07,-0.21739377};
+		pos[]={686.10638,155.83925,12893.063};
+		dir[]={-0.84005058,-0.24990803,0.48165783};
+		up[]={-0.21687524,0.96824473,0.1243494};
+		aside[]={0.49743932,6.211194e-07,0.86758214};
 	};
 };
 binarizationWanted=0;
@@ -10596,14 +10596,13 @@ class Mission
 						class Item0
 						{
 							dataType="Marker";
-							position[]={664.21747,135.78912,12880.361};
+							position[]={647.78845,139.72353,12894.653};
 							name="btc_base";
 							text="HQ";
 							type="Faction_NATO_EP1";
 							b=0.69999999;
-							angle=358.49805;
 							id=35;
-							atlOffset=0.0002746582;
+							atlOffset=0.78050232;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -10634,7 +10633,7 @@ class Mission
 						class Item2
 						{
 							dataType="Marker";
-							position[]={664.06482,135.78905,12880.217};
+							position[]={664.05157,135.78908,12880.186};
 							name="btc_log_point";
 							type="Empty";
 							alpha=0.42799053;
@@ -10662,7 +10661,7 @@ class Mission
 						};
 					};
 					id=34;
-					atlOffset=0.018234253;
+					atlOffset=0.37301636;
 				};
 				class Item4
 				{
@@ -10790,7 +10789,7 @@ class Mission
 				};
 			};
 			id=0;
-			atlOffset=-77.904747;
+			atlOffset=-77.796249;
 		};
 		class Item1
 		{
@@ -19524,7 +19523,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={643.36334,135.8736,12918.082};
+						position[]={643.47595,135.87303,12918.219};
 						angles[]={0,1.0442623,0};
 					};
 					side="West";
