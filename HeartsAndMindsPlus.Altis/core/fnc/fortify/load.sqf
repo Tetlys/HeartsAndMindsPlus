@@ -36,7 +36,7 @@ for "_i" from (count _main_class) to 0 step -1 do {
     switch (_i) do {
         case 1: {
             //_level = 10;
-            _level = 0;
+            _level = 10;
         };
         case 2: {
             //_level = 25;
