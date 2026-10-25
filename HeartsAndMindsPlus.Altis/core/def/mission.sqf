@@ -857,7 +857,7 @@ btc_rep_malus_player_respawn = - 3; // LOW
 btc_rep_malus_building_damaged = - 10; // LOW
 btc_rep_malus_building_destroyed = - 50; // HIGH
 btc_rep_malus_foodRemove = - btc_rep_bonus_foodGive; // WAI
-btc_rep_malus_breakDoor = - 2; // WAI
+btc_rep_malus_breakDoor = - 0; // WAI
 btc_rep_malus_wheelChange = 0; // DISABLED
 btc_rep_malus_mil_killed = - 15;
 
