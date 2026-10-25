@@ -479,12 +479,14 @@ btc_player_type = ["SoldierWB", "SoldierEB", "SoldierGB"] select ([west, east, i
 // Setup each vehicle with price into tiers here.
 
 _Tier0Array = [
+    ["rhsgref_hidf_canoe", 50],
     ["UK3CB_B_M1030_NATO", 80],
     ["rhsusf_mrzr4_d", 200],
     ["UK3CB_C_V3S_Recovery", 250],
     ["C_Offroad_01_F", 500],
     ["UK3CB_C_LandRover_Open", 500],
     ["UK3CB_C_LandRover_Closed", 500],
+    ["B_T_Boat_Transport_01_F", 500],
     ["UK3CB_CW_US_B_EARLY_M151_JEEP_HMG", 600],
     ["rhsusf_m1151_m240_v2_usarmy_wd", 750],
     ["UK3CB_TKA_B_Hilux_Ambulance", 800]
@@ -495,6 +497,7 @@ _Tier1Array = [
     ["rhsusf_m1151_m2_v2_usarmy_wd", 1000],
     ["rhsusf_M1078A1R_SOV_M2_D_fmtv_socom", 1000],
     ["rhsusf_m1151_mk19_v3_usmc_wd", 1000],
+    ["UK3CB_MDF_B_Skiff", 1000],
     ["rhsusf_M1084A1P2_B_WD_fmtv_usarmy", 1200],
     ["rhsusf_m1165a1_gmv_m2_m240_socom_d", 1500],
     ["rhsusf_m113_usarmy_medical", 1500],
@@ -511,6 +514,7 @@ _Tier2Array = [
     ["rhsusf_m1240a1_usarmy_wd", 3000],
     ["UK3CB_B_MaxxPro_M2_US_W", 3000],
     ["rhsusf_m1240a1_m240_usarmy_wd", 3800],
+    ["rhsusf_mkvsoc", 4500],
     ["RHS_MELB_MH6M", 5000],
     ["UK3CB_B_T28Trojan_HIDF_CAS", 6000]
 ];
