@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=542;
+		nextID=566;
 	};
 	class Camera
 	{
-		pos[]={15530.196,46.535309,6895.1138};
-		dir[]={-0.83895695,-0.38932216,-0.38047639};
-		up[]={-0.35468856,0.92103261,-0.16085601};
-		aside[]={-0.41305852,-1.0061194e-06,0.91080445};
+		pos[]={15483.888,59.385666,6797.457};
+		dir[]={0.32765639,-0.43408835,0.83919853};
+		up[]={0.15787955,0.90086955,0.4043642};
+		aside[]={0.93153536,-3.8510188e-07,-0.36370686};
 	};
 };
 binarizationWanted=0;
@@ -10161,7 +10161,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={15458.197,15.746988,6851.1094};
-								angles[]={-0,3.9261739,0};
+								angles[]={0,3.9261739,0};
 							};
 							side="Empty";
 							flags=4;
@@ -10205,7 +10205,7 @@ class Mission
 						};
 					};
 					id=1;
-					atlOffset=5.8835306;
+					atlOffset=5.9168167;
 				};
 				class Item1
 				{
@@ -10257,13 +10257,12 @@ class Mission
 						class Item0
 						{
 							dataType="Marker";
-							position[]={15483.157,22.962,6856.5269};
+							position[]={15494.221,3.806689,6835.5122};
 							name="btc_base";
 							text="HQ";
 							type="Faction_NATO_EP1";
 							b=0.69999999;
 							id=35;
-							atlOffset=19.479818;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -10305,7 +10304,7 @@ class Mission
 						};
 					};
 					id=34;
-					atlOffset=4.9401169;
+					atlOffset=0.12136269;
 				};
 				class Item4
 				{
@@ -10426,7 +10425,7 @@ class Mission
 				};
 			};
 			id=0;
-			atlOffset=1.9248188;
+			atlOffset=0.66917229;
 		};
 		class Item1
 		{
@@ -19769,7 +19768,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15417.292,19.907045,6870.5845};
-				angles[]={0,0.76614922,-0};
+				angles[]={0,0.76614922,0};
 			};
 			side="Empty";
 			flags=5;
@@ -19780,6 +19779,7 @@ class Mission
 			};
 			id=1586;
 			type="TFAR_Land_Communication_F";
+			atlOffset=7.1525574e-07;
 			class CustomAttributes
 			{
 				class Attribute0

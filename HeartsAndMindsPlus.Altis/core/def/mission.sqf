@@ -845,6 +845,7 @@ btc_rep_bonus_removeTag = 5; // WAI
 btc_rep_bonus_removeTagLetter = 2; // WAI
 btc_rep_bonus_foodGive = 5; // WAI
 btc_rep_bonus_vehicle = 0; // WAI
+btc_rep_bonus_grave = 5;
 
 btc_rep_malus_veh_killed = 0; // DISABLE
 btc_rep_malus_civ_hd = 0 ; // DISABLE
