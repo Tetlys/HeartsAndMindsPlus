@@ -26,8 +26,7 @@ Author:
 params [
     ["_group", grpNull, [grpNull]],
     ["_active_city", objNull, [objNull]],
-    ["_area", btc_patrol_area, [0]],
-    ["_p_chem", btc_p_chem, [false]]
+    ["_area", btc_patrol_area, [0]]
 ];
 
 if (isNil "btc_civilian_id") then {btc_civilian_id = -1;};
@@ -51,7 +50,7 @@ _roads = _roads select {isOnRoad _x};
 if (_roads isEqualTo []) then {
     _safe_pos = [_pos, 0, 500, 13, [0,1] select btc_p_sea, 60 * (pi / 180), 0] call BIS_fnc_findSafePos;
     _safe_pos = [_safe_pos select 0, _safe_pos select 1, 0];
-    _pos_isWater = surfaceIsWater _safe_pos;
+    _pos_isWater = (surfaceIsWater _safe_pos) && {getTerrainHeightASL _safe_pos < -2};
     if (_pos_isWater) then {
         _veh_type = selectRandom btc_civ_type_boats;
     } else {

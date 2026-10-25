@@ -48,7 +48,7 @@ private _heli_type = selectRandom ((btc_fortify_vehicles) select { // btc_vehicl
 private _heli = createVehicle [_heli_type, _pos, [], 0, "NONE"];
 _heli setVariable ["btc_dont_delete", true];
 _heli setVariable ["ace_cookoff_enableAmmoCookoff", false, true];
-_heli setDamage 1;
+_heli setDamage [1, false];
 _heli enableSimulation false;
 _heli setPos [getPosASL _heli select 0, getPosASL _heli select 1, 0 - 1.5];
 private _pitch = if (random 1 > 0.5) then {
