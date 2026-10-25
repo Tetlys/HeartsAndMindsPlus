@@ -390,10 +390,10 @@ if (isServer) then {
     btc_slots_serialized = createHashMap;
 
     //Delay
-    btc_delay_agent = 0.1;
-    btc_delay_unit = 0.2;
-    btc_delay_vehicle = 0.3;
-    btc_delay_exec = 0.1;
+    btc_delay_agent = 0.2;
+    btc_delay_unit = 0.3;
+    btc_delay_vehicle = 0.4;
+    btc_delay_exec = 0.2;
 };
 
 //Civ
