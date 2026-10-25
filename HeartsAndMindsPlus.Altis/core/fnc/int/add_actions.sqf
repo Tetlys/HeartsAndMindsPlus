@@ -316,6 +316,21 @@ _action = ["set_night", localize "STR_BTC_HAM_ACTION_SET_NIGHT", "\A3\Ui_f\data\
 _action = ["set_weather", localize "STR_BTC_HAM_ACTION_CHANGE_WEATHER", "a3\3den\data\attributes\slidertimeday\sun_ca.paa", {[] remoteExecCall ["btc_fnc_changeWeather", 2]}, {btc_p_change_weather}] call ace_interact_menu_fnc_createAction; //&& player getVariable ["side_mission", false]
 [btc_gear_object, 0, ["ACE_MainActions","env_menu"], _action] call ace_interact_menu_fnc_addActionToObject;
 
+//Trade Tags For Rep
+_action = ["trade", "Trade Dog Tags", "\A3\ui_f\data\igui\cfg\simpleTasks\letters\T_ca.paa", {
+    private _tags = (items _player) select {(toLowerANSI _x) find "ace_dogtag" isEqualTo 0};
+    private _count = count _tags;
+    if (_count isEqualTo 0) exitWith {
+        ("You have no dog tags to turn in.") call CBA_fnc_notify;
+    };
+    {
+        _player removeItem _x;
+    } forEach _tags;
+    [_count * 0.1, _player] remoteExecCall ["btc_rep_fnc_change", 2];
+   (format ["Turned in %1 dog tags (+%2 reputation)", _count, _count * 0.1]) call CBA_fnc_notify;
+}, {true}] call ace_interact_menu_fnc_createAction;
+[btc_gear_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
 //Additional Loading
 {
   private _action = [
