@@ -1,5 +1,14 @@
 /////////////////////SERVER\\\\\\\\\\\\\\\\\\\\\
 if (isServer) then {
+   
+   // VBEID - Vehicle-Borne Explosive Device
+    btc_vbeid_fnc_create = compileScript ["core\fnc\vbeid\create.sqf"];
+    btc_vbeid_fnc_activate = compileScript ["core\fnc\vbeid\activate.sqf"];
+    btc_vbeid_fnc_monitor = compileScript ["core\fnc\vbeid\monitor.sqf"];
+    btc_vbeid_fnc_detonate = compileScript ["core\fnc\vbeid\detonate.sqf"];
+    btc_flag_fnc_randomFlagVehicle = compileScript ["core\fnc\vbeid\randomFlagVehicle.sqf"];
+    btc_vbeid_fnc_spawner = compileScript ["core\fnc\vbeid\spawner.sqf"];
+
     //BODY
     btc_body_fnc_bagRecover_s = compileScript ["core\fnc\body\bagRecover_s.sqf"];
     btc_body_fnc_createMarker = compileScript ["core\fnc\body\createMarker.sqf"];
