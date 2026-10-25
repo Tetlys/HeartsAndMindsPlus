@@ -326,8 +326,8 @@ _action = ["trade", "Trade Dog Tags", "\A3\ui_f\data\igui\cfg\simpleTasks\letter
     {
         _player removeItem _x;
     } forEach _tags;
-    [_count * 0.1, _player] remoteExecCall ["btc_rep_fnc_change", 2];
-   (format ["Turned in %1 dog tags (+%2 reputation)", _count, _count * 0.1]) call CBA_fnc_notify;
+    [_count * 0.2, _player] remoteExecCall ["btc_rep_fnc_change", 2];
+   (format ["Turned in %1 dog tags (+%2 reputation)", _count, _count * 0.2]) call CBA_fnc_notify;
 }, {true}] call ace_interact_menu_fnc_createAction;
 [btc_gear_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 

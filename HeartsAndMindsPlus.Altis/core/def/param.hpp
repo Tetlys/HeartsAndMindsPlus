@@ -291,7 +291,7 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_CACHE_DISTANCE"]);
         values[]={500,1000,1500,2000,2500,3000,3500,4000,5000};
         texts[]={"500 m","1000 m","1500 m","2000 m","2500 m","3000 m","3500 m","4000 m","5000 m"};
-        default = 500;
+        default = 1000;
     };
     class btc_p_cache_info_ratio { //Cache info ratio:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_PARAM_CACHE_RATIO"]);
