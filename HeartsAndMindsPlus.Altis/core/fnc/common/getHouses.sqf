@@ -35,6 +35,8 @@ private _notEnterable = [];
     if ((_x buildingPos -1) isEqualTo []) then {
         if (
             _x isKindOf "Lamps_base_F" ||
+            {_x isKindOf "CampEast_EP1"} ||
+            {_x isKindOf "Camp_EP1"} ||
             {_x isKindOf "PowerLines_Small_base_F"} ||
             {_x isKindOf "PowerLines_Wires_base_F"} ||
             {_x isKindOf "Wall"} ||

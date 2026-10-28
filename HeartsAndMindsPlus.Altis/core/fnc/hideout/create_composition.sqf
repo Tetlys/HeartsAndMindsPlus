@@ -29,6 +29,16 @@ private _type_bigbox = selectRandom ["Box_FIA_Ammo_F", "C_supplyCrate_F", "Box_E
 private _power = selectRandom btc_type_power;
 
 private _composition_hideout = [
+["BTR90_HQ_unfolded",180,[2.00195,1.45358,-0.204549]],
+["Land_Radar",330,[-3.41797,5.64545,-0.204549]],
+["Land_fort_artillery_nest",180,[1.2168,-6.95047,-0.204549]],
+[selectRandom btc_type_bigbox,13.1468,[-0.462891,-8.49118,-0.204549]],
+[_type_bigbox,325.543,[2.39453,-8.41666,-0.204549]],
+[_power,135,[-3.41797,8.39539,-0.204549]],
+["FxWindPollen1",162.795,[-10.3672,-15.1866,0.361438]]
+];
+/*
+private _composition_hideout = [
     [selectRandom btc_type_campfire,0,[-2.30957,-1.02979,0]],
     [_type_bigbox,121.331,[0.675781,-1.52539,0]],
     [selectRandom btc_type_bigbox,227.166,[2.66504,1.4126,0]],
@@ -54,6 +64,7 @@ if (
 ) then {
     _composition_hideout pushBack [selectRandom (btc_type_camonet - ["Land_IRMaskingCover_02_F","CamoNet_BLUFOR_F","CamoNet_OPFOR_F","CamoNet_INDP_F","CamoNet_ghex_F","CamoNet_wdl_F"]),0,[-0.84668,-2.16113,0]];
 };
+*/
 
 private _composition = [_pos, random 360, _composition_hideout] call btc_fnc_create_composition;
 

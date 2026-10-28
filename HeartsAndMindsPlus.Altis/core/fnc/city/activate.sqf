@@ -266,12 +266,12 @@ if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
         case (_random <= 0.3) : {};
         case (_random > 0.3 && _random <= 0.75) : {
             private _statics = btc_type_gl + btc_type_mg;
-            [[(_pos select 0) + 7, (_pos select 1) + 7, 0], _statics, 45, [], _city] call btc_mil_fnc_create_static;
+            [[(_pos select 0) + 15, (_pos select 1) + 15, 0], _statics, 45, [], _city] call btc_mil_fnc_create_static;
         };
         case (_random > 0.75) : {
             private _statics = btc_type_gl + btc_type_mg;
-            [[(_pos select 0) + 7, (_pos select 1) + 7, 0], _statics, 45, [], _city] call btc_mil_fnc_create_static;
-            [[(_pos select 0) - 7, (_pos select 1) - 7, 0], _statics, 225, [], _city] call btc_mil_fnc_create_static;
+            [[(_pos select 0) + 15, (_pos select 1) + 15, 0], _statics, 45, [], _city] call btc_mil_fnc_create_static;
+            [[(_pos select 0) - 15, (_pos select 1) - 15, 0], _statics, 225, [], _city] call btc_mil_fnc_create_static;
         };
     };
     if (btc_p_veh_armed_ho) then {

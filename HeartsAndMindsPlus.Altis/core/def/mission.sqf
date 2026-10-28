@@ -249,7 +249,7 @@ if (isServer) then {
     btc_type_generator = _allClassSorted select {_x isKindOf "Land_Device_assembled_F"};
     btc_type_storagebladder = _allClassSorted select {_x isKindOf "StorageBladder_base_F"};
     btc_type_mines = ["APERSMine", "APERSBoundingMine", "APERSTripMine"];
-    btc_type_power = ["Land_PowerGenerator_F", "Land_PortableGenerator_01_F"] + (_allClassSorted select {_x isKindOf "Machine_base_F"});
+    btc_type_power = ["Land_PowerGenerator_F", "Land_PortableGenerator_01_F"];
     btc_type_cord = ["Land_ExtensionCord_F"];
     btc_type_cones = ["Land_RoadCone_01_F", "RoadCone_F", "RoadCone_L_F"];
     btc_type_fences = ["Land_PlasticNetFence_01_long_F", "Land_PlasticNetFence_01_long_d_F", "RoadBarrier_F", "TapeSign_F"];

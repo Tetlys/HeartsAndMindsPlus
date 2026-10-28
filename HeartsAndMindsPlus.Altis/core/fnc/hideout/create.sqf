@@ -65,7 +65,7 @@ if (_pos isEqualTo []) then {
 
     private _cachingRadius = _city getVariable ["cachingRadius", 0];
     private _random_pos = [getPos _city, _cachingRadius/2] call btc_fnc_randomize_pos;
-    _pos = [_random_pos, 0, 100, 2, false] call btc_fnc_findsafepos;
+    _pos = [_random_pos, 0, 100, 15, false] call btc_fnc_findsafepos;
 
     _id = _city getVariable ["id", 0];
     _city setVariable ["occupied", true];
