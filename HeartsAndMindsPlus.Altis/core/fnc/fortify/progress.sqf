@@ -1,9 +1,9 @@
 
 /* ----------------------------------------------------------------------------
-Function: tet_fortify_eco
+Function: tet_fortify_progress
 
 Description:
-    Adds money to the economy
+    Updates map progress
 
 Usage:
     spawn tet_fortify_open
@@ -33,7 +33,7 @@ if (_y getVariable ["occupied", false]) then {
 } forEach btc_city_all; 
 
 // Turns it into a %
-VictoryPercentage = 100 - (((count city_remaining) / (count btc_city_all)) *100);
+VictoryPercentage = (100 - (((count city_remaining) / (count btc_city_all)) *100) max 0.1);
 
 publicVariable "VictoryPercentage";
 publicVariable "btc_vehicles";
