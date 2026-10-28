@@ -5,7 +5,6 @@ if (isServer) then {
     btc_vbeid_fnc_create = compileScript ["core\fnc\vbeid\create.sqf"];
     btc_vbeid_fnc_activate = compileScript ["core\fnc\vbeid\activate.sqf"];
     btc_vbeid_fnc_monitor = compileScript ["core\fnc\vbeid\monitor.sqf"];
-    btc_vbeid_fnc_detonate = compileScript ["core\fnc\vbeid\detonate.sqf"];
     btc_flag_fnc_randomFlagVehicle = compileScript ["core\fnc\vbeid\randomFlagVehicle.sqf"];
     btc_vbeid_fnc_spawner = compileScript ["core\fnc\vbeid\spawner.sqf"];
 

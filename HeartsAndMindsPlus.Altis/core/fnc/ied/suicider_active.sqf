@@ -29,10 +29,14 @@ private _group = createGroup [btc_enemy_side, true];
 _group setVariable ["suicider", true];
 _group setVariable ["acex_headless_blacklist", true];
 
+private _range = 0;
+if (!isNull (objectParent _suicider)) then {_range = 15} else {_range = 5};
+
+
 [group _suicider] call CBA_fnc_clearWaypoints;
 
 private _trigger = createTrigger ["EmptyDetector", getPos _suicider, false];
-_trigger setTriggerArea [5, 5, 0, false];
+_trigger setTriggerArea [_range, _range, 0, false];
 _trigger setTriggerActivation [str btc_player_side, "PRESENT", false];
 _trigger setTriggerStatements ["this", "thisTrigger call btc_ied_fnc_allahu_akbar;", ""];
 _trigger setVariable ["suicider", _suicider];
