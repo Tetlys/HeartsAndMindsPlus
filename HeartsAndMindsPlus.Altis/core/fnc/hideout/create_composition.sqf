@@ -25,7 +25,7 @@ params [
     ["_pos", [0, 0, 0], [[]]]
 ];
 
-private _type_bigbox = selectRandom ["Box_FIA_Ammo_F", "C_supplyCrate_F", "Box_East_AmmoVeh_F"];
+private _type_bigbox = selectRandom ["Box_FIA_Ammo_F", "Box_East_AmmoVeh_F"];
 private _power = selectRandom btc_type_power;
 
 private _composition_hideout = [
@@ -33,7 +33,7 @@ private _composition_hideout = [
 ["Land_Radar",330,[-3.41797,5.64545,-0.204549]],
 ["Land_fort_artillery_nest",180,[1.2168,-6.95047,-0.204549]],
 [selectRandom btc_type_bigbox,13.1468,[-0.462891,-8.49118,-0.204549]],
-[_type_bigbox,325.543,[2.39453,-8.41666,-0.204549]],
+[selectRandom btc_type_bigbox,325.543,[2.39453,-8.41666,-0.204549]],
 [_power,135,[-3.41797,8.39539,-0.204549]],
 ["FxWindPollen1",162.795,[-10.3672,-15.1866,0.361438]]
 ];
