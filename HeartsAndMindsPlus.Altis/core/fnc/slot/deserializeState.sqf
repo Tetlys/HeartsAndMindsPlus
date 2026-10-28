@@ -36,7 +36,8 @@ Author:
         "_isContaminated",
         "_medicalDeserializeState",
         ["_vehicle", objNull, [objNull]],
-        ["_field_rations", [], [[]]]
+        ["_field_rations", [], [[]]],
+        ["_aceFlagItem", "", [""]]
     ];
 
     if (
@@ -50,6 +51,11 @@ Author:
     //};
     //player setDir _dir;
     //player forceFlagTexture _flagTexture;
+    if (_aceFlagItem isEqualTo "") then {
+        player forceFlagTexture _flagTexture;
+    } else {
+        [player, _aceFlagItem] call ace_flags_fnc_carryFlag;
+    };
     //[{player getVariable ["ace_medical_initialized", false]}, {
     //    [player, _this] call ace_medical_fnc_deserializeState;
     //}, _medicalDeserializeState] call CBA_fnc_waitUntilAndExecute;
