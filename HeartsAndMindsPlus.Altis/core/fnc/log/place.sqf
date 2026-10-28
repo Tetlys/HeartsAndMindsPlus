@@ -73,6 +73,9 @@ btc_log_placing_d = 1.5 + abs(((_bbr select 1) select 1) - ((_bbr select 0) sele
     if (!alive player || player getVariable ["ACE_isUnconscious", false] || !btc_log_placing || (vehicle player != player)) then {
         _arguments params ["_placing_obj", "_actionEH", "_place_EH_keydown"];
 
+        ["ace_common_fixCollision", player] call CBA_fnc_localEvent;
+        ["ace_common_fixCollision", btc_log_placing_obj, btc_log_placing_obj] call CBA_fnc_targetEvent;
+
         //remove PFH
         [_idPFH] call CBA_fnc_removePerFrameHandler;
 

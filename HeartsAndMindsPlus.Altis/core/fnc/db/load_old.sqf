@@ -55,7 +55,7 @@ private _cities_status = +(profileNamespace getVariable [format ["btc_hm_%1_citi
         if (_city getVariable ["occupied", false]) then {
             _marker setMarkerColor "colorRed";
         } else {
-            _marker setMarkerColor "colorBLUFOR";
+            _marker setMarkerColor "colorGreen";
         };
     };
     if (btc_debug_log) then {
@@ -100,7 +100,7 @@ btc_cache_pos = _cache_pos;
 btc_cache_n = _cache_n;
 btc_cache_info = _cache_info;
 
-[_cache_pos, btc_p_chem, [1, 0] select _isChem] call btc_cache_fnc_create;
+[_cache_pos, btc_p_chem_cache_probability > 0, [1, 0] select _isChem] call btc_cache_fnc_create;
 btc_cache_obj setVariable ["btc_cache_unitsSpawned", _cache_unitsSpawned];
 
 btc_cache_markers = [];
@@ -130,17 +130,6 @@ private _fobs = +(profileNamespace getVariable [format ["btc_hm_%1_fobs", _name]
 
 //REP
 btc_global_reputation = profileNamespace getVariable [format ["btc_hm_%1_rep", _name], 0];
-publicVariable "btc_global_reputation";
-
-//ECONOMY
-btc_global_economy = profileNamespace getVariable [format ["btc_hm_%1_eco", _name], 0];
-publicVariable "btc_global_economy";
-
-//UI
-btc_player_array = profileNamespace getVariable [format ["btc_hm_%1_playerdb", _name], 0];
-publicVariable "btc_player_array";
-btc_uid_array = profileNamespace getVariable [format ["btc_hm_%1_playeruid", _name], 0];
-publicVariable "btc_UID_array";
 
 //Objects
 {deleteVehicle _x} forEach (getMissionLayerEntities "btc_vehicles" select 0);
@@ -148,7 +137,6 @@ if !(isNil "btc_vehicles") then {
     {deleteVehicle _x} forEach btc_vehicles;
     btc_vehicles = [];
 };
-publicVariable "btc_vehicles";
 
 private _objs = +(profileNamespace getVariable [format ["btc_hm_%1_objs", _name], []]);
 [{ // Can't use ace_cargo for objects created during first frame.

@@ -30,7 +30,6 @@ Author:
 
     if !(visibleWatch) exitWith {
         [_idPFH] call CBA_fnc_removePerFrameHandler;
-        //hintSilent ""; // Removes hint
     };
     if (btc_chem_contaminated isEqualTo []) exitWith {
         _obj ctrlAnimateModel ["Threat_Level_Source", 0, true];
@@ -42,8 +41,6 @@ Author:
     } else {
         _level = (floor (btc_chem_range / _level * 10)) / 10;
     };
-
-    //if (visibleWatch) then {hint format ["Chemical Level  [%1]", _level]};         // OPTIONAL : DLC Remover
 
     _obj ctrlAnimateModel ["Threat_Level_Source", _level, true]; //Displaying a threat level (value between 0.0 and 1.0)
 }, 0.3, _this] call CBA_fnc_addPerFrameHandler;

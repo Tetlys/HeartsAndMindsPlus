@@ -41,4 +41,4 @@ private _condition = {
     (_target distance _player < _radius) && {[_player, objNull, ["isnotinside"]] call ace_common_fnc_canInteractWith}
 };
 
-[localize "STR_BTC_HAM_CON_INFO_SEARCH_BAR", btc_int_search_intel_time, _condition, _onFinish, {}, [_target, player, _radius]] call CBA_fnc_progressBar;
+[btc_int_search_intel_time, [_target, player, _radius], _onFinish, {}, localize "STR_BTC_HAM_CON_INFO_SEARCH_BAR", _condition, ["isNotInside"]] call ace_common_fnc_progressBar;

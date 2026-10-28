@@ -1,17 +1,24 @@
+
 /* ----------------------------------------------------------------------------
 Function: btc_civ_fnc_createGrave
+
 Description:
     Create graves and add flower bouquets next to them.
+
 Parameters:
     _city - City. [Object]
     _graves - Array of grave around city. [Array]
+
 Returns:
+
 Examples:
     (begin example)
         [btc_city_all get 1, [[getPosASL player, getDir player, "ACE_Grave"]]] call btc_civ_fnc_createGrave;
     (end)
+
 Author:
     Vdauphin
+
 ---------------------------------------------------------------------------- */
 
 params [

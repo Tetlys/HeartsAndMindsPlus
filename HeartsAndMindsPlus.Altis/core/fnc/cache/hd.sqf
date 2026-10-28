@@ -63,7 +63,7 @@ if (
 
     private _marker = createMarker [format ["btc_cache_%1", btc_cache_n], btc_cache_pos];
     _marker setMarkerType "hd_destroy";
-    [_marker, "STR_BTC_HAM_O_EH_HDCACHE_MRK", btc_cache_n] remoteExecCall ["btc_fnc_set_markerTextLocal", [0, -2] select isDedicated, _marker]; //Cached %1 destroyed
+    [_marker, "STR_BTC_HAM_O_EH_HDCACHE_MRK", btc_cache_n] remoteExecCall ["btc_fnc_set_markerTextLocal", [0, -2] select isDedicated, _marker]; //Cache %1 destroyed
     _marker setMarkerSize [1, 1];
     _marker setMarkerColor "ColorRed";
 
@@ -71,16 +71,10 @@ if (
         [format ["DESTROYED: ID %1 POS %2", btc_cache_n, btc_cache_pos], __FILE__, [false]] call btc_debug_fnc_message;
     };
 
-
     [btc_rep_bonus_cache, _instigator] call btc_rep_fnc_change;
-    //{[btc_rep_bonus_cache, _x] call btc_rep_fnc_change;} foreach allplayers;
 
     //Notification
-    //[0] remoteExecCall ["btc_fnc_show_hint", 0];
-    //ADDNOTIF CACHE DESTROYED
-    [parseText "<t color='#FACE00' font='PuristaBold' align = 'right' shadow = '1.5' size='2'>+ Enemy Cache Destroyed! </t><br /><t  align = 'right' shadow = '1.5' size='1.5'>+$2000</t>", [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ["BIS_fnc_textTiles", 0];
-    [west, 2000, false] call acex_fortify_fnc_updateBudget; 
-    btc_global_economy = btc_global_economy + 2000;
+    [0] remoteExecCall ["btc_fnc_show_hint", 0];
 
     [btc_cache_n + 1, btc_cache_pictures] call btc_cache_fnc_init;
 } else {

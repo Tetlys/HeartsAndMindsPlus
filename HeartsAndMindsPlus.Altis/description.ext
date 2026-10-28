@@ -1,6 +1,6 @@
 
-loadScreen = "res\1.paa";
-author = "Tetlys";
+loadScreen = "core\img\btc.paa";
+author = "Giallustio";
 onLoadName = $STR_BTC_HAM_DESCR_NAME;
 onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
 enabledebugconsole = 1;
@@ -9,14 +9,6 @@ enabledebugconsole = 1;
 #include "core\fnc\fob\dlg.hpp"
 #include "core\fnc\log\dlg.hpp"
 #include "core\fnc\debug\defines.hpp"
-#include "core\fnc\ui\tet_fortify_dlg_salvage.hpp"
-#include "core\fnc\ui\tet_fortify_dlg.hpp"
-#include "core\fnc\ui\tet_ui_dlg_permissions.hpp"
-#include "core\fnc\ui\tet_ui_dlg_scoreboard.hpp"
-#include "core\fnc\ui\tet_fortify_preview.hpp"
-#include "VAM_GUI\defines.hpp"
-#include "VAM_GUI\VAM_GUI_controls.hpp"
-#include "VAM_GUI\VAM_GUI_classes.hpp"
 
 class RscTitles {
     class Default {
@@ -35,20 +27,8 @@ class RscTitles {
 
 #include "core\fnc\task\taskTypes.hpp"
 
-class CfgFunctions
-{
-	#include "INC_airPower\cfgFunctions.hpp"
-
-};
-
-class CfgRemoteExec
-{
-   class Functions
-   {
-       mode = 2;
-       jip = 1;
-       #include "INC_airPower\functionsWhitelist.hpp"
-   };
+class CfgFunctions {
+    // add your own functions below
 };
 
 // CBA XEH
@@ -66,29 +46,14 @@ class Extended_InitPost_EventHandlers {
     class Ship {
         #include "core\fnc\eh\xeh_InitPost_EH_Vehicle.hpp"
     };
-    class CAManBase {
-		init = "_this call (compile preprocessFileLineNumbers 'postInitXEH.sqf')";
-	};
 };
 
 respawn = 3;
 respawnDelay = 2;
 respawnDialog = 0;
-respawnButton = 0;
 respawnOnStart = 0;
 respawnTemplates[] = {"MenuPosition", "Tickets"};
 
 // Disable BI wreck system (H&M handle it internally)
 wreckManagerMode = 0;
 corpseManagerMode = 0;
-
-
-//CONFIG - Channel remover [CHANNEL id, text, voice]
-disableChannels[] = {
-    { 0, false, true },
-    { 1, true, true },
-    { 2, true, true },
-    { 3, true, true },
-    { 4, true, true },
-    { 5, true, true }
-};

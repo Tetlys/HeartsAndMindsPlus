@@ -28,26 +28,20 @@ params [
     ["_isRuin", false, [false]]
 ];
 
-//if (tet_limiter == true) exitwith {};
-//tet_limiter = true;
 private _classname = toUpper typeOf _from;
 private _malus = [btc_rep_malus_building_damaged, btc_rep_malus_building_destroyed] select _isRuin;
 private _skipCategories = false;
 
 // Accept only static, terrain buildings, discard any dynamically created ones but keep already damaged buildings.
 if (
-    (getObjectType _from != 1) && // If NOT part of the map
-    !(_from in btc_buildings_changed) || // If building is NOT in btc_buildings_changed then exit
+    (getObjectType _from != 1) &&
+    !(_from in btc_buildings_changed) ||
     {_classname isEqualTo ""} ||
     {_classname isKindOf "Wall"} ||
-    {"GATE" in _classname} ||
-    {"Mil" in _classname}
+    {"GATE" in _classname}
 ) exitWith {};
 
-if (_from in tet_buildings_changed) exitwith {};
-
 btc_buildings_changed pushBack _to;
-tet_buildings_changed pushback _from;
 
 {
     _x params ["_buildings_classname", "_malus_multipliers"];
@@ -73,5 +67,3 @@ if (btc_debug) then {
 };
 
 _malus call btc_rep_fnc_change;
-
-//[{tet_limiter = false;},[], 0.1] call CBA_fnc_waitAndExecute;

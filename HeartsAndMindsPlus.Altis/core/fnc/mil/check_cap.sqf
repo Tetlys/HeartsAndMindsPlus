@@ -39,8 +39,7 @@ if (_cap_to isEqualTo []) exitWith {};
             [btc_mil_fnc_send, [_hideout, _closest, 0], _i * 2 + 1] call CBA_fnc_waitAndExecute;
         };
     } else {
-        _closest setVariable ["occupied", true]; 
-
+        _closest setVariable ["occupied", true];
         if (btc_debug) then {
             (format ["loc_%1", _closest getVariable "id"]) setMarkerColor "ColorRed";
         };

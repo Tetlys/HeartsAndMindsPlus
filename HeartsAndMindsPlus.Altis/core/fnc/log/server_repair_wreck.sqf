@@ -35,21 +35,6 @@ private _dir = getDir _veh;
 private _marker = _veh getVariable ["marker", ""];
 private _vehProperties = _veh call btc_veh_fnc_propertiesGet;
 
-//Eco Check
-private _eco = [west] call acex_fortify_fnc_getBudget;
-private _cost = [west, _type] call ace_fortify_fnc_getCost;
-private _costadjusted = floor (_cost * 0.2);
-
-if!(_eco > _costadjusted ) exitWith {
-    [26] remoteExecCall ["btc_fnc_show_hint", remoteExecutedOwner];
-};
-
-private _output = 0 - _costadjusted;
-
-[west, _output, false] call acex_fortify_fnc_updateBudget; 
-btc_global_economy = btc_global_economy + _output;
-
-
 // Reset properties
 _vehProperties set [5, false];
 (_vehProperties select 3) set [0, _veh getVariable "btc_EDEN_defaultFuelCargo"];
@@ -58,7 +43,6 @@ _vehProperties set [5, false];
 private _EDENinventory = _veh getVariable ["btc_EDENinventory", []];
 
 btc_vehicles = btc_vehicles - [_veh];
-publicVariable "btc_vehicles";
 
 if (_marker != "") then {
     deleteMarker _marker;

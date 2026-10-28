@@ -42,8 +42,9 @@ _city setVariable ["spawn_more", true];
 
 waitUntil {!isNil "btc_vehicles"}; // Wait for loading vehicles from db
 
-private _heli_type = selectRandom ((btc_fortify_vehicles) select { // btc_vehicles + btc_veh_respawnable
-    _x isKindOf "air"
+private _heli_type = typeOf selectRandom ((btc_vehicles + btc_veh_respawnable) select {
+    _x isKindOf "air" &&
+    {!(unitIsUAV _x)}
 });
 private _heli = createVehicle [_heli_type, _pos, [], 0, "NONE"];
 _heli setVariable ["btc_dont_delete", true];
@@ -77,6 +78,7 @@ private _back_taskID = _taskID + "bk";
 private _units = [];
 private _triggers = [];
 {
+    _x setVariable ["kjw_imposters_core_ignore", true, true]; // Prevent KJW Imposters from resetting captive state
     _x setCaptive true;
     removeAllWeapons _x;
     _x setBehaviour "CARELESS";
@@ -151,7 +153,7 @@ if (_units select {alive _x} isEqualTo []) then {
             (([_x] call ace_dogtags_fnc_getDogtagData) select 0) in _dogTagList
         } count (nearestObjects [btc_create_object_point, ["ACE_bodyBagObject"], 100]) >= count _units
     };
-    _rep = 60;
+    _rep = 40;
 };
 
 {
@@ -161,9 +163,6 @@ if (_units select {alive _x} isEqualTo []) then {
 
 if (_taskID call BIS_fnc_taskState in ["CANCELED", "FAILED"]) exitWith {};
 
-//ADDNOTIF SIDE MISSION
-[parseText "<t color='#FACE00' font='PuristaBold' align = 'right' shadow = '1.5' size='2'>+ Side Mission Completed! </t><br /><t  align = 'right' shadow = '1.5' size='1.5'>+$600</t>", [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ["BIS_fnc_textTiles", 0];
-    [west, 600, false] call acex_fortify_fnc_updateBudget; 
-    btc_global_economy = btc_global_economy + 600;
+_rep call btc_rep_fnc_change;
 
 [_taskID, "SUCCEEDED"] call btc_task_fnc_setState;

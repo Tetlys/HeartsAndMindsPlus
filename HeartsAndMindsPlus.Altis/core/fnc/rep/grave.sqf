@@ -1,17 +1,24 @@
+
 /* ----------------------------------------------------------------------------
 Function: btc_rep_fnc_grave
+
 Description:
     Add reputation when a player put dead civil in grave.
+
 Parameters:
     _restingPlace - Resting Place [Object]
     _medic - Medic [Object]
+
 Returns:
+
 Examples:
     (begin example)
         [cursorObject, player] call btc_rep_fnc_grave;
     (end)
+
 Author:
     Vdauphin
+
 ---------------------------------------------------------------------------- */
 
 params ["_restingPlace", "_medic"];

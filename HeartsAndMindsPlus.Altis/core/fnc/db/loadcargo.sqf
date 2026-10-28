@@ -32,7 +32,8 @@ Author:
             ["_dogtagDataTaken", [], [[]]],
             ["_turretMagazines", [], [[]]],
             ["_customName", "", [""]],
-            ["_properties", [], [[]]]
+            ["_properties", [], [[]]],
+            ["_playerKiller", "", [""]]
         ];
 
         private _l = createVehicle [_type, getPosATL _obj, [], 0, "CAN_COLLIDE"];
@@ -67,6 +68,9 @@ Author:
             ([_l] + _properties) call btc_veh_fnc_propertiesSet;
         };
 
+        if (_playerKiller isNotEqualTo "") then {
+            _l setVariable ["btc_rep_playerKiller", _playerKiller];
+        };
     } forEach _cargo;
 
     //set inventory content for weapons, magazines and items

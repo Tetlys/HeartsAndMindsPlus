@@ -1,46 +1,9 @@
-private _locations = configfile >> "cfgworlds" >> worldname >> "names";
-
 btc_custom_loc = [
 /*
-    DESCRIPTION: [POS(Array),TYPE(String),NAME(String),RADIUS (Number),IS OCCUPIED(Bool), (count _locations + #)]
+    DESCRIPTION: [POS(Array),TYPE(String),NAME(String),RADIUS (Number),IS OCCUPIED(Bool)]
     Possible types: "NameVillage","NameCity","NameCityCapital","NameLocal","Hill","Airport","NameMarine", "StrongpointArea", "BorderCrossing", "VegetationFir"
-    EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,true,(count _locations + 1)]
+    EXAMPLE: [[13132.8,3315.07,0.00128174],"NameVillage","Mountain 1",800,true]
 */
-[[18865.7,18999.2,0],"Airport","Airport_1",800,true],
-[[18505.7,3619.51,0],"Airport","Airport_2",800,true],
-[[4817.19,8973.45,0],"Airport","Airport_3",800,true],
-[[1175.09,1208.18,0],"Airport","Airport_4",800,true],
-[[11023.9,2180.18,0],"BorderCrossing","Boardercorssing_2",500,true],
-[[12451.3,8172.63,0],"NameLocal","NameLocal_10",300,true],
-[[18709.6,6614.23,0],"NameLocal","NameLocal_11",300,true],
-[[13047.2,14826.8,0],"NameLocal","NameLocal_12",300,true],
-[[11362.1,15286.3,0],"NameLocal","NameLocal_13",300,true],
-[[2197.46,19997.5,0],"NameLocal","NameLocal_14",300,true],
-[[1599.94,8953.2,0],"NameLocal","NameLocal_15",300,true],
-[[17210.9,12383.7,0],"NameLocal","NameLocal_2",300,true],
-[[11552.3,9738.18,0],"NameLocal","NameLocal_3",300,true],
-[[10158.2,5707.67,0],"NameLocal","NameLocal_4",300,true],
-[[18443.9,9670.14,0],"NameLocal","NameLocal_5",300,true],
-[[17091.3,9539.93,0],"NameLocal","NameLocal_6",300,true],
-[[8023.83,15509.2,0],"NameLocal","NameLocal_7",300,true],
-[[17019,16807.9,0],"NameLocal","NameLocal_8",300,true],
-[[13302.9,12832.1,0],"NameLocal","NameLocal_9",300,true],
-[[14579.3,8433.28,0],"NameVillage","NameVillage_10",500,true],
-[[9501.58,1826.66,0],"NameVillage","NameVillage_11",500,true],
-[[6300.32,7653.2,0],"NameVillage","NameVillage_12",500,true],
-[[4800.24,5274.43,0],"NameVillage","NameVillage_13",500,true],
-[[1423.47,7757.86,0],"NameVillage","NameVillage_14",500,true],
-[[1684.2,17973.4,0],"NameVillage","NameVillage_15",500,true],
-[[6069.74,16626.9,0],"NameVillage","NameVillage_16",500,true],
-[[5621.11,15119.5,0],"NameVillage","NameVillage_17",500,true],
-[[14609.5,19507.2,0],"NameVillage","NameVillage_2",500,true],
-[[17866,2319.53,0],"NameVillage","NameVillage_3",500,true],
-[[18705.9,4881.33,0],"NameVillage","NameVillage_4",500,true],
-[[14354.4,2610.7,0],"NameVillage","NameVillage_5",500,true],
-[[19697.5,7133.79,0],"NameVillage","NameVillage_6",500,true],
-[[17400.1,7457.56,0],"NameVillage","NameVillage_7",500,true],
-[[19696.2,10026.7,0],"NameVillage","NameVillage_8",500,true],
-[[16030.6,10193.1,0],"NameVillage","NameVillage_9",500,true]
 ];
 
 /*

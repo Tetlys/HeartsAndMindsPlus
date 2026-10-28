@@ -47,7 +47,7 @@ if (_pos isEqualTo []) then {
             !(_x getVariable ["active", false]) &&
             {_x distance (getMarkerPos btc_respawn_marker) > btc_hideout_safezone} &&
             {!(_x getVariable ["has_ho", false])} &&
-            {_x getVariable ["type", ""] in ["NameCity","NameLocal", "Hill", "NameVillage", "Airport"]}
+            {_x getVariable ["type", ""] in ["NameLocal", "Hill", "NameVillage", "Airport"]}
         };
         private _inHoRange = values btc_city_all select {
             private _city = _x;

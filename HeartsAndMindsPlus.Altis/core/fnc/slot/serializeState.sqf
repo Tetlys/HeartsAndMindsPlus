@@ -28,15 +28,7 @@ if (
     isNil {_unit getVariable "btc_slot_key"}
 ) exitWith {};
 
-private _loadout = getUnitLoadout _unit;
-if (["acre_api"] call ace_common_fnc_isModLoaded) then {
-    _loadout = [_loadout] call acre_api_fnc_filterUnitLoadout;
-};
-
-// Add earplugs to uniform if has them plugged in (temporary until Variables support)
-if (_unit call ace_hearing_fnc_hasEarPlugsIn && {!((_loadout select 3) isEqualTo [])}) then {
-    ((_loadout select 3) select 1) pushBack ["ACE_EarPlugs", 1];
-};
+private _loadout = [_unit] call CBA_fnc_getLoadout;
 
 private _data = [
     getPosASL _unit,
@@ -49,7 +41,8 @@ private _data = [
     [
         _unit getVariable ["acex_field_rations_thirst", 0],
         _unit getVariable ["acex_field_rations_hunger", 0]
-    ]
+    ],
+    _unit getVariable ["ace_flags_carryingFlag", ""]
 ];
 
 if (btc_debug || btc_debug_log) then {

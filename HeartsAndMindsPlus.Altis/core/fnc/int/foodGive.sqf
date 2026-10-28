@@ -26,10 +26,10 @@ params [
     ["_target", objNull, [objNull]]
 ];
 
-private _hadFood = "ACE_Banana" in items _target;
+private _hadFood = btc_rep_food in items _target;
 if (
-    [player, "ACE_Banana"] call CBA_fnc_removeItem &&
-    {[_target, "ACE_Banana", true] call CBA_fnc_addItem}
+    [player, btc_rep_food] call CBA_fnc_removeItem &&
+    {[_target, btc_rep_food, true] call CBA_fnc_addItem}
 ) then {
     [_player, "PutDown"] call ace_common_fnc_doGesture;
 

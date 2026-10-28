@@ -26,24 +26,11 @@ params [
 
 if !(_city getVariable ["active", false]) exitWith {};
 
-Points_Active = Points_Active - 1;
-
-publicVariable "Points_Active";
-
 if (btc_debug) then {
     private _id = _city getVariable "id";
     [str _id, __FILE__, [btc_debug, btc_debug_log, true]] call btc_debug_fnc_message;
 };
 
-// Recon Colors Map Markers
-if (_city getVariable ["marker", ""] != "") then {
-    (_city getVariable ["marker", ""]) setMarkerAlpha 0.5;
-    if (_city getVariable ["occupied", false]) then {
-        (_city getVariable ["marker", ""]) setMarkerColor "colorOPFOR"; // CONFIG OBJ Colors - OCCUPIED
-    } else {
-        (_city getVariable ["marker", ""]) setMarkerColor "colorBLUFOR"; // CONFIG OBJ Colors - CLEAR/CIVILIAN
-    };
-};
 //Save all and delete
 private _cachingRadius = _city getVariable ["cachingRadius", 0];
 private _has_en = _city getVariable ["occupied", false];
@@ -102,10 +89,6 @@ private _data_tags = [];
     };
 } forEach (btc_tags_server inAreaArray [_pos_city, _cachingRadius, _cachingRadius]);
 btc_tags_server = btc_tags_server - [objNull];
-
-{
-    [_x] call btc_tag_fnc_vehicle; 
-} forEach (btc_vehicles inAreaArray [_pos_city, _cachingRadius, _cachingRadius]);
 
 {
     [_x] call btc_tag_fnc_vehicle; 

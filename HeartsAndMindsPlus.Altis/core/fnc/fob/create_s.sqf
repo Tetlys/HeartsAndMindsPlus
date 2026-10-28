@@ -35,24 +35,10 @@ params [
     ["_fobs", btc_fobs, [[]]]
 ];
 
-private _pad_type = "Land_HelipadCivil_F";
-
 private _flag = createVehicle [_fob_flag, _pos, [], 0, "CAN_COLLIDE"];
 private _structure = createVehicle [_fob_structure, _pos, [], 0, "CAN_COLLIDE"];
 
 _structure setDir _direction;
-
-// Define the offset distance
-private _offsetDistance = 15;
-
-private _offsetPosition = _pos vectorAdd [(_offsetDistance * sin _direction), (_offsetDistance * cos _direction), 0];
-
-private _pad = createVehicle [_pad_type, _offsetPosition, [], 0, "CAN_COLLIDE"];
-
-_pad setDir _direction;
-
-btc_log_points = btc_log_points + [[_flag, _pad]];
-publicVariable "btc_log_points";
 
 private _marker = createMarker [_FOB_name, _pos];
 _marker setMarkerSize [1, 1];

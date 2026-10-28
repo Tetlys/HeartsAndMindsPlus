@@ -27,10 +27,7 @@ params [
 private _array = (nearestObjects [_object, ["LandVehicle", "Air", "Ship"], 10]) select {!(
     _x isKindOf "ACE_friesBase" OR
     _x isKindOf "ace_fastroping_helper"
-) && (typeof _x in btc_fortify_vehicles)
-};
-
-
+)};
 
 if (_array isEqualTo []) exitWith {(localize "STR_BTC_HAM_LOG_RWRECK_NOWRECK") call CBA_fnc_notify;};
 

@@ -37,6 +37,7 @@ if (_array isEqualTo []) exitWith {_failNotify call CBA_fnc_notify;};
 
 private _fuelSource = _array select 0;
 private _default_fuelCargo = _fuelSource getVariable ["btc_EDEN_defaultFuelCargo", _fuelSource call ace_refuel_fnc_getFuel];
+
 if (_default_fuelCargo <= 0) exitWith {_failNotify call CBA_fnc_notify;};
 
 [_fuelSource, _default_fuelCargo] call ace_refuel_fnc_setFuel;

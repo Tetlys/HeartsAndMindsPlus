@@ -34,6 +34,8 @@ params [
     ["_keyPressed", false, [false]]
 ];
 
+if !(btc_log_placing) exitWith {};
+
 private _turbo = if (_shift) then {1} else {0};
 
 //height [+] (Key 16: Q)

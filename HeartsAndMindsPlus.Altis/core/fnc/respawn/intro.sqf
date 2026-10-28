@@ -52,7 +52,7 @@ private _days = (_date vectorDiff _startingDate) vectorDotProduct [365, 30.5, 1]
 [
     getMarkerPos "btc_base",
     format [localize "STR_BTC_HAM_INTRO_LOADINGTXT", round _days],
-    20, 30, 240, 0, _array, 0, true, 25
+    20, 30, 240, 0, _array, 0
 ] call BIS_fnc_establishingShot;
 
 enableSaving [false, false];

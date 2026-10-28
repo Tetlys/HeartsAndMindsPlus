@@ -116,10 +116,6 @@ if !(alive _captive) exitWith {
     [[], _group + [_group_civ, _trigger, _mine]] call btc_fnc_delete;
 };
 
-//ADDNOTIF SIDE MISSION
-[parseText "<t color='#FACE00' font='PuristaBold' align = 'right' shadow = '1.5' size='2'>+ Side Mission Completed! </t><br /><t  align = 'right' shadow = '1.5' size='1.5'>+$1500</t>", [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ["BIS_fnc_textTiles", 0];
-    [west, 1500, false] call acex_fortify_fnc_updateBudget; 
-    btc_global_economy = btc_global_economy + 1500;
-
+40 call btc_rep_fnc_change;
 
 [_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;

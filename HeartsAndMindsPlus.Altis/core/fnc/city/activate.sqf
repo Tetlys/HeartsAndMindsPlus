@@ -36,26 +36,12 @@ params [
     ["_p_patrol_max", btc_p_patrol_max, [0]]
 ];
 
-// CHANGE THE NUMBER VV HERE TO LOWER OR RAISE POINT CAP
-if (Points_Active >= 5) exitWith {["Point Proc Limit Reached"] remoteExec ["CBA_fnc_notify"];};
-Points_Active = Points_Active + 1;
-
-publicVariable "Points_Active";
-
 if (btc_debug) then {
     _city setVariable ["serverTime", serverTime];
 };
 
 _city enableSimulation false;
 _city setVariable ["active", true];
-
-// _citysound = getpos _city 
-// Attach the sound name as a variable - Use _city to get pos for a playsound3D
-
-
-// Added Player Scaling Variable
-private _CurrentPlayers = count allPlayers;
-private _PlayerScale = ((_CurrentPlayers * 0.1) max 1) min 2;
 
 private _data_units = _city getVariable ["data_units", []];
 private _data_animals = _city getVariable ["data_animals", []];
@@ -66,31 +52,19 @@ private _has_ho = _city getVariable ["has_ho", false];
 private _ieds = _city getVariable ["ieds", []];
 private _spawningRadius = _cachingRadius/2;
 
-// Recon Colors Map Markers
-if (_city getVariable ["marker", ""] != "") then {
-    (_city getVariable ["marker", ""]) setMarkerAlpha 1;
-    if (_city getVariable ["occupied", false]) then {
-        (_city getVariable ["marker", ""]) setMarkerColor "ColorRed"; // CONFIG OBJ Colors - OCCUPIED
-    } else {
-        (_city getVariable ["marker", ""]) setMarkerColor "ColorBlue"; // CONFIG OBJ Colors - CLEAR/CIVILIAN
-    };
-};
-
 if (!(_city getVariable ["initialized", false])) then {
     private _numberOfIED = (switch _type do {
         case "Hill" : {1};
         case "VegetationFir" : {1};
         case "BorderCrossing" : {2};
-        case "NameLocal" : {3};
+        case "NameLocal" : {2.5};
         case "StrongpointArea" : {3};
-        case "NameVillage" : {4};
-        case "NameCity" : {6};
-        case "NameCityCapital" : {7};
+        case "NameVillage" : {3.5};
+        case "NameCity" : {5};
+        case "NameCityCapital" : {6};
         case "Airport" : {0};
         case "NameMarine" : {0};
-        case "VegetationVineyard" : {2};
-        case "Strategic" : {3};
-        default {1};
+        default {0};
     });
 
     if (_has_en) then {
@@ -123,29 +97,27 @@ if (_data_units isNotEqualTo []) then {
 } else {
     // Maximum number of enemy group
     private _numberOfGroup = (switch _type do {
-        case "Hill" : {10};
-        case "VegetationFir" : {10};
-        case "BorderCrossing" : {16};
-        case "NameLocal" : {18};
-        case "StrongpointArea" : {20};
-        case "NameVillage" : {18};
-        case "NameCity" : {22};
-        case "NameCityCapital" : {25};
-        case "Airport" : {22};
-        case "NameMarine" : {5}; 
-        case "VegetationVineyard" : {10};
-        case "Strategic" : {16};
-        default {10};
+        case "Hill" : {4};
+        case "VegetationFir" : {4};
+        case "BorderCrossing" : {7};
+        case "NameLocal" : {7};
+        case "StrongpointArea" : {8};
+        case "NameVillage" : {8};
+        case "NameCity" : {16};
+        case "NameCityCapital" : {32};
+        case "Airport" : {32};
+        case "NameMarine" : {4};
+        default {0};
     });
 
     if (_has_en) then {
-        private _finalNumberOfGroup = floor (_p_mil_group_ratio * _numberOfGroup * _PlayerScale); // Player Scaling Adjusted  * _PlayerScale
+        private _finalNumberOfGroup = _p_mil_group_ratio * _numberOfGroup;
         private _numberOfHouseGroup = _finalNumberOfGroup * btc_p_mil_wp_houseDensity;
         for "_i" from 1 to round _finalNumberOfGroup do {
             [
                 _city,
                 [_spawningRadius, _spawningRadius/2] select (_i <= _numberOfHouseGroup),
-                2 + round random 3,
+                2 + round random 2,
                 [["PATROL", "SENTRY"] selectRandomWeighted [0.7, 0.3], "HOUSE"] select (_i <= _numberOfHouseGroup)
             ] call btc_mil_fnc_create_group;
         };
@@ -158,32 +130,28 @@ if (_data_units isNotEqualTo []) then {
             private _numberOfStatic = (switch _type do {
                 case "VegetationFir" : {3};
                 case "BorderCrossing" : {6};
-                case "NameLocal" : {4};
-                case "StrongpointArea" : {8};
-                case "NameVillage" : {8};
-                case "NameCity" : {10};
-                case "NameCityCapital" : {12};
+                case "NameLocal" : {3};
+                case "StrongpointArea" : {6};
+                case "NameVillage" : {6};
+                case "NameCity" : {12};
+                case "NameCityCapital" : {15};
                 case "Airport" : {6};
-                case "VegetationVineyard" : {3};
-                case "Strategic" : {6};
-                default {3};
+                default {0};
             });
-            [_housesEntrerable+_housesNotEntrerable, round (_p_mil_static_group_ratio * _numberOfStatic * _PlayerScale), _city] call btc_mil_fnc_create_staticOnRoof;
+            [_housesEntrerable+_housesNotEntrerable, round (_p_mil_static_group_ratio * _numberOfStatic), _city] call btc_mil_fnc_create_staticOnRoof;
         };
 
         // Spawn civilians
         private _numberOfCivi = (switch _type do {
-            case "VegetationFir" : {0};
-            case "BorderCrossing" : {4};
-            case "NameLocal" : {8};
+            case "VegetationFir" : {2};
+            case "BorderCrossing" : {0};
+            case "NameLocal" : {6};
             case "StrongpointArea" : {0};
-            case "NameVillage" : {10};
-            case "NameCity" : {15};
-            case "NameCityCapital" : {18};
-            case "Airport" : {8};
-            case "VegetationVineyard" : {0};
-            case "Strategic" : {0};
-            default {5};
+            case "NameVillage" : {12};
+            case "NameCity" : {20};
+            case "NameCityCapital" : {38};
+            case "Airport" : {12};
+            default {4};
         });
         [+_housesEntrerable, round (_p_civ_group_ratio * _numberOfCivi), _city] call btc_civ_fnc_populate;
     };
@@ -204,8 +172,6 @@ if (btc_p_animals_group_ratio > 0) then {
             case "NameCityCapital" : {0};
             case "Airport" : {0};
             case "NameMarine" : {0};
-            case "VegetationVineyard" : {3};
-            case "Strategic" : {0};
             default {0};
         });
         for "_i" from 1 to _numberOfAnimalsGroup do {
@@ -230,7 +196,7 @@ if (_city getVariable ["spawn_more", false]) then {
         ] call btc_mil_fnc_create_group;
     };
     if (btc_p_veh_armed_spawn_more) then {
-        [[_city, _spawningRadius, 1, btc_type_motorized_armed, 1 + round random 3 + round _PlayerScale], btc_city_fnc_send] call btc_delay_fnc_exec;
+        [[_city, _spawningRadius, 1, btc_type_motorized_armed, 1 + round random 2], btc_city_fnc_send] call btc_delay_fnc_exec;
     };
 };
 
@@ -250,7 +216,7 @@ if (
         [btc_cache_pos, 8, 3, "HOUSE"] call btc_mil_fnc_create_group;
         [btc_cache_pos, 50, 4, "SENTRY"] call btc_mil_fnc_create_group;
         if (btc_p_veh_armed_spawn_more) then {
-            [[_city, _spawningRadius, 1, btc_type_motorized_armed, 1 + round random 4], btc_city_fnc_send] call btc_delay_fnc_exec;
+            [[_city, _spawningRadius, 1, btc_type_motorized_armed, 1 + round random 3], btc_city_fnc_send] call btc_delay_fnc_exec;
         };
     };
 };
@@ -275,7 +241,7 @@ if (_has_ho && {!(_city getVariable ["ho_units_spawned", false])}) then {
         };
     };
     if (btc_p_veh_armed_ho) then {
-        [[_city, _spawningRadius, 1, btc_type_motorized_armed, 2 + round random 4], btc_city_fnc_send] call btc_delay_fnc_exec;
+        [[_city, _spawningRadius, 1, btc_type_motorized_armed, 2 + round random 3], btc_city_fnc_send] call btc_delay_fnc_exec;
     };
 };
 
@@ -293,9 +259,6 @@ if !(_city getVariable ["has_suicider", false]) then {
     };
 };
 
-
-//CONFIG - Disable tags
-
 if (_city getVariable ["data_tags", []] isEqualTo []) then {
     private _tag_number = (switch _type do {
         case "Hill" : {1};
@@ -307,8 +270,6 @@ if (_city getVariable ["data_tags", []] isEqualTo []) then {
         case "NameCityCapital" : {6};
         case "Airport" : {6};
         case "NameMarine" : {0};
-        case "VegetationVineyard" : {1};
-        case "Strategic" : {2};
         default {0};
     });
 

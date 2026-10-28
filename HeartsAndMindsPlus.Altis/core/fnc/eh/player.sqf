@@ -71,7 +71,7 @@ _player addEventHandler ["WeaponAssembled", {
     _this remoteExecCall ["btc_log_fnc_init", 2];
 }] call CBA_fnc_addEventHandler;
 
-if (btc_p_chem) then {
+if (btc_p_chem_sides || (btc_p_chem_cache_probability > 0)) then {
     // Add biopsy
     [missionNamespace, "probingEnded", btc_chem_fnc_biopsy] call BIS_fnc_addScriptedEventHandler;
 
@@ -134,5 +134,10 @@ if (btc_p_respawn_ticketsAtStart >= 0) then {
 
 ["ace_marker_flags_placed", {
     params ["_unit", "_flag"];
+    _flag remoteExecCall ["btc_log_fnc_init", 2];
+}] call CBA_fnc_addEventHandler; 
+
+["ace_flags_placed", {
+    params ["_player", "_flag", "_item"];
     _flag remoteExecCall ["btc_log_fnc_init", 2];
 }] call CBA_fnc_addEventHandler; 

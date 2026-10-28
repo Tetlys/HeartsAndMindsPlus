@@ -87,9 +87,9 @@ for "_i" from 1 to (2 + round random 2) do {
     private _posStatic = [_x -2.39185*cos(-_direction) - 2.33984*sin(-_direction), _y  + 2.33984 *cos(-_direction) -2.39185*sin(-_direction), _z];
     private _group = [_posStatic, _statics, _direction + 180, [], _city] call btc_mil_fnc_create_static;
     _groups pushBack _group;
-    
+
     private _posStatic = [_x + 2.72949*cos(-_direction) - -2.03857*sin(-_direction), _y -2.03857*cos(-_direction) +2.72949*sin(-_direction), _z];
-   private _group = [_posStatic, _statics, _direction, [], _city] call btc_mil_fnc_create_static;
+    private _group = [_posStatic, _statics, _direction, [], _city] call btc_mil_fnc_create_static;
     _groups pushBack _group;
 
     _composition append ([_pos, _direction, _composition_checkpoint] call btc_fnc_create_composition);
@@ -127,8 +127,7 @@ waitUntil {sleep 5;
 if (_taskID call BIS_fnc_taskState isEqualTo "CANCELED") exitWith {
     [[], _groups apply {vehicle leader _x}] call btc_fnc_delete;
 };
-//ADDNOTIF SIDE MISSION
-[parseText "<t color='#FACE00' font='PuristaBold' align = 'right' shadow = '1.5' size='2'>+ Side Mission Completed! </t><br /><t  align = 'right' shadow = '1.5' size='1.5'>+$250</t>", [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ["BIS_fnc_textTiles", 0];
-    [west, 250, false] call acex_fortify_fnc_updateBudget; 
-    btc_global_economy = btc_global_economy + 250;
+
+80 call btc_rep_fnc_change;
+
 [_taskID, "SUCCEEDED"] call btc_task_fnc_setState;

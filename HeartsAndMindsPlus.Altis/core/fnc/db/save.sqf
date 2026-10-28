@@ -120,14 +120,6 @@ profileNamespace setVariable [format ["btc_hm_%1_cache", _name], +_array_cache];
 //REPUTATION
 profileNamespace setVariable [format ["btc_hm_%1_rep", _name], btc_global_reputation];
 
-//ECONOMY
-profileNamespace setVariable [format ["btc_hm_%1_eco", _name], btc_global_economy];
-
-//PLAYERDATA
-profileNamespace setVariable [format ["btc_hm_%1_playerdb", _name], btc_player_array];
-profileNamespace setVariable [format ["btc_hm_%1_playeruid", _name], btc_uid_array];
-
-
 //FOBS
 private _fobs = [];
 {
@@ -155,7 +147,8 @@ private _vehiclesInCargo = _vehicles - _vehiclesNotInCargo;
         ["_turretMagazines", [], [[]]],
         ["_notuse", "", [""]],
         ["_tagTexture", "", [""]],
-        ["_properties", [], [[]]]
+        ["_properties", [], [[]]],
+        ["_playerKiller", "", [""]]
     ];
 
     private _data = [];
@@ -174,6 +167,7 @@ private _vehiclesInCargo = _vehicles - _vehiclesNotInCargo;
     _data pushBack _turretMagazines;
     _data pushBack _tagTexture;
     _data pushBack _properties;
+    _data pushBack _playerKiller;
 
     private _fakeViV = isVehicleCargo attachedTo _x;
     if (
@@ -259,6 +253,30 @@ private _markers_properties = _player_markers apply {
     [markerText _x, markerPos _x, markerColor _x, markerType _x, markerSize _x, markerAlpha _x, markerBrush _x, markerDir _x, markerShape _x, markerPolyline _x, markerChannel _x]
 };
 profileNamespace setVariable [format ["btc_hm_%1_markers", _name], +_markers_properties];
+
+//Explosives
+private _explosives = [];
+{
+    _x params ["_explosive", "_dir", "_pitch"];
+    if (isNull _explosive) then {continue};
+    _explosives pushBack [
+        typeOf _explosive,
+        _dir,
+        _pitch,
+        getPosATL _explosive,
+        _explosive getVariable ["btc_side", sideEmpty]
+    ]
+} forEach btc_explosives;
+{
+    _explosives pushBack [
+        typeOf _x,
+        getDir _x,
+        0,
+        getPosATL _x,
+        _x getVariable ["btc_side", side group ((getShotParents _x) select 0)]
+    ]
+} forEach (allMines select {_x isKindOf "APERSMineDispenser_Mine_Ammo"});
+profileNamespace setVariable [format ["btc_hm_%1_explosives", _name], +_explosives];
 
 //End
 profileNamespace setVariable [format ["btc_hm_%1_db", _name], true];

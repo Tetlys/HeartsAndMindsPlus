@@ -35,18 +35,5 @@ Author:
 
             [{visibleWatch}, btc_chem_fnc_updateDetector, [_obj]] call CBA_fnc_waitUntilAndExecute;
         };
-
-        // OPTIONAL : DLC Remover
-        if (
-            (_key in actionKeys "Watch" || _key in actionKeys "WatchToggle") &&
-            {!visibleWatch} &&
-            {"ItemWatch" in (assignedItems player)}
-        ) then {
-            private _ui = uiNamespace getVariable "RscWeaponChemicalDetector";
-            private _obj = _ui displayCtrl 101;
-
-            [{visibleWatch}, btc_chem_fnc_updateDetector, [_obj]] call CBA_fnc_waitUntilAndExecute;
-        };
-
     }];
 }] call CBA_fnc_waitUntilAndExecute;

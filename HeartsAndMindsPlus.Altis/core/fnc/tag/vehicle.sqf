@@ -1,16 +1,23 @@
+
 /* ----------------------------------------------------------------------------
 Function: btc_tag_fnc_vehicle
+
 Description:
     Create random tag with stencil on a vehicle.
+
 Parameters:
     _vehicle - Vehicle to apply the tag to. [Object]
+
 Returns:
+
 Examples:
     (begin example)
         [cursorObject] call btc_tag_fnc_vehicle;
     (end)
+
 Author:
     Vdauphin
+
 ---------------------------------------------------------------------------- */
 
 params [

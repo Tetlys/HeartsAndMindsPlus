@@ -50,7 +50,6 @@ if (
     publicVariable "btc_hideouts";
 
     [btc_rep_bonus_hideout, _instigator] call btc_rep_fnc_change;
-    //{[btc_rep_bonus_hideout, _x] call btc_rep_fnc_change;} foreach allplayers;
 
     private _id = _hideout getVariable "id";
     private _marker = createMarker [format ["btc_hideout_%1_destroyed", _id], getPos _hideout];
@@ -72,11 +71,8 @@ if (
     if (btc_hq isEqualTo _hideout) then {btc_hq = objNull};
     if (btc_hideouts isEqualTo []) then {[] spawn btc_fnc_final_phase;};
 
-    //ADDNOTIF HIDEOUT DESTROYED
-    [parseText "<t color='#FACE00' font='PuristaBold' align = 'right' shadow = '1.5' size='2'>+ Enemy Hideout Destroyed! </t><br /><t  align = 'right' shadow = '1.5' size='1.5'>+$1000</t>", [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ["BIS_fnc_textTiles", 0];
-    [west, 1000, false] call acex_fortify_fnc_updateBudget; 
-    btc_global_economy = btc_global_economy + 1000;
-
+    //Notification
+    [2, count btc_hideouts] remoteExecCall ["btc_fnc_show_hint", 0];
     if (btc_debug_log) then {
         [format ["_this = %1 ; POS %2 ID %3", _this, getPos _hideout, _id], __FILE__, [false]] call btc_debug_fnc_message;
     };

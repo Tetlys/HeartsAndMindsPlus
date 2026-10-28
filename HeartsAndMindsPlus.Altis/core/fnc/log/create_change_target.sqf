@@ -34,4 +34,3 @@ for "_i" from 0 to ((count _category) - 1) do {
     lbSetData [72, _index, _class];
     if (_i isEqualTo 0) then {lbSetCurSel [72, _index];};
 };
- 

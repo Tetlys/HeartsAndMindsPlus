@@ -1,14 +1,5 @@
 /////////////////////SERVER\\\\\\\\\\\\\\\\\\\\\
 if (isServer) then {
-   
-   // VBEID - Vehicle-Borne Explosive Device
-    btc_vbeid_fnc_create = compileScript ["core\fnc\vbeid\create.sqf"];
-    btc_vbeid_fnc_activate = compileScript ["core\fnc\vbeid\activate.sqf"];
-    btc_vbeid_fnc_monitor = compileScript ["core\fnc\vbeid\monitor.sqf"];
-    btc_vbeid_fnc_detonate = compileScript ["core\fnc\vbeid\detonate.sqf"];
-    btc_flag_fnc_randomFlagVehicle = compileScript ["core\fnc\vbeid\randomFlagVehicle.sqf"];
-    btc_vbeid_fnc_spawner = compileScript ["core\fnc\vbeid\spawner.sqf"];
-
     //BODY
     btc_body_fnc_bagRecover_s = compileScript ["core\fnc\body\bagRecover_s.sqf"];
     btc_body_fnc_createMarker = compileScript ["core\fnc\body\createMarker.sqf"];
@@ -206,7 +197,7 @@ if (isServer) then {
     btc_side_fnc_EMP = compileScript ["core\fnc\side\EMP.sqf"];
     btc_side_fnc_removeRubbish = compileScript ["core\fnc\side\removeRubbish.sqf"];
     btc_side_fnc_pandemic = compileScript ["core\fnc\side\pandemic.sqf"];
-     btc_side_fnc_massacre = compileScript ["core\fnc\side\massacre.sqf"];
+    btc_side_fnc_massacre = compileScript ["core\fnc\side\massacre.sqf"];
 
     //TAG
     btc_tag_fnc_initArea = compileScript ["core\fnc\tag\initArea.sqf"];
@@ -217,7 +208,6 @@ if (isServer) then {
     //LOG
     btc_log_fnc_createVehicle = compileScript ["core\fnc\log\createVehicle.sqf"];
     btc_log_fnc_init = compileScript ["core\fnc\log\init.sqf"];
-    btc_log_fnc_init_v = compileScript ["core\fnc\log\init_v.sqf"];
     btc_log_fnc_server_delete = compileScript ["core\fnc\log\server_delete.sqf"];
     btc_log_fnc_create_s = compileScript ["core\fnc\log\create_s.sqf"];
     btc_log_fnc_server_repair_wreck = compileScript ["core\fnc\log\server_repair_wreck.sqf"];
@@ -250,7 +240,6 @@ btc_cache_fnc_hd = compileScript ["core\fnc\cache\hd.sqf"];
 
 //COMMON
 btc_fnc_get_class = compileScript ["core\fnc\common\get_class.sqf"];
-btc_fnc_get_classeast = compileScript ["core\fnc\common\get_classeast.sqf"];
 btc_fnc_randomize_pos = compileScript ["core\fnc\common\randomize_pos.sqf"];
 btc_fnc_getHouses = compileScript ["core\fnc\common\getHouses.sqf"];
 btc_fnc_house_addWP_loop = compileScript ["core\fnc\common\house_addWP_loop.sqf"];
@@ -311,32 +300,6 @@ btc_tow_fnc_int = compileScript ["core\fnc\tow\int.sqf"];
 //VEH
 btc_veh_fnc_init = compileScript ["core\fnc\veh\init.sqf"];
 
-//FORTIFY
-tet_fortify_getobjects = compileScript ["core\fnc\fortify\getobjects.sqf"];
-tet_fortify_select = compileScript ["core\fnc\fortify\select.sqf"];
-tet_fortify_load = compileScript ["core\fnc\fortify\load.sqf"];
-tet_fortify_open = compileScript ["core\fnc\fortify\open.sqf"];
-tet_fortify_loadsalvage = compileScript ["core\fnc\fortify\loadsalvage.sqf"];
-tet_fortify_opensalvage = compileScript ["core\fnc\fortify\opensalvage.sqf"];
-tet_fortify_salvage = compileScript ["core\fnc\fortify\salvage.sqf"];
-tet_fortify_eco = compileScript ["core\fnc\fortify\eco.sqf"];
-tet_fortify_delete = compileScript ["core\fnc\fortify\delete.sqf"];
-tet_fortify_openpreview = compileScript ["core\fnc\fortify\openpreview.sqf"];
-tet_fortify_fill = compileScript ["core\fnc\fortify\fill.sqf"];
-tet_fortify_progress = compileScript ["core\fnc\fortify\progress.sqf"];
-
-//UI
-tet_ui_kill = compileScript ["core\fnc\ui\kill.sqf"];
-tet_ui_KEY = compileScript ["core\fnc\ui\KEY.sqf"];
-tet_ui_init = compileScript ["core\fnc\ui\init.sqf"];
-tet_ui_setdataperms = compileScript ["core\fnc\ui\setdataperms.sqf"];
-tet_ui_setdatascore = compileScript ["core\fnc\ui\setdatascore.sqf"];
-tet_ui_loadperms = compileScript ["core\fnc\ui\loadperms.sqf"];
-tet_ui_loadscores = compileScript ["core\fnc\ui\loadscores.sqf"];
-tet_ui_openperms = compileScript ["core\fnc\ui\openperms.sqf"];
-tet_ui_openscores = compileScript ["core\fnc\ui\openscores.sqf"];
-tet_perms = compileScript ["core\fnc\ui\tetperms.sqf"];
-
 /////////////////////CLIENT\\\\\\\\\\\\\\\\\\\\\
 if (!isDedicated) then {
     //BODY
@@ -391,6 +354,7 @@ if (!isDedicated) then {
     btc_fob_fnc_rallypointAssemble = compileScript ["core\fnc\fob\rallypointAssemble.sqf"];
     btc_fob_fnc_redeploy = compileScript ["core\fnc\fob\redeploy.sqf"];
     btc_fob_fnc_redeployCheck = compileScript ["core\fnc\fob\redeployCheck.sqf"];
+    btc_fob_fnc_addInteraction = compileScript ["core\fnc\fob\addInteraction.sqf"];
 
     //INT
     btc_int_fnc_add_actions = compileScript ["core\fnc\int\add_actions.sqf"];

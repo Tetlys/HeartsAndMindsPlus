@@ -45,7 +45,6 @@ btc_delay_time = btc_delay_time + btc_delay_vehicle;
 
     private _isAir = _vehicle_type isKindOf "Air";
     private _veh = createVehicle [_vehicle_type, _position, [], 0, ["CAN_COLLIDE", "FLY"] select _isAir];
-
     if !(_isAir) then {
         _veh setDir _direction;
         if (_surfaceNormal isEqualTo []) then {
@@ -77,8 +76,6 @@ btc_delay_time = btc_delay_time + btc_delay_vehicle;
             };
         };
     };
-
-    _veh addMPEventHandler ["MPKilled", {_this spawn tet_ui_kill}];
     _group selectLeader (driver _veh);
     (units _group) joinSilent _group;
 
@@ -86,7 +83,6 @@ btc_delay_time = btc_delay_time + btc_delay_vehicle;
     for "_i" from _crews to ((_crews_and_turret min _numberOfUnits) - 1) do {
         [_group, _units_type select _i, _position, "CAN_COLLIDE", _veh] call btc_delay_fnc_createUnit;
     };
-
 
     ["btc_delay_vehicleInit", [_veh, _group]] call CBA_fnc_localEvent;
 }, _this, btc_delay_time - 0.01] call CBA_fnc_waitAndExecute;

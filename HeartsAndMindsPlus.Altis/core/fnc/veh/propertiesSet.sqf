@@ -48,13 +48,6 @@ if (_isMedicalVehicle && {!([_vehicle] call ace_medical_treatment_fnc_isMedicalV
 if (_isRepairVehicle && {!([_vehicle] call ace_repair_fnc_isRepairVehicle)}) then {
     _vehicle setVariable ["ACE_isRepairVehicle", _isRepairVehicle, true];
 };
-_type = TypeOf _vehicle;
-if (_type in btc_log_def_loadable) then {
-    [_vehicle, round ((sizeOf _type)/1.5)] call ace_cargo_fnc_setSize;
-};
-if (_type in btc_log_def_can_load) then {
-    [_vehicle, round ((sizeOf _type)*1.5)] call ace_cargo_fnc_setSpace;
-};
 if (_fuelSource isNotEqualTo []) then {
     _fuelSource params [
         ["_fuelCargo", 0, [0]],
@@ -92,7 +85,7 @@ if (_supplyVehicle isNotEqualTo []) then {
     ];
 
     if (_isSupplyVehicle) then {
-                if (_currentSupply isEqualTo -1) then {
+        if (_currentSupply isEqualTo -1) then {
             [_vehicle, 0] call ace_rearm_fnc_makeSource;
         } else {
             [_vehicle, _currentSupply] call ace_rearm_fnc_makeSource;

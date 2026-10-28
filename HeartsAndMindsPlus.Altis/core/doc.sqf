@@ -51,3 +51,9 @@ player createDiaryRecord [_mainCategory, [localize "STR_BTC_HAM_ACTION_ORDERS_MA
 
 //Traffic
 player createDiaryRecord [_mainCategory, [localize "STR_BTC_HAM_DOC_TRAFFIC_TITLE", localize "STR_BTC_HAM_DOC_TRAFFIC_TEXT"]];
+
+//Version
+player createDiaryRecord [_mainCategory, [localize "STR_A3_FM_Welcome4",
+        format (["<img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa' width='20' height='20'/> Version %1.%2.%3 <img image='\A3\ui_f\data\igui\cfg\simpleTasks\types\download_ca.paa' width='20' height='20'/> <br/><br/> <img image='\a3\missions_f_orange\Data\Img\orange_overview_ca.paa' width='355' height='200'/>"] + btc_version)
+    ]
+];

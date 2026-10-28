@@ -36,10 +36,3 @@ if !((_object_placed isKindOf "allVehicles") || (_object_placed isKindOf "Module
         [str _object_placed, __FILE__, [btc_debug, false]] call btc_debug_fnc_message;
     };
 };
-
-if ((typeof _object_placed in btc_fortify_vehicles) && (_object_placed isKindOf "allVehicles")) then {
-    
-    [_object_placed] remoteExecCall ["btc_veh_fnc_add", 2];
-    [typeof _object_placed] remoteExecCall ["btc_veh_fnc_init", 2];
-    [_object_placed] remoteExecCall ["btc_log_fnc_init_v", 2];
-};

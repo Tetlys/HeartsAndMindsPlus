@@ -30,7 +30,7 @@ private _ticket = 0;
 private _UID = _bodyBag getVariable ["btc_UID", ""];
 private _players = [];
 if (_UID isEqualTo "") then {
-        if (
+    if (
         alive _bodyBag &&
         _bodyBag isKindOf "CAManBase" &&
          side group _bodyBag isEqualTo btc_enemy_side

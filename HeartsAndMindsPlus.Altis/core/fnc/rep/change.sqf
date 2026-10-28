@@ -30,10 +30,6 @@ if (btc_debug || btc_debug_log) then {
     [format ["GLOBAL %1 - CHANGE %2 - %3", btc_global_reputation, _reputation, name _player], __FILE__, [btc_debug, btc_debug_log, true]] call btc_debug_fnc_message;
 };
 
-_UID = getplayerUID _player;
-if (_reputation == btc_rep_bonus_hideout ||_reputation == btc_rep_bonus_cache ) then {{_UID = getplayerUID _x; ["REP",_UID,nil,_reputation] call tet_ui_setdatascore;}foreach allplayers;} else {if !(isNil "_UID") then {["REP",_UID,nil,_reputation] call tet_ui_setdatascore;}};
-
-
 btc_global_reputation = btc_global_reputation + _reputation;
 
 if (btc_p_rep_notify >= 0) then {

@@ -38,10 +38,10 @@ btc_city_remaining = [];
         _marker setMarkerSize [_cachingRadius, _cachingRadius];
         _marker setMarkerAlpha 0.3;
         if (_y getVariable ["occupied", false]) then {
-            _marker setMarkerColor "colorRed"; // CONFIG OBJ Colors - ENDGAME
+            _marker setMarkerColor "colorRed";
             btc_city_remaining pushBack _y;
         } else {
-            _marker setMarkerColor "colorBLUFOR"; // CONFIG OBJ Colors - ENDGAME
+            _marker setMarkerColor "colorGreen";
             _marker setMarkerAlpha 0;
         };
         _y setVariable ["marker", _marker];

@@ -71,7 +71,6 @@ if (_cache_info < _info_cache_ratio) then {
     btc_cache_info = [[_cache_obj, _cache_info] call CBA_fnc_randPos, _cache_info] call btc_info_fnc_cacheMarker;
 };
 
-// INFOPOPUP
-[parseText "<t color='#1AA3FF' font='PuristaBold' align = 'right' shadow = '1.5' size='2'>Intel Collected! </t>", [0, 0.5, 1, 1], nil, 5, 1.7, 0] remoteExec ["BIS_fnc_textTiles", 0];
+_intelId remoteExecCall ["btc_fnc_show_hint", [0, -2] select isDedicated];
 
 _intelId

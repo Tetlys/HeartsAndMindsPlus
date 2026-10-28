@@ -28,8 +28,15 @@ if (
     {!isAgent teamMember _unit}
 ) exitWith {};
 
-if (isPlayer _instigator) then {
+if (
+    isPlayer _instigator ||
+    _killer isEqualTo btc_explosives_objectSide ||
+    isPlayer _killer
+) then {
     private _isAgent = isAgent teamMember _unit;
+    if (isNull _instigator && isPlayer _killer) then {
+        _instigator = _killer;
+    };
     [
         [btc_rep_malus_civ_killed, btc_rep_malus_animal_killed] select _isAgent,
         _instigator
@@ -39,6 +46,7 @@ if (isPlayer _instigator) then {
     };
 
     if !(_isAgent) then {
+        _unit setVariable ["btc_rep_playerKiller", getPlayerUID _instigator];
         private _city = (group _unit) getVariable ["btc_city", objNull];
         if !(isNull _city) then {
             private _civKilled = _city getVariable ["btc_rep_civKilled", []];

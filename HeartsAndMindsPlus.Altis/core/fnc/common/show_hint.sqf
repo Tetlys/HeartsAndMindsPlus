@@ -127,12 +127,6 @@ private _text = switch (_type) do {
     case 25 : {
         localize "STR_BTC_HAM_O_COMMON_NOPLAYERFTICKET";
     };
-    case 26 : {
-        localize "STR_BTC_HAM_LOG_RWRECK_NOWRECK_FUNDS";
-    };
 };
 
 _text call CBA_fnc_notify;
-
-
-

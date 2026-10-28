@@ -1,6 +1,6 @@
 
 /* ----------------------------------------------------------------------------
-Function:btc_veh_fnc_init 
+Function: btc_veh_fnc_init
 
 Description:
     Add custom ACE interaction depends one vehicle type (static weapon, land vehicle, helicopter and ship).
@@ -32,6 +32,7 @@ switch true do {
     case (_type isKindOf "StaticWeapon") : {};
     case (_type isKindOf "LandVehicle" || {_type isKindOf "Ship"}) : {
         _type call btc_tow_fnc_int;
+
         _type call btc_flag_fnc_int;
     };
     case (_type isKindOf "Helicopter") : {
@@ -59,3 +60,5 @@ switch true do {
         _type call btc_tow_fnc_int;
     };
 };
+
+

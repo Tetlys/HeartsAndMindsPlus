@@ -36,30 +36,35 @@ Author:
         "_isContaminated",
         "_medicalDeserializeState",
         ["_vehicle", objNull, [objNull]],
-        ["_field_rations", [], [[]]]
+        ["_field_rations", [], [[]]],
+        ["_aceFlagItem", "", [""]]
     ];
 
     if (
         player distance ASLToAGL _previousPos > 50 || // Don't set loadout when near main base
         btc_p_autoloadout isEqualTo 0
-    ) then {
-        //[{player setUnitLoadout _this;}, _loadout] call CBA_fnc_execNextFrame;
+    ) then { 
+        [{[player, _this] call CBA_fnc_setLoadout;}, _loadout] call CBA_fnc_execNextFrame;
     };
-    //if ((isNull _vehicle) || {!(player moveInAny _vehicle)}) then {
-        //player setPosASL _previousPos;
-    //};
-    //player setDir _dir;
-    //player forceFlagTexture _flagTexture;
-    //[{player getVariable ["ace_medical_initialized", false]}, {
-    //    [player, _this] call ace_medical_fnc_deserializeState;
-    //}, _medicalDeserializeState] call CBA_fnc_waitUntilAndExecute;
+    if ((isNull _vehicle) || {!(player moveInAny _vehicle)}) then {
+        player setPosASL _previousPos;
+    };
+    player setDir _dir;
+    if (_aceFlagItem isEqualTo "") then {
+        player forceFlagTexture _flagTexture;
+    } else {
+        [player, _aceFlagItem] call ace_flags_fnc_carryFlag;
+    };
+    [{player getVariable ["ace_medical_initialized", false]}, {
+        [player, _this] call ace_medical_fnc_deserializeState;
+    }, _medicalDeserializeState] call CBA_fnc_waitUntilAndExecute;
 
     if (_isContaminated) then {
-        //player call btc_chem_fnc_damageLoop;
+        player call btc_chem_fnc_damageLoop;
     };
 
     _field_rations params [["_thirst", 0, [0]], ["_hunger", 0, [0]]];
-    //player setVariable ["acex_field_rations_thirst", _thirst];
-    //player setVariable ["acex_field_rations_hunger", _hunger];
+    player setVariable ["acex_field_rations_thirst", _thirst];
+    player setVariable ["acex_field_rations_hunger", _hunger];
 
 }, _this] call CBA_fnc_waitUntilAndExecute;

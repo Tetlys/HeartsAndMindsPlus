@@ -3,7 +3,7 @@
 Function: btc_mil_fnc_unit_killed
 
 Description:
-    Fill me when you edit me !
+    Handle intel and reputation when an enemy is killed.
 
 Parameters:
     _unit - Object the event handler is assigned to. [Object]
@@ -24,20 +24,21 @@ Author:
 
 params ["_unit", "_causeOfDeath", "_killer", "_instigator"];
 
-if (isPlayer _instigator) then {
-_uid = getplayerUID _instigator;
-["KILL", _uid, _unit] call tet_ui_setdatascore;
-};
-
 if (side group _unit isNotEqualTo btc_enemy_side) exitWith {};
 
 if (random 100 > btc_info_intel_chance) then {
     _unit setVariable ["intel", true];
 };
 
-
-if (isPlayer _instigator) then {
+if (
+    isPlayer _instigator ||
+    _killer isEqualTo btc_explosives_objectSide ||
+    isPlayer _killer
+) then {
     private _repValue = btc_rep_bonus_mil_killed;
+    if (isNull _instigator && isPlayer _killer) then {
+        _instigator = _killer;
+    };
     if (
         _unit getVariable ["ace_captives_isHandcuffed", false] ||
         _unit getVariable ["ace_captives_isSurrendering", false]
@@ -47,8 +48,4 @@ if (isPlayer _instigator) then {
         };
     };
     [_repValue, _instigator] call btc_rep_fnc_change;
-
-    //ECONOMY
-    [west, 1, false] call acex_fortify_fnc_updateBudget;
-    btc_global_economy = btc_global_economy + 1;
 };

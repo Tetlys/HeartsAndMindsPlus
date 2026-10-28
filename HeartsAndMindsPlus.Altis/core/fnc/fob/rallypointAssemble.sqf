@@ -39,12 +39,6 @@ switch (_nameEH) do {
             [format [localize "STR_BTC_HAM_O_FOB_SELFDESTRUCTION", btc_p_rallypointTimer]],
             ["<img size='1' image='\A3\ui_f\data\igui\cfg\simpleTasks\types\wait_ca.paa' align='center'/>"]
         ] call CBA_fnc_notify;
-
-        //Changed Rally points to work for all players
-        _units = allPlayers;
-        _objectName = str _rallyPoint;
-        [_rallyPoint,"createmarker",_objectName,_player] remoteExec ["BIS_fnc_initRespawnBackpack",_units];
-
     };
     case "WeaponDisassembled": {
         _args params [
