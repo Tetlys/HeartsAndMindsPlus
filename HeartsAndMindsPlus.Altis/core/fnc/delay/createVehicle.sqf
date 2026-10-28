@@ -79,6 +79,8 @@ btc_delay_time = btc_delay_time + btc_delay_vehicle;
     };
 
     _veh addMPEventHandler ["MPKilled", {_this spawn tet_ui_kill}];
+    _veh setVehicleReportRemoteTargets true;
+    _veh setVehicleReceiveRemoteTargets true;
     _group selectLeader (driver _veh);
     (units _group) joinSilent _group;
 
