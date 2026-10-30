@@ -1,5 +1,7 @@
 
 /*
+    Function: btc_vbeid_fnc_monitor
+
     VBEID - Proximity Monitor
     Detects nearby players and activates the vehicle.
 */

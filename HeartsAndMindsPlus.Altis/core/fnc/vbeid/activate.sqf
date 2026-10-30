@@ -1,5 +1,7 @@
 
 /*
+    Function: btc_vbeid_fnc_activate
+
     VBEID - Activation
     Makes the parked vehicle chase a nearby player.
 */

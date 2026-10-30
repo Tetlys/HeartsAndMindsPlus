@@ -1,4 +1,6 @@
 /*
+    Function: btc_vbeid_fnc_spawner
+
     VBEID - Automatic Spawner
     Hearts and Minds Plus
 

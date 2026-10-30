@@ -1,5 +1,8 @@
 
 /*
+
+    Function: btc_vbeid_fnc_create
+
     VBEID - Vehicle-Borne Explosive Device
     Creates a parked civilian vehicle with an AI driver.
     The vehicle will remain stationary until activated.
