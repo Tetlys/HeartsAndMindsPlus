@@ -4349,7 +4349,7 @@
                 <Czech>Ukážu vám nějakou nápovědu na mapě</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_ASKHIDEOUT_TRUE">
-                <Original>I saw a lot of militia activity towards %1, %2 meter from here. I heard
+                <Original>I saw a lot of military activity towards %1, %2 meter from here. I heard
                     there is a hideout!</Original>
                 <Spanish>Vi mucha actividad de la milicia en direccion a %1, %2 metros de aqui.
                     ¡Probablemente haya un escondite!</Spanish>
@@ -4398,7 +4398,7 @@
                 <Czech>Hledání intel . . .</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_TROOPS_TRUE">
-                <Original>I saw some militia movement %1, %2 meter from here</Original>
+                <Original>I saw some military movement %1, %2 meter from here</Original>
                 <Spanish>Vi movimiento de milicia a %1, %2 metros de aqui</Spanish>
                 <German>Ich habe mehrer bewaffnete Personen in Richtung %1, ca. %2m entfernt,
                     gesehen</German>
@@ -4408,7 +4408,7 @@
                 <Czech>Viděl jsem nějaké hnutí milice %1, %2 metr odtud</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_CON_INFO_TROOPS_FALSE">
-                <Original>I didn't see any militia movement in this area!</Original>
+                <Original>I didn't see any military movement in this area!</Original>
                 <Spanish>¡No vi ningún movimiento de milicia en esta zona!</Spanish>
                 <German>Ich habe keine bewaffneten Personen in der Nähe gesehen!</German>
                 <Portuguese>Eu não vi nenhum movimento de milícia nesta área!</Portuguese>
