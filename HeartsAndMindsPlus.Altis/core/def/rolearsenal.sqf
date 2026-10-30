@@ -537,7 +537,11 @@ roleArsenal = {
 		"MRAWS_HE_F",
 		"MRAWS_HEAT55_F",
 		"MRAWS_HEAT_F",
-		"rhs_fgm148_magazine_AT"
+		"rhs_fgm148_magazine_AT", 
+		//GLATTACHMENTS
+		"rhsusf_acc_grip_m203_blk", 
+		"rhsusf_acc_grip_m203_d", 
+		"rhsusf_acc_grip_m203_wd"
 		
       ];
 
@@ -592,7 +596,11 @@ roleArsenal = {
 		"MRAWS_HE_F",
 		"MRAWS_HEAT55_F",
 		"MRAWS_HEAT_F",
-		"rhs_fgm148_magazine_AT"
+		"rhs_fgm148_magazine_AT",
+		//GLATTACHMENTS
+		"rhsusf_acc_grip_m203_blk", 
+		"rhsusf_acc_grip_m203_d", 
+		"rhsusf_acc_grip_m203_wd"
       ];
 
       Private _MEDIC = [
