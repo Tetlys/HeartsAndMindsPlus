@@ -23,7 +23,7 @@ private _group = group _driver;
 _group setBehaviour "CARELESS";
 _group setSpeedMode "FULL";
 
-_vehicle forceFlagTexture "\A3\Data_F_Enoch\Flags\flag_looters_co.paa";
+_vehicle forceFlagTexture "\A3\Data_F\Flags\flag_CSAT_CO.paa";
 
 [driver _vehicle] call btc_ied_fnc_suicider_active;
 

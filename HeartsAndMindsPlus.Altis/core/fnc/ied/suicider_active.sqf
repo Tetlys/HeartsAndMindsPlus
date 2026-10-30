@@ -30,7 +30,7 @@ _group setVariable ["suicider", true];
 _group setVariable ["acex_headless_blacklist", true];
 
 private _range = 0;
-if (!isNull (objectParent _suicider)) then {_range = 15} else {_range = 5};
+if (!isNull (objectParent _suicider)) then {_range = 20} else {_range = 5};
 
 
 [group _suicider] call CBA_fnc_clearWaypoints;
