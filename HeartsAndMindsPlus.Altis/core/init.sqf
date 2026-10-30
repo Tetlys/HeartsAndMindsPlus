@@ -21,3 +21,4 @@ if (!isDedicated && !hasInterface) then {
 
     ACE_maxWeightCarry = 5000;
     ACE_maxWeightDrag = 10000;
+    CHVD_allowNoGrass = false;
