@@ -237,7 +237,7 @@ if (isServer) then {
 
     //Side
     btc_side_ID = 0;
-    btc_side_list = ["supply", "mines", "get_city", "tower",  "checkpoint", "hostage", "kill", "civtreatment", "EMP", "rescue", "hack", "removeRubbish","convoy", "capture_officer", "massacre"]; //, "vehicle"
+    btc_side_list = ["supply", "mines", "get_city", "tower",  "checkpoint", "hostage", "kill", "civtreatment", "EMP", "rescue", "hack", "removeRubbish", "massacre"]; //, "vehicle","convoy", "capture_officer"
     if (btc_p_sea) then {btc_side_list append ["civtreatment_boat", "underwater_generator"]}; // On sea
     if (btc_p_chem) then {btc_side_list append ["chemicalLeak", "pandemic"]};
     btc_side_list_use = [];
