@@ -10,6 +10,9 @@
     20% cleared towns
 
     Server-side only.
+
+    Examples:
+        [] call btc_vbeid_fnc_spawner;
 */
 
 if (!isServer) exitWith {};

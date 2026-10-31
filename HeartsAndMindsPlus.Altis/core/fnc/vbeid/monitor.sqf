@@ -1,9 +1,18 @@
-
 /*
     Function: btc_vbeid_fnc_monitor
 
     VBEID - Proximity Monitor
     Detects nearby players and activates the vehicle.
+
+    Parameters:
+        _vehicle - VBEID vehicle to monitor. [Object]
+        _activationDistance - Distance at which players activate the vehicle. [Number]
+
+    Returns:
+        Nothing.
+
+    Examples:
+        [_vehicle, 1000] call btc_vbeid_fnc_monitor;
 */
 
 params [

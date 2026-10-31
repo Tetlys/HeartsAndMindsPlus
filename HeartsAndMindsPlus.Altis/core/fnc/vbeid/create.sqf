@@ -1,4 +1,3 @@
-
 /*
 
     Function: btc_vbeid_fnc_create
@@ -6,6 +5,17 @@
     VBEID - Vehicle-Borne Explosive Device
     Creates a parked civilian vehicle with an AI driver.
     The vehicle will remain stationary until activated.
+
+    Parameters:
+        _pos - Position to spawn the vehicle. [Array]
+        _vehicleType - Vehicle classname to create. [String]
+
+    Returns:
+        _vehicle - Created vehicle object. [Object]
+
+    Examples:
+        [getPos player] call btc_vbeid_fnc_create;
+        [getPos player, "C_Offroad_01_F"] call btc_vbeid_fnc_create;
 */
 
 params [

@@ -4,6 +4,16 @@
 
     VBEID - Activation
     Makes the parked vehicle chase a nearby player.
+
+    Parameters:
+        _vehicle - VBEID vehicle to activate. [Object]
+        _target - Player to target. [Object]
+
+    Returns:
+        Nothing.
+
+    Examples:
+        [_vehicle, player] call btc_vbeid_fnc_activate;
 */
 
 params [
