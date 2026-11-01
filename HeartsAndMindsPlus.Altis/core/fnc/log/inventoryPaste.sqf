@@ -34,6 +34,10 @@ if (
 ) exitWith {(localize "STR_BTC_HAM_O_PASTE_NOCOPIEDI") call CBA_fnc_notify};
 if (_objects isEqualTo []) exitWith {(localize "STR_BTC_HAM_O_COPY_NOOBJECTS") call CBA_fnc_notify};
 
+_inventory set [2, (_inventory select 2) select {
+    !(_x find "ACE_dogtag" >= 0)
+}];
+
 [_objects select 0, _inventory] call btc_log_fnc_inventorySet;
 
 (localize "str_mission_completed") call CBA_fnc_notify;
