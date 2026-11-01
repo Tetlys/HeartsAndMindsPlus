@@ -154,7 +154,7 @@ if (count _missingMods > 0 || count _disallowedMods > 0) then {
         ["", "END1"] call BIS_fnc_endMission;
     };
 } else {
-    [player, "All required mods found. Welcome!"] call BIS_fnc_showSubtitle;
+    ["SERVER", "All required mods found. Welcome!"] call BIS_fnc_showSubtitle;
 };
 
 
