@@ -147,6 +147,7 @@ if (count _missingMods > 0 || count _disallowedMods > 0) then {
     };
 } else {
     ["All required mods found. Welcome!"] call CBA_fnc_notify;
+    systemchat "All required mods found. Welcome!";
 };
 
 
