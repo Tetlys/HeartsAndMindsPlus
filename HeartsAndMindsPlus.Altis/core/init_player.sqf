@@ -16,7 +16,7 @@ btc_intro_done = [] spawn btc_respawn_fnc_intro;
 // MOD CHECKER 
 
 /*
-CODE TO COLLECT MOD HASHES AND NAMES FROM THE LOADED MODS, REQUIRED MODS, AND OPTIONAL MODS.
+CODE TO COLLECT MOD HASHES AND NAMES FROM THE LOADED MODS, REQUIRED MODS, AND OPTIONAL MODS (Run local in debug).
 
  private _mods = (getLoadedModsInfo select { 
     !(_x select 2) && 
@@ -26,6 +26,7 @@ CODE TO COLLECT MOD HASHES AND NAMES FROM THE LOADED MODS, REQUIRED MODS, AND OP
 }; 
  
 _mods
+
 */
 tet_requiredmods = [
     ["22dc683ee7645369b375f5d3a2db51a995658245", "RHS: United States Forces"],
@@ -141,13 +142,19 @@ if (count _missingMods > 0 || count _disallowedMods > 0) then {
 
     [_message, "MOD CHECK FAILED"] spawn BIS_fnc_guiMessage;
 
+    private _issueMods = _disallowedMods + _missingMods;
+
+    diag_log format [
+    "[MOD CHECK FAILED] The following mod issues were detected: %1",
+    _issueMods joinString ", "
+    ];
+
     [] spawn {
-        sleep 5;
+        sleep 10;
         ["", "END1"] call BIS_fnc_endMission;
     };
 } else {
-    ["All required mods found. Welcome!"] call CBA_fnc_notify;
-    systemchat "All required mods found. Welcome!";
+    [player, "All required mods found. Welcome!"] call BIS_fnc_showSubtitle;
 };
 
 
