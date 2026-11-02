@@ -39,7 +39,7 @@ if (_colorSel isEqualTo "sand") then {_color = [[.55, .47, .37, .75], [0.78, 0.7
 if (_colorSel isEqualTo "gray") then {_color = [[.1, .1, .1, .75], [0.78, 0.76, 0.71, 0]];};
 if (_colorSel isEqualTo "brown") then {_color = [[0.55, 0.41, 0.25, 1], [0.55, 0.41, 0.25, 0]];};
 
-private _size = 1 + random 3;
+private _size = 3 + random 3;
 
 private _thingToFling = "Land_Bucket_F" createVehicleLocal [0, 0, 0];
 _thingToFling hideObject true;

@@ -40,7 +40,7 @@ for "_i" from 0 to ((count _color)-1) step 1 do {
     _smoke setPosASL _posASL;
     _smoke setParticleCircle [0, [0, 0, 0]];
     _smoke setParticleRandom [0, [8, 8, 2], [300, 300, 0], 0, 0.25, [0.05, 0.05, 0.05, 0.1], 0, 0];
-    _smoke setParticleParams [["\A3\data_f\cl_fireD", 1, 0, 1], "", "Billboard", 1, 3, [0, 0, -1], [0, 0, -8], 0, 10, 7.85, .375, [6, 8, 10], _color select _i, [.08], 1, 0, "", "", _posASL];
+    _smoke setParticleParams [["\A3\data_f\cl_fireD", 1, 0, 1], "", "Billboard", 1, 3, [0, 0, -1], [0, 0, -8], 0, 10, 7.85, .375, [12, 16, 20], _color select _i, [.08], 1, 0, "", "", _posASL];
     _smoke setDropInterval .0004;
 
     _smokes pushBack _smoke;
