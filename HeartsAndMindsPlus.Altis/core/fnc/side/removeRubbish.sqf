@@ -59,7 +59,7 @@ for "_i" from 0 to (_minNumberOfSubTask + _extra_ied - 1) do {
 
         if (!(_clear_taskID call BIS_fnc_taskCompleted) && {_pos_ied distance _posDeleted_ied < 5}) then {
             [_clear_taskID, "SUCCEEDED"] call BIS_fnc_taskSetState;
-            if (0.5 < random 1) then {
+            if (0.5 < random 2) then {
                 [_posDeleted_ied] call btc_rep_fnc_call_militia;
             };
         };

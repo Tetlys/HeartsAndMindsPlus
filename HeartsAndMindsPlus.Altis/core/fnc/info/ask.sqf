@@ -47,7 +47,7 @@ if (
     [name _man, localize "STR_BTC_HAM_CON_INFO_ASK_ALLREADYANS"] call btc_fnc_showSubtitle;
 };
 
-if ((round random 3) >= 2 || !_isInterrogate) then {
+if ((round random 4) >= 3 || !_isInterrogate) then {
     _man setVariable ["btc_already_asked", true, true];
     if (_isInterrogate) then {_man setVariable ["btc_already_interrogated", true, true];};
 };

@@ -44,6 +44,12 @@ if (isPlayer _instigator) then {
     ) then {
         if (_causeOfDeath isNotEqualTo "CardiacArrest:Bleedout") then {
             _repValue = btc_rep_malus_mil_killed;
+            private _name = name _instigator;
+            [
+                [
+                    format ["%1 has committed a war crime by killing a POW!", _name]
+                ]
+            ] remoteExec ["CBA_fnc_notify", 0];
         };
     };
     [_repValue, _instigator] call btc_rep_fnc_change;

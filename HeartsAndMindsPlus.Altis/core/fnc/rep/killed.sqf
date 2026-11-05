@@ -34,6 +34,12 @@ if (isPlayer _instigator) then {
         [btc_rep_malus_civ_killed, btc_rep_malus_animal_killed] select _isAgent,
         _instigator
     ] call btc_rep_fnc_change;
+    private _name = name _instigator;
+    [
+        [
+            format ["%1 has committed a war crime by killing a Civilian!", _name]
+        ]
+    ] remoteExec ["CBA_fnc_notify", 0];
     if (btc_global_reputation < btc_rep_level_normal + 100) then {
         [getPos _unit] call btc_rep_fnc_eh_effects;
     };

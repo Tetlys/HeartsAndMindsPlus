@@ -41,6 +41,10 @@ btc_delay_time = btc_delay_time + btc_delay_unit;
         _pos = _pos get "_pos";
     };
     private _unit = _group createUnit [_unit_type, _pos, [], 0, _special];
+    
+    // Check if LAMBS is disabled for the group and set the unit AI accordingly
+    _unit setVariable ["lambs_danger_disableAI", _group getVariable ["lambs_danger_disableGroupAI", false]]; 
+    
     [_unit] joinSilent _group;
 
     if (!isNull _vehicle) then {
