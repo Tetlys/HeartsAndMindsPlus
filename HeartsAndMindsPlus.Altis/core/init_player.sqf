@@ -65,8 +65,7 @@ tet_requiredmods = [
     ["994f101842636b158ad082197ed6348b9f1cf705", "@Goon's Toons"],
     ["90f74ba4565b9fdc6c77260500e33626c81071c0", "@G.O.S Al Rayak"],
     ["06d116f091ec9d10db5bc0fd67ee4c587c988edd", "BRF Faction Pack"],
-    ["0462ee5ca5b707354b4fdaf085b619894b0a431f", "TLB Interactions"],
-    ["6dcde2a23a8d98e2cdd395055682ad421e5b6742", "LAMBS Danger.fsm 2.6.2"]
+    ["0462ee5ca5b707354b4fdaf085b619894b0a431f", "TLB Interactions"]
 ];
 
 tet_optionalmods = [
