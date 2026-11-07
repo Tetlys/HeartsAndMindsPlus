@@ -41,6 +41,9 @@ HeartsAndMindsPlus is a customized Arma 3 gamemode by Tetlys, building upon the 
 - Auto Loadout
 - Arsenal on Death Screen
 
+### HELP
+
+- Looking for support setting up a server? Or got an idea that would improve the gamemode, I would love to hear it! Reach out to @Tetlys
 
 ### COMING SOON!
 
