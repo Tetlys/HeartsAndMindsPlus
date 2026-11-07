@@ -101,7 +101,7 @@ if (_protection >= 1) exitWith {_this};
 
 if (_firstDamage || (random 1 > _protection)) then {
     _this set [1, false];
-    [_unit, random [0.05, 0.05, 0.2], selectRandom _bodyParts, "stab"] call ace_medical_fnc_addDamageToUnit; // ropeburn
+    [_unit, random [0.05, 0.05, 0.2], selectRandom _bodyParts, "KAT_chemicalBurn"] call ace_medical_fnc_addDamageToUnit; // ropeburn CHANGE TO "stab" if not using KAT medical!
 };
 
 _this
