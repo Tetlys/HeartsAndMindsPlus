@@ -150,7 +150,8 @@ if (count _missingMods > 0 || count _disallowedMods > 0) then {
     ];
 
     [] spawn {
-        sleep 10;
+        ["MOD CHECK FAILED", "You will now be kicked"] call BIS_fnc_showSubtitle;
+        sleep 20;
         ["", "END1"] call BIS_fnc_endMission;
     };
 

@@ -37,7 +37,7 @@ params [
 ];
 
 // CHANGE THE NUMBER VV HERE TO LOWER OR RAISE POINT CAP
-if (Points_Active >= 5) exitWith {["Point Proc Limit Reached"] remoteExec ["CBA_fnc_notify"];};
+if (Points_Active >= 4) exitWith {["Point Proc Limit Reached"] remoteExec ["CBA_fnc_notify"];};
 Points_Active = Points_Active + 1;
 
 publicVariable "Points_Active";
@@ -55,7 +55,7 @@ _city setVariable ["active", true];
 
 // Added Player Scaling Variable
 private _CurrentPlayers = count allPlayers;
-private _PlayerScale = ((_CurrentPlayers * 0.1) max 1) min 2;
+private _PlayerScale = ((_CurrentPlayers * 0.08) max 0.8) min 1.5;
 
 private _data_units = _city getVariable ["data_units", []];
 private _data_animals = _city getVariable ["data_animals", []];
