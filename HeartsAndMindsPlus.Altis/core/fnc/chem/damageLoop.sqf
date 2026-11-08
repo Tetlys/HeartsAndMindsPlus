@@ -35,7 +35,7 @@ private _handle = [{
         ["btc_chem_decontaminated", [_unit]] call CBA_fnc_localEvent;
     };
     _this set [0, _args call btc_chem_fnc_damage];
-}, 3, [_unit, _notAlready, _bodyParts, configFile >> "CfgGlasses"]] call CBA_fnc_addPerFrameHandler;
+}, 5, [_unit, _notAlready, _bodyParts, configFile >> "CfgGlasses"]] call CBA_fnc_addPerFrameHandler;
 
 ["btc_chem_decontaminated", {
     params ["_unitfromCallEvent"];
