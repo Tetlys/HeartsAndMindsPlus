@@ -392,6 +392,11 @@ if (_numberOfCivVeh < _p_civ_max_veh) then {
     };
 };
 
+// VBEID - Start automatic spawning system
+if ((random 2) > 0.5) then { //MOT
+[] call btc_vbeid_fnc_spawner;
+};
+
 // https://feedback.bistudio.com/T162941
 private _HCs = entities "HeadlessClient_F";
 if (_HCs isNotEqualTo []) then {
