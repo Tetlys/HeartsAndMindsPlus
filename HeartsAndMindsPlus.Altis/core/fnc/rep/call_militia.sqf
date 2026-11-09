@@ -54,7 +54,7 @@ if (btc_debug_log) then {
 };
 
 // VBEID - Start automatic spawning system
-if ((random 2) > 0.5) then { //MOT
+if ((random 2) < 0.5) then { //MOT
 [] call btc_vbeid_fnc_spawner;
 };
 

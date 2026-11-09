@@ -41,6 +41,10 @@ if (!isNull (objectParent _suicider)) then {
                 currentWeapon _vehicle
             ];
         };
+
+        if (random 5 > 4) then {
+            [_vehicle, _vehicle] call btc_ied_fnc_boom;
+        };
     };
 };
 

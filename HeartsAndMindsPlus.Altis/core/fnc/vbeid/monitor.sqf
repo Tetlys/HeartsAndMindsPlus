@@ -39,8 +39,18 @@ if (isNull _vehicle) exitWith {};
 
         if (_players isNotEqualTo []) then {
             [_vehicle, _players select 0] call btc_vbeid_fnc_activate;
+        } else {
+            if (allPlayers findIf {
+                alive _x &&
+                {side group _x isEqualTo btc_player_side} &&
+                {!captive _x} &&
+                {_x distance _vehicle <= (_activationDistance + 500)}
+            } isEqualTo -1) exitWith {
+                {deleteVehicle _x} forEach crew _vehicle;
+                deleteVehicle _vehicle;
+            };
         };
-
-        sleep 1;
+        
+        sleep 5;
     };
 };

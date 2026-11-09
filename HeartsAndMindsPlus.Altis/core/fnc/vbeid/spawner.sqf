@@ -222,11 +222,18 @@ private _spawnVBEID = {
     _vehicle
 };
 // Track VBEIDs created by the automatic spawner
-private _activeVBEIDs = [];
+
 
 // Remove destroyed, detonated, or deleted vehicles from tracking
 private _cleanupVBEIDList = {
-    _activeVBEIDs = _activeVBEIDs select {
+    {
+        if (!isNull _x && {!alive _x}) then {
+            {deleteVehicle _x} forEach crew _x;
+            deleteVehicle _x;
+        };
+    } forEach activeVBEIDs;
+
+    activeVBEIDs = activeVBEIDs select {
         !isNull _x &&
         {alive _x} &&
         {!(_x getVariable ["btc_vbeid_detonated", false])}
@@ -239,7 +246,7 @@ private _cleanupVBEIDList = {
     call _cleanupVBEIDList;
 
     // Only spawn if we're below the vehicle limit
-    if (count _activeVBEIDs < _maxActiveVBEIDs) then {
+    if (count activeVBEIDs < _maxActiveVBEIDs) then {
 
         private _players = call _getEligiblePlayers;
 
@@ -260,12 +267,12 @@ if (_pos isEqualTo []) then {
                 private _vehicle = [_pos] call _spawnVBEID;
 
                 if (!isNull _vehicle) then {
-                    _activeVBEIDs pushBack _vehicle;
+                    activeVBEIDs pushBack _vehicle;
 
                     diag_log format [
                         "[VBEID] Category: %1 | Active: %2/%3",
                         _category,
-                        count _activeVBEIDs,
+                        count activeVBEIDs,
                         _maxActiveVBEIDs
                     ];
                 };

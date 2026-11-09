@@ -910,5 +910,6 @@ if (_class in _alltoprice) then {_alltoprice deleteat (_alltoprice find _class);
 ALLTOPRICETOTAL = _alltopricearray + _customprices;
 
 city_remaining = [];
+activeVBEIDs = [];
 
 Points_Active = 0;
