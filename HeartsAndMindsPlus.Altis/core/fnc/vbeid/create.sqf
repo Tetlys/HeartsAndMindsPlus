@@ -29,7 +29,7 @@ private _vehicle = createVehicle [_vehicleType, _pos, [], 0, "NONE"];
 _vehicle setDir random 360;
 
 private _group = createGroup [civilian, true];
-_group setVariable ["no_cache", true];
+_group setVariable ["no_cache", false];
 _group setVariable ["acex_headless_blacklist", true];
 
 private _driver = _group createUnit [SelectRandom btc_civ_type_units, _pos, [], 0, "NONE"];
