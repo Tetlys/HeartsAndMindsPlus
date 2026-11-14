@@ -80,7 +80,7 @@ tet_optionalmods = [
     ["0735646b6b0a8984ec7b1d410ec79a42972f4960", "@Simple MapTools"],
     ["4cfe87e9086ce0306dcaed4952b0963ff72fcedc", "@Reduced Haze Mod v3.1"],
     ["9c9eb99eb843419b064cd0c5023abd6a8371e74c", "Enhanced GPS"],
-    ["34ac3216a87075b9e7cbe6c7386f983cc0e7b991", "Reactive Building Effects PLUS"],
+    ["ead08d48972002f9a31d6f82f13cfe61bc71a907","Reactive Building Effects PLUS"],
     ["ca1f0b8bc75e193da9a6ef7026b93fadc9d19e7d", "JSRS Soundmod 2025 - Version 4.0.0.12"],
     ["7254b966e432a9ac91b373200d94efc54f951f8f", "A3 Additional Measurements"],
     ["7789a7bf631f51e59c971409e5a466f20ee97acd", "ANZACSAS Enhanced Missile Smoke and Lighting Efx Mod 1.4"],
@@ -90,7 +90,8 @@ tet_optionalmods = [
     ["453cde79b35716d708ea579a5fbe2b6896cc08c0", "PDD"],
     ["4a84cb1f1af19b20e0fe99bda3438bc7c24cb21c", "GPS Route Plotter PLUS"],
     ["26388a776a69542b979f4416e59b0cbc6417745b", "@Turret Enhanced Plus"],
-    ["879086d09e4c28ff876f80081784e41f382ab621", "@「RSS」 Immersive Hud"]
+    ["879086d09e4c28ff876f80081784e41f382ab621", "@「RSS」 Immersive Hud"],
+    ["726e4c02a242e07cb6a430586d692503186c628b","@Immersive cTab"]
 ];
 
 
