@@ -1,16 +1,15 @@
 # Hearts and Minds Plus
 
-Hearts and Minds Plus is an enhanced version of the Arma 3 Hearts and Minds gamemode, developed by Tetlys.
+Hearts and Minds Plus is a community-developed continuation of the original Arma 3 Hearts and Minds gamemode, created by [vdauphin](https://vdauphin.github.io/HeartsAndMinds/).
+
+Developed by Tetlys, Hearts and Minds Plus builds upon the original work, introducing new gameplay systems, features, improvements and customisation options while continuing to evolve the original experience.
 
 Featuring an expanded economy, custom UI, vehicle and construction progression, enhanced air support, persistent player systems and much more.
 
 Play with us on The EDEN Community server, or explore the project and help develop the gamemode.
 
-[![GitHub Release](https://img.shields.io/github/v/release/Tetlys/HeartsAndMindsPlus?include_prereleases&color=success)](https://github.com/Tetlys/HeartsAndMindsPlus/releases/tag/Beta2.0)
+[![GitHub Release](https://img.shields.io/github/v/release/Tetlys/HeartsAndMindsPlus?include_prereleases&color=success)](https://github.com/Tetlys/HeartsAndMindsPlus/releases/tag/v1.0.0)
 [![Join our Discord](https://img.shields.io/badge/Discord-Join%20The%20EDEN%20Community-5865F2?logo=discord&logoColor=white)](https://discord.gg/7TXaQa7sEv)
-
-
-Hearts and Minds Plus builds on the original Hearts and Minds project by [vdauphin](https://vdauphin.github.io/HeartsAndMinds/).
 
 ## Join The EDEN Community
 
@@ -86,7 +85,7 @@ Join The EDEN Community Discord to ask questions, share feedback and get involve
 
 ## Installation
 
-1. [Download the current Beta 2.0 release](https://github.com/Tetlys/HeartsAndMindsPlus/releases/tag/Beta2.0).
+1. [Download the official full release](https://github.com/Tetlys/HeartsAndMindsPlus/releases/tag/v1.0.0).
 2. Install the required mods:
    - [CBA](https://github.com/CBATeam/CBA_A3/releases)
    - [ACE](https://ace3.acemod.org/)
