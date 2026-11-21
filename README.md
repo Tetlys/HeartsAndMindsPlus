@@ -76,7 +76,7 @@ Need help setting up Hearts and Minds Plus, found an issue, or have an idea for 
 
 Join The EDEN Community Discord to ask questions, share feedback and get involved in development.
 
-[Join the Discord](https://discord.gg/4DdMKvJjMa)
+[Join the Discord](https://discord.gg/7TXaQa7sEv)
 
 ## Coming Soon
 
@@ -100,7 +100,7 @@ The documentation helps other communities install, configure, and customise thei
 
 1. Install the required mods listed above.
 2. Join The EDEN Community game server.
-3. Visit the [EDEN Community Discord](https://discord.gg/4DdMKvJjMa) for the password and latest server information.
+3. Visit the [EDEN Community Discord](https://discord.gg/7TXaQa7sEv) for the password and latest server information.
 4. Get involved with the community and its operations.
 
 ## Screenshots
