@@ -4,8 +4,8 @@
 
 Enhanced air support, player scaling, permissions, custom UI, dynamic economy, and more! 🌟
 
-[![GitHub Release](https://img.shields.io/github/v/release/Tetlys/HeartsAndMindsPlus?include_prereleases&color=success)](https://github.com/Tetlys/HeartsAndMindsPlus/releases/tag/Beta1.0)
-[![Discord](https://img.shields.io/discord/1234567890?label=Discord&logo=discord&color=blue)](https://discord.gg/4DdMKvJjMa)
+[![GitHub Release](https://img.shields.io/github/v/release/Tetlys/HeartsAndMindsPlus?include_prereleases&color=success)](https://github.com/Tetlys/HeartsAndMindsPlus/releases/tag/Beta2.0)
+[EDEN Community Discord](https://discord.gg/4DdMKvJjMa)
 
 ## Overview 🌐
 
@@ -53,17 +53,17 @@ HeartsAndMindsPlus is a customized Arma 3 gamemode by Tetlys, building upon the 
 
 ## Installation 🚀
 
-1. [Download the latest release](https://github.com/Tetlys/HeartsAndMindsPlus/releases/tag/Beta2.0)
+1. [Download the current Beta 2.0 release](https://github.com/Tetlys/HeartsAndMindsPlus/releases/tag/Beta2.0)
 2. Install required mods:
-   - [CBA](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
-   - [ACE](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
+   - [CBA](https://github.com/CBATeam/CBA_A3/releases)
+   - [ACE](https://ace3.acemod.org/)
    - [HeartsAndMindsPlusCompat](https://steamcommunity.com/sharedfiles/filedetails/?id=3071188942)
 
 ## Documentation 📚
 
-Documentation for custom versions is still in development.
+Documentation for Hearts and Minds Plus is available in the [documentation index](docs/README.md). Start with the [installation guide](docs/INSTALLATION.md), then see the [configuration overview](docs/CONFIGURATION.md) and the [mission parameter reference](docs/PARAMETERS.md).
 
-## Server Information 🌍
+## EDEN Community Server 🌍
 
 ### Game Server 🎮
 
@@ -86,9 +86,7 @@ Always check [Discord](https://discord.gg/4DdMKvJjMa) for the latest server info
 <details>
   <summary>Screenshots</summary>
   
-  <!-- Add your image links or attachments here -->
-  ![Buy Menu](link-to-image1.png)
-  ![Salvage Menu](link-to-image2.png)
-  ![Role Arsenal](link-to-image3.png)
-  <!-- You can add more images as needed -->
+  <!-- Screenshot: public mission build menu showing vehicle categories and costs. Teaches players what they can purchase. Optional. -->
+  <!-- Screenshot: public mission salvage interface. Teaches how players recover value from eligible vehicles. Optional. -->
+  <!-- Screenshot: public mission role arsenal. Teaches that available equipment is role-specific. Optional. -->
 </details>
