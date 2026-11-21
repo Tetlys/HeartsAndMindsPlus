@@ -1,92 +1,105 @@
-# HeartsAndMindsPlus 🚀
+# Hearts and Minds Plus
 
-**Custom Arma 3 Gamemode by Tetlys** 🎮
+Hearts and Minds Plus is an enhanced version of the Arma 3 Hearts and Minds gamemode, developed by Tetlys.
 
-Enhanced air support, player scaling, permissions, custom UI, dynamic economy, and more! 🌟
+Featuring an expanded economy, custom UI, vehicle and construction progression, enhanced air support, persistent player systems and much more.
+
+Play with us on The EDEN Community server, or explore the project and help develop the gamemode.
 
 [![GitHub Release](https://img.shields.io/github/v/release/Tetlys/HeartsAndMindsPlus?include_prereleases&color=success)](https://github.com/Tetlys/HeartsAndMindsPlus/releases/tag/Beta2.0)
 [EDEN Community Discord](https://discord.gg/4DdMKvJjMa)
 
-## Overview 🌐
+Hearts and Minds Plus builds on the original Hearts and Minds project by [vdauphin](https://vdauphin.github.io/HeartsAndMinds/).
 
-HeartsAndMindsPlus is a customized Arma 3 gamemode by Tetlys, building upon the original work by [vdauphin](https://vdauphin.github.io/HeartsAndMinds/). This version includes a range of enhancements and modifications.
+## Join The EDEN Community
 
-### Features 🛠️
+Players are welcome to join us and experience Hearts and Minds Plus on The EDEN Community server. Join the Discord for the server password, announcements, events, community discussion, and the latest server information.
 
-- **Custom UI:** Fully custom UI interface for interacting with the new systems.
-- **Build System:** Construct at any FOB using the all-new economy.
-- **Salvage System:** Earn money by salvaging enemy vehicles.
-- **Economy:** Full system based on kills, side missions, salvage, and recovery.
-- **Updated String-Table and Side Missions:** Improved user experience.
-- **Role-Specific Arsenal:** Tailored loadouts for different roles.
-- **Improved VIV and Object Loading:** Enhancements for better gameplay.
-- **Modified Map Markers:** - Changed to better suit larger groups of players.
-- **Building Damage Modifiers changed:** - Changed to better suit larger full warefare scenarios. 
-- **Improved Map Markers** - Improved on the existing system towards a large multiplayer environment.
-- **Automation** - Lots of QOL improvmenets to missions creators, E.g: Enemy vehicles self fill to the salvage array.
-- **Full permissions system** - Per player persistant permissions for Build, Salvage, CAS/WEATHER/SIDEMISSIONS, Flight and Armour.
-- **Vehicle Appearance manager** - Use the logic point at spawn to change the apperance of your vehicles persistantly.
-- **Peristant scoreboard** - Keep track of kills, and rep for each player!
-- **Map based progression system** - Unlock new assets as you progress through the map!
-- **CAS Script:** In-depth air support with laser, smoke, and tracking effects. Full ROE and collateral damage chat response.
-- **Vehicle-Borne IEDs (VBIEDs)** - spawns when you do really bad things!
-- **Dog Tag Trading** - Ability to trade collected dog tags for reputation.
+### Game Server
 
+- **IP:** 92.42.46.91
+- **Port:** 2302
+- **Password:** See Discord
 
-* Some features limited to latest builds
+### TeamSpeak 3
 
-### Deprecated Features ⚠️
+- **IP:** 92.42.46.91
+
+[Join The EDEN Community Discord](https://discord.gg/4DdMKvJjMa)
+
+## Features
+
+### Gameplay and Progression
+
+- **Dynamic Economy:** Earn and spend mission funds through kills, side missions, salvage, and recovery.
+- **Vehicle Salvage:** Salvage eligible enemy vehicles to earn funds.
+- **Build System:** Construct at FOBs using the mission economy.
+- **Vehicle and Construction Progression:** Unlock additional categories in the construction menu as campaign progress increases. Unlock thresholds can be configured in [`core/fnc/fortify/load.sqf`](HeartsAndMindsPlus.Altis/core/fnc/fortify/load.sqf).
+- **Dog Tag Trading:** Trade collected dog tags for reputation.
+- **Persistent Scoreboard:** Keep track of player kills and reputation.
+
+### Player Systems
+
+- **Custom UI:** Use the mission's custom interfaces to interact with its systems.
+- **Role-Specific Arsenal:** Access equipment tailored to different roles.
+- **Permissions System:** Manage player permissions for building, salvage, command, flight, and armour.
+- **Vehicle Appearance Manager:** Change vehicle appearance at the spawn logic point and keep the selected appearance.
+
+**Default Permissions:** See the [Player Permissions guide](docs/PERMISSIONS.md) for how to configure the defaults in [`core/fnc/ui/init.sqf`](HeartsAndMindsPlus.Altis/core/fnc/ui/init.sqf).
+
+### Combat and Support
+
+- **Close Air Support (CAS):** Air support includes laser, smoke, and tracking effects, with rules of engagement and collateral-damage responses.
+- **Vehicle-Borne IEDs (VBIEDs):** VBIEDs can spawn in response to player actions.
+- **Improved VIV and Object Loading:** Improvements to vehicle-in-vehicle transport and object loading.
+
+### Mission Improvements
+
+- **Player Scaling:** Mission systems include player-scaling features.
+- **Updated String Table and Side Missions:** Updated mission text and side-mission content.
+- **Modified and Improved Map Markers:** Map markers are adjusted for larger multiplayer groups.
+- **Building Damage Modifiers:** Adjusted for larger full-warfare scenarios.
+- **Automation:** Quality-of-life improvements for mission creators, including automatic handling of enemy vehicles for the salvage system.
+
+*Some features are limited to the latest builds.*
+
+## Deprecated Features
 
 - Per Player Slot Persistence
 - Auto Loadout
 - Arsenal on Death Screen
 
-### HELP
+## Help and Contributions
 
-- Looking for support setting up a server? Or got an idea that would improve the gamemode, I would love to hear it! Reach out to @Tetlys
+Need help setting up Hearts and Minds Plus, found an issue, or have an idea for improving the gamemode?
 
-### COMING SOON!
+Join The EDEN Community Discord to ask questions, share feedback and get involved in development.
+
+[Join the Discord](https://discord.gg/4DdMKvJjMa)
+
+## Coming Soon
 
 - Dynamic objective sounds
-- Dynamic civilian interaction improvmenets
-- Removal of selectivly deprecated code.
+- Dynamic civilian interaction improvements
+- Removal of selectively deprecated code
 
-## Installation 🚀
+## Installation
 
-1. [Download the current Beta 2.0 release](https://github.com/Tetlys/HeartsAndMindsPlus/releases/tag/Beta2.0)
-2. Install required mods:
+1. [Download the current Beta 2.0 release](https://github.com/Tetlys/HeartsAndMindsPlus/releases/tag/Beta2.0).
+2. Install the required mods:
    - [CBA](https://github.com/CBATeam/CBA_A3/releases)
    - [ACE](https://ace3.acemod.org/)
    - [HeartsAndMindsPlusCompat](https://steamcommunity.com/sharedfiles/filedetails/?id=3071188942)
 
-## Documentation 📚
+## Documentation
 
-Documentation for Hearts and Minds Plus is available in the [documentation index](docs/README.md). Start with the [installation guide](docs/INSTALLATION.md), then see the [configuration overview](docs/CONFIGURATION.md) and the [mission parameter reference](docs/PARAMETERS.md).
+The documentation helps other communities install, configure, and customise their own Hearts and Minds Plus server. The [Configuration Guide](docs/CONFIGURATION.md) explains vehicle and construction progression, and the [Player Permissions guide](docs/PERMISSIONS.md) explains default player permissions. Start with the [documentation index](docs/README.md), then see the [installation guide](docs/INSTALLATION.md) and [mission parameter reference](docs/PARAMETERS.md).
 
-## EDEN Community Server 🌍
+## Quick Start
 
-### Game Server 🎮
+1. Install the required mods listed above.
+2. Join The EDEN Community game server.
+3. Visit the [EDEN Community Discord](https://discord.gg/4DdMKvJjMa) for the password and latest server information.
+4. Get involved with the community and its operations.
 
-- **IP:** 92.42.46.91
-- **Port:** 2302
-- **Password:** see discord
-
-### Teamspeak 3 🎙️
-
-- **IP:** 92.42.46.91
-
-Always check [Discord](https://discord.gg/4DdMKvJjMa) for the latest server information.
-
-## Quick Start 🚀
-
-1. Install required mods.
-2. Join the game server.
-3. Explore the features and collaborate with the community on [Discord](https://discord.gg/4DdMKvJjMa).
-
-<details>
-  <summary>Screenshots</summary>
-  
-  <!-- Screenshot: public mission build menu showing vehicle categories and costs. Teaches players what they can purchase. Optional. -->
-  <!-- Screenshot: public mission salvage interface. Teaches how players recover value from eligible vehicles. Optional. -->
-  <!-- Screenshot: public mission role arsenal. Teaches that available equipment is role-specific. Optional. -->
-</details>
+## Screenshots

@@ -32,4 +32,4 @@ The in-game permission interface includes a Build permission category. Confirm t
 
 For installing or packaging the edited mission, see [Installation](INSTALLATION.md). For screenshots, see the [checklist](SCREENSHOTS.md).
 
-The Notion command log also describes a Zeus wreck-repair routine involving a logic point and an economy refund. Its point location and refund steps are not specified there; see [Debugging](DEBUGGING.md#wreck-repair-routine) for the source note and the missing details.
+[Debugging](DEBUGGING.md#wreck-repair-routine)

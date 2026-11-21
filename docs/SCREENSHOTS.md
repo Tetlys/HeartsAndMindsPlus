@@ -16,6 +16,7 @@ Capture these from the public mission or its clean working copy. Each placeholde
 | `INSTALLATION.md` | Successful first launch | What a working mission start looks like | Optional |
 | `CONFIGURATION.md` | Eden playable-unit attributes and role description | Where editors change a role name and why it must match the arsenal mapping | Essential |
 | `CONFIGURATION.md` | Lobby parameter groups | Where to choose community-facing settings | Essential |
+| `CONFIGURATION.md` | Build menu showing a newly unlocked category and current campaign progress | How campaign progress unlocks additional categories | Optional |
 | `PARAMETERS.md` | Lobby parameter group headings | How settings are organized | Essential |
 | `PARAMETERS.md` | Faction and spawn-density options | How to select a faction and tune population | Optional |
 | `PARAMETERS.md` | Persistence and restart options with private values hidden | Where to set server management choices | Optional |

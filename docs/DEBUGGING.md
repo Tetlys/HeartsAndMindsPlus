@@ -23,8 +23,6 @@ Use these checks to collect evidence when the mission fails to start or a system
 
 ## Debug Console Command Log
 
-The following commands and notes are transcribed from the Notion **Debug Console Command Log**. Select the execution context shown in the table when using a command in the debug console. For object-context entries, the source uses `_this`; the Notion record does not explain how the target object is selected or supplied.
-
 ### Reputation and campaign status
 
 **Display current victory percentage and global reputation** — Execution context: **Global**. The source says this displays both values as a hint.
@@ -93,8 +91,6 @@ btc_global_reputation = btc_global_reputation + 100
 
 ### Zeus and admin notes
 
-The Notion source labels these as **Zeus/Admin General** tips:
-
 - Never delete anything spawned by the server.
 - Do not change AI group or unit waypoints. If this is done by mistake, kill those units.
 - Only Bluefor players and assets may be moved using Zeus.
@@ -108,9 +104,8 @@ The Notion source labels these as **Zeus/Admin General** tips:
 
 ### Force Objective Clearing
 
-The Notion source says: “You can only ‘END’ Units, never delete them.” Its steps are:
 
-1. Proc the point, kill the units, and wait for the cap.
+1. Proc the point, kill the units using 'end' , and wait for the cap.
 2. If there is no cap, deactivate and repeat.
 3. If it fails, wait for the restart, then repeat.
 
@@ -118,20 +113,8 @@ Execution context: **Zeus**.
 
 ### Wreck Repair Routine
 
-The Notion source lists this **Zeus** routine:
-
 1. Drag the wreck to the logic point.
 2. Repair it.
 3. Refund the economy.
-
-## Information that would help complete these instructions
-
-The Notion records provide commands, execution contexts, and short effects, but do not give the following details. I have not filled them in:
-
-- For the two **Object** commands, how the administrator selects and supplies the object represented by `_this`.
-- For **Force Objective Clearing**, what “proc the point,” “cap,” “deactivate,” and “restart” mean in the intended Zeus workflow.
-- For **Wreck Repair Routine**, which logic point to use and how to perform the economy refund.
-- For the **Vehicle Appearance Manager**, what “reboot” should look like and when administrators should use the command.
-- Whether the Zeus/Admin General rules, objective-clearing procedure, and wreck-repair procedure are intended for public H&M Plus documentation or are specific to your server.
 
 For other setup issues, see [Installation](INSTALLATION.md), [Mission parameters](PARAMETERS.md), and [Configuration](CONFIGURATION.md).
