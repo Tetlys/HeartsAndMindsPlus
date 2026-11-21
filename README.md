@@ -69,7 +69,7 @@ Documentation for custom versions is still in development.
 
 - **IP:** 92.42.46.91
 - **Port:** 2302
-- **Password:** see discord
+- **Password:** Build  [updated - 19/01/2024]
 
 ### Teamspeak 3 🎙️
 
