@@ -36,17 +36,6 @@ private _uniform = toLower uniform _unit;
 private _protection = 0;
 
 
-
-// OPTIONAL : DLC Remover
-if (
-      [
-    "kat_mask_M04",
-    "kat_mask_M50"
-      ] findIf {_googles isKindOf [_x, _cfgGlasses]} > -1 
-    ) then { _protection = _protection + 1; 
-};
-
-
 if (
     [
         "G_Respirator_base_F"
@@ -101,7 +90,7 @@ if (_protection >= 1) exitWith {_this};
 
 if (_firstDamage || (random 1 > _protection)) then {
     _this set [1, false];
-    [_unit, random [0.05, 0.05, 0.2], selectRandom _bodyParts, "KAT_chemicalBurn"] call ace_medical_fnc_addDamageToUnit; // ropeburn CHANGE TO "stab" if not using KAT medical!
+    [_unit, random [0.05, 0.05, 0.2], selectRandom _bodyParts, "stab"] call ace_medical_fnc_addDamageToUnit;
 };
 
 _this
