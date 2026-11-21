@@ -1,6 +1,6 @@
 # Build menu and vehicles
 
-H&M Plus players use the ACE self-interaction **Build Menu** to buy vehicles and place construction items. The menu is available within a build zone near an FOB flag. The menu displays the available items and their costs; the shared mission economy must have enough funds for a purchase.
+H&M Plus players use the ACE self-interaction **Build Menu** to buy vehicles and place construction items. The menu is available within a build zone near an FOB flag. The menu displays the available items and their costs; the shared mission economy must have enough funds for a purchase and the correct player must have the correct permissions.
 
 ## Open the menu and purchase an item
 

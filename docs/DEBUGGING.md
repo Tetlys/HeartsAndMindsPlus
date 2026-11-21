@@ -25,7 +25,7 @@ Use these checks to collect evidence when the mission fails to start or a system
 
 ### Reputation and campaign status
 
-**Display current victory percentage and global reputation** — Execution context: **Global**. The source says this displays both values as a hint.
+**Display current victory percentage and global reputation** — Execution context: **Global**. 
 
 ```sqf
 _displayReputationAndVictory = {
@@ -94,22 +94,15 @@ btc_global_reputation = btc_global_reputation + 100
 - Never delete anything spawned by the server.
 - Do not change AI group or unit waypoints. If this is done by mistake, kill those units.
 - Only Bluefor players and assets may be moved using Zeus.
-- Players can be healed or teleported.
-- Never control Opfor units, for any reason. The source says doing so results in an immediate ban.
 - Do not spawn Opfor units or assets.
-- Do not place friendly assets using Zeus unless approved by `tet`.
-- To replace vehicles or objects, spawn them using the build menu, then refund them through debug.
-
-**Potentially server-specific — please confirm whether these Zeus/Admin rules should be part of the public guide.** The source includes a named approver (`tet`) and a server ban policy. The notes are preserved here pending that decision; they are not presented as a universal H&M Plus policy.
+- Objects placed by zeus will save and have the correct code on them only if they are in the build menu.
 
 ### Force Objective Clearing
 
 
-1. Proc the point, kill the units using 'end' , and wait for the cap.
-2. If there is no cap, deactivate and repeat.
-3. If it fails, wait for the restart, then repeat.
-
-Execution context: **Zeus**.
+1. activate the point, kill the units using 'end' , and wait for the point to flip.
+2. If it does not flip, leave activation range, deactivate and repeat.
+3. If it fails, restart, then repeat.
 
 ### Wreck Repair Routine
 
