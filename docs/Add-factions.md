@@ -12,6 +12,7 @@ The faction mod must be loaded on the server and every player's client. Adding a
 
    ```sqf
    copyToClipboard str (["EN"] call btc_fnc_get_class);
+   
    ```
 
 4. Paste the copied result into a text editor.
@@ -97,3 +98,57 @@ The numeric value, display label and faction class name must refer to the same f
 If the faction does not appear in the lobby, check the `values[]` and `texts[]` arrays. If the mission starts but units do not spawn correctly, check the faction class name and whether the mod is loaded.
 
 **Important:** Adding a faction to the enemy list does not guarantee that every unit or vehicle category will be populated. The faction must contain compatible class definitions for the gamemode's spawning system.
+
+## 5. Add a civilian faction
+
+Adding a civilian faction follows the same process as adding an enemy faction, but civilian factions use separate configuration lists for personnel and vehicles.
+
+### Find the civilian faction class name
+
+1. Load the optional faction mod in a local test mission.
+2. Open the debug console and execute this command locally:
+
+   ```sqf
+   copyToClipboard str (["CIV"] call btc_fnc_get_class);
+   ```
+
+3. Paste the result into a text editor and identify the faction class name, display label and numeric value.
+
+### Add the faction to the mission
+
+Open:
+
+`HeartsAndMindsPlus.Altis/core/def/mission.sqf`
+
+Find the civilian faction configuration and add the new faction class to the appropriate civilian faction list.
+
+Civilian factions use two separate lists:
+
+- `btc_p_civ` — Civilian personnel factions.
+- `btc_p_civ_veh` — Civilian vehicle factions.
+
+Add the faction to both lists where applicable. These are separate selections, so make sure the faction is available for the civilian personnel and vehicle configuration as intended.
+
+### Add the faction to the mission parameters
+
+Open:
+
+`HeartsAndMindsPlus.Altis/core/def/param.hpp`
+
+Find the corresponding parameter definitions:
+
+- `btc_p_civ`
+- `btc_p_civ_veh`
+
+Add the faction's display label to the appropriate `texts[]` array and its matching numeric value to `values[]`.
+
+Repeat this for both parameters, keeping the entries in the same order as their corresponding faction lists in `mission.sqf`.
+
+### Test the faction
+
+1. Load the faction mod on the server and all clients.
+2. Start the mission and open the lobby parameters.
+3. Select the new civilian faction in the civilian personnel and vehicle options.
+4. Start the mission and verify that civilian personnel and vehicles spawn as expected.
+
+**Important:** Civilian personnel and civilian vehicles are configured independently. Adding a faction to one does not automatically make it available in the other.
