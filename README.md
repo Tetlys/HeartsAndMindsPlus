@@ -7,7 +7,8 @@ Featuring an expanded economy, custom UI, vehicle and construction progression, 
 Play with us on The EDEN Community server, or explore the project and help develop the gamemode.
 
 [![GitHub Release](https://img.shields.io/github/v/release/Tetlys/HeartsAndMindsPlus?include_prereleases&color=success)](https://github.com/Tetlys/HeartsAndMindsPlus/releases/tag/Beta2.0)
-[EDEN Community Discord](https://discord.gg/4DdMKvJjMa)
+[![Join our Discord](https://img.shields.io/badge/Discord-Join%20The%20EDEN%20Community-5865F2?logo=discord&logoColor=white)](https://discord.gg/7TXaQa7sEv)
+
 
 Hearts and Minds Plus builds on the original Hearts and Minds project by [vdauphin](https://vdauphin.github.io/HeartsAndMinds/).
 
@@ -25,7 +26,7 @@ Players are welcome to join us and experience Hearts and Minds Plus on The EDEN 
 
 - **IP:** 92.42.46.91
 
-[Join The EDEN Community Discord](https://discord.gg/4DdMKvJjMa)
+[Join The EDEN Community Discord](https://discord.gg/7TXaQa7sEv)
 
 ## Features
 
