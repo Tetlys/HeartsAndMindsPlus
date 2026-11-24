@@ -31,10 +31,10 @@ _mods
 tet_requiredmods = [
     ["22dc683ee7645369b375f5d3a2db51a995658245", "RHS: United States Forces"],
     ["c099f9533a1d61a33bef449594ec01c28661aa62", "RHS: Armed Forces of the Russian Federation"],
-    ["191c55263683942147a8ee29b5429d08b598cff4", "Community Base Addons v3.19.0"],
+    ["fe7d5d97ec59d027e087fa62927994edad9cc5d8","Community Base Addons v3.20.0"],
     ["40a576a45eb2d629a9fc05ba543bf905933ce741", "RHS: Serbian Armed Forces"],
     ["d45628bb1168a22a9554c18f8c1458615546af9a", "RHS: GREF"],
-    ["b1f79d14fb9d22ed2932595337ba5bf283e4578a", "Advanced Combat Environment 3.21.2"],
+    ["4e89d0a10c1d2a43b1221cc72a7b2a16b0e6cfe9", "Advanced Combat Environment 3.21.3"],
     ["e34d59ccbe4cbc59548fec00db4d9cf4979b227f", "CUP Terrains - Core 1.19.3"],
     ["11e2851ba4154d181b57602ebaf0c2c5a8cda84a", "CUP Terrains - Maps 1.16.0"],
     ["fbc1f582c89f11919f9c6ead5d842e6c1aea9b71", "Enhanced Movement"],
