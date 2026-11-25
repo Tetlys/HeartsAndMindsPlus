@@ -25,7 +25,7 @@ CODE TO COLLECT MOD HASHES AND NAMES FROM THE LOADED MODS, REQUIRED MODS, AND OP
     [_x select 5, _x select 0] 
 }; 
  
-_mods
+copyToClipboard str _mods
 
 */
 tet_requiredmods = [
@@ -91,7 +91,13 @@ tet_optionalmods = [
     ["8bcf4d4341d2f048c1407d62001b1058e29d8969", "GPS Route Plotter PLUS"],
     ["26388a776a69542b979f4416e59b0cbc6417745b", "@Turret Enhanced Plus"],
     ["879086d09e4c28ff876f80081784e41f382ab621", "@「RSS」 Immersive Hud"],
-    ["51961c6590b151404f0314171240a3d85a6add23","@Immersive cTab"]
+    ["51961c6590b151404f0314171240a3d85a6add23","@Immersive cTab"],
+    ["d8b7c4fdd7c2bfb6720f19804b2f2ddb1ccf91fb","Some Effects Rework: Impacts"]
+    ["b943a5a01718dfcfd0f98f84d1815a533de19116","Some Effects Rework: Grenades"],
+    ["1fe3540a3f6686c8cfec8038c89b36ffefecbe8a","Some Effects Rework: Blood Impact"],
+    ["375465a440e9e1255ffacd62e0738b63235aab20","@Splendid Smoke Rework"],
+    ["e57702699ef313e448ac3dcd929eaa2e8b1946c9","Splendid Lighting Plus"],
+    ["5265ebaaf05d6f3c55c2c3fad107a95acfa06610","ITN Beta"]
 ];
 
 
