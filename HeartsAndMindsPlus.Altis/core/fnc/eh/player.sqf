@@ -42,6 +42,12 @@ params [
 }] call CBA_fnc_addEventHandler;
 {
     _x addEventHandler ["CuratorObjectPlaced", btc_eh_fnc_CuratorObjectPlaced];
+    _x addEventHandler ["CuratorObjectSelectionChanged", {
+        params ["_curator", "_entity"];
+        if (_entity in [btc_create_object_point, btc_create_object, btc_gear_object]) then {
+            [_curator, [[_entity], true]] remoteExecCall ["removeCuratorEditableObjects", 2];
+        };
+    }];
 } forEach allCurators;
 ["ace_treatmentSucceded", btc_rep_fnc_treatment] call CBA_fnc_addEventHandler;
 if !(isServer) then { // Don't add twice the event in player host

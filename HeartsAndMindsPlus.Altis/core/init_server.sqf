@@ -117,10 +117,11 @@ if isServer then
 		while {true} do
 		{
 			{
-				_x addCuratorEditableObjects [allPlayers, true];
-                _x addCuratorEditableObjects [btc_vehicles, true];
-                _x addCuratorEditableObjects [btc_veh_respawnable, true];
-			} count allCurators;
+            _x addCuratorEditableObjects [allPlayers, true];
+            _x addCuratorEditableObjects [btc_vehicles, true];
+            _x addCuratorEditableObjects [btc_veh_respawnable, true];
+            _x removeCuratorEditableObjects [[btc_create_object_point, btc_create_object, btc_gear_object], true];
+            } count allCurators;
         sleep 60;
 		};
 	};
@@ -137,23 +138,6 @@ if isServer then
         publicvariable "BTC_PLAYER_array";
         publicvariable "BTC_UID_array";
         sleep 10;
-		};
-	};
-};
-
-
-
-//Object Protector
-if isServer then
-{
-	[] spawn
-	{
-		while {true} do
-		{
-			{
-				_x removeCuratorEditableObjects [[btc_create_object_point, btc_create_object, btc_gear_object],true]
-			} count allCurators;
-        sleep 0.25;
 		};
 	};
 };
